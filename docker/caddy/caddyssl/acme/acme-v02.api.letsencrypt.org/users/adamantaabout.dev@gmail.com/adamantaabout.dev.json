@@ -1,0 +1,12 @@
+{
+	"Email": "adamantaabout.dev@gmail.com",
+	"Registration": {
+		"body": {
+			"status": "valid",
+			"contact": [
+				"mailto:adamantaabout.dev@gmail.com"
+			]
+		},
+		"uri": "https://acme-v02.api.letsencrypt.org/acme/acct/102203841"
+	}
+}

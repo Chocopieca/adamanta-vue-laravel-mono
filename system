@@ -1,0 +1,148 @@
+#!/bin/bash
+
+if ! [ -x "$(command -v realpath)" ]; then
+	echo "realpath is missing, please install it."
+	exit 1
+fi
+
+# Set up basic variables
+SCRIPTSDIR="$PWD/system_scripts"
+
+. $SCRIPTSDIR/config.sh
+
+QUIT=0
+MESSAGE=""
+
+workspace_submenu () {
+  local PS3='Please enter workspace option: '
+  local options=("Backend")
+  local opt
+  select opt in "${options[@]}"
+  do
+      case $opt in
+          "Backend")
+              source $SCRIPTSDIR/docker/console.sh
+              ;;
+          *) echo "invalid option $REPLY";;
+      esac
+  done
+}
+
+docker_submenu () {
+  local PS3='Please enter docker option: '
+  local options=("Up Prod" "Up Dev" "Down")
+  local opt
+  select opt in "${options[@]}"
+  do
+      case $opt in
+          "Up Prod")
+              source $SCRIPTSDIR/docker/up.sh
+              ;;
+          "Up Dev")
+              source $SCRIPTSDIR/docker/up_dev.sh
+              ;;
+          "Down")
+            source $SCRIPTSDIR/docker/down.sh
+            ;;
+          *) echo "invalid option $REPLY";;
+      esac
+  done
+}
+
+build_front_submenu () {
+  local PS3='Please enter docker option: '
+  local options=("Backend" "ApiDock")
+  local opt
+  select opt in "${options[@]}"
+  do
+      case $opt in
+          "Backend")
+              docker exec -it adamanta_app sh ./system_scripts/build/backend.sh
+              ;;
+          "ApiDock")
+              docker exec -it adamanta_app sh ./system_scripts/build/apidoc.sh
+              ;;
+          *) echo "invalid option $REPLY";;
+      esac
+  done
+}
+
+deploy_submenu () {
+  local PS3='Please enter deploy option: '
+  local options=("Prod" "Dev")
+  local opt
+  select opt in "${options[@]}"
+  do
+      case $opt in
+          "Prod")
+              echo "[-] This run prod deploy"
+              read -p "Continue (y/n)?" choice
+              case "$choice" in
+                y|Y )
+                  docker exec -t adamanta_app sh -c "php artisan deploy production -vvv"
+                  echo "[-] Deploy has been compleated"
+                  ;;
+              *) echo "[-] Deploy canceled"
+              esac
+              break
+              ;;
+          "Dev")
+               docker exec -t adamanta_app sh -c "php artisan deploy staging -vvv"
+              break
+              ;;
+          *) echo "invalid option $REPLY";;
+      esac
+  done
+}
+
+# Main app - give the user a list of choices
+function main () {
+	echo $MESSAGE
+	echo "=============== $SITENAME ==============="
+	echo ""
+	MESSAGE=""
+	PS3="Choose an option: "
+	OPTIONS=("Run Install" "Run Workspace" "Run Docker" "Build" "Deploy" "Quit")
+	select OPTION in "${OPTIONS[@]}"; do
+		case "$OPTION" in
+			"Run Install")
+                echo "[-] This run install system"
+                read -p "Continue (y/n)?" choice
+                case "$choice" in
+                  y|Y )
+                        source $SCRIPTSDIR/run-install.sh
+                        echo "[-] Install has been compleated"
+                        ;;
+                    *) echo "[-] Run install canceled"
+                esac
+                break
+                ;;
+            "Run Workspace")
+                workspace_submenu
+                break
+                ;;
+            "Run Docker")
+                docker_submenu
+                echo "[-] Done"
+                break
+                ;;
+            "Build")
+                build_front_submenu
+                break
+                ;;
+            "Deploy")
+                deploy_submenu
+                break
+                ;;
+			      "Quit")
+                QUIT=1
+                break
+                ;;
+			*) echo "[-] Bad choice .. try again";;
+		esac
+	done
+}
+
+while [ "$QUIT" -eq "0" ]; do
+	main
+done

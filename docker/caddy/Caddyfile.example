@@ -1,0 +1,19 @@
+https://adamanta.local {
+    root /app/public
+    fastcgi / app:9000 php {
+        connect_timeout 300s
+        read_timeout 300s
+        send_timeout 300s
+        index index.php
+    }
+    rewrite {
+        to {path} {path}/ /index.php?{query}
+    }
+    timeouts 5m
+    gzip
+    browse
+    log /var/log/caddy/access.log
+    errors /var/log/caddy/error.log
+
+    tls petr.gorchanuk@gmail.com
+}
