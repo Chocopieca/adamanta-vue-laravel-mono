@@ -9,11 +9,23 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ampeco/nova-date-range-filter": "^0.1.1",
+        "bakerkretzmar/nova-settings-tool": "^1.0",
+        "bissolli/nova-phone-field": "^0.0.4",
+        "chris-ware/nova-breadcrumbs": "^2.1",
+        "custom-component/access-control": "*",
+        "custom-component/form-translations": "*",
+        "custom-component/site-menu": "*",
+        "emilianotisato/nova-tinymce": "^1.1",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5"
+        "laravel/nova": "*",
+        "laravel/passport": "^10.0",
+        "laravel/tinker": "^2.5",
+        "predis/predis": "^1.1",
+        "prettus/l5-repository": "^2.7"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -37,7 +49,12 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "classmap": [
+            "database/migrations",
+            "database/seeders",
+            "database/factories"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -57,5 +74,23 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/FormTranslations"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/SiteMenu"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/AccessControl"
+        }
+    ]
 }

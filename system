@@ -30,7 +30,7 @@ workspace_submenu () {
 
 docker_submenu () {
   local PS3='Please enter docker option: '
-  local options=("Up Prod" "Up Dev" "Down")
+  local options=("Up Prod" "Up Dev" "Up Local" "Down")
   local opt
   select opt in "${options[@]}"
   do
@@ -40,6 +40,9 @@ docker_submenu () {
               ;;
           "Up Dev")
               source $SCRIPTSDIR/docker/up_dev.sh
+              ;;
+          "Up Local")
+              source $SCRIPTSDIR/docker/up_local.sh
               ;;
           "Down")
             source $SCRIPTSDIR/docker/down.sh
@@ -102,7 +105,7 @@ function main () {
 	echo ""
 	MESSAGE=""
 	PS3="Choose an option: "
-	OPTIONS=("Run Install" "Run Workspace" "Run Docker" "Build" "Deploy" "Quit")
+	OPTIONS=("Run Install" "Run Workspace" "Run Front Workspace" "Run Docker" "Build" "Deploy" "Quit")
 	select OPTION in "${OPTIONS[@]}"; do
 		case "$OPTION" in
 			"Run Install")
@@ -119,6 +122,10 @@ function main () {
                 ;;
             "Run Workspace")
                 workspace_submenu
+                break
+                ;;
+            "Run Front Workspace")
+                source $SCRIPTSDIR/docker/front_console.sh
                 break
                 ;;
             "Run Docker")
