@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e16bebdd4714e80101ac21a50ffbcef",
+    "content-hash": "2bbae9398ea215732f70409ac09eaea9",
     "packages": [
         {
             "name": "ampeco/nova-date-range-filter",
@@ -2978,6 +2978,175 @@
                 "serialize"
             ],
             "time": "2020-11-07T02:01:34+00:00"
+        },
+        {
+            "name": "optimistdigital/nova-menu-builder",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/optimistdigital/nova-menu-builder.git",
+                "reference": "8d15c8e3b1d34cbc7a0edbb77e580b1765dad731"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/optimistdigital/nova-menu-builder/zipball/8d15c8e3b1d34cbc7a0edbb77e580b1765dad731",
+                "reference": "8d15c8e3b1d34cbc7a0edbb77e580b1765dad731",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": ">=2.0.0",
+                "laravel/nova": "^3.0",
+                "optimistdigital/nova-tailwind": "^1.0.2",
+                "optimistdigital/nova-translations-loader": "^2.0.0",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "OptimistDigital\\MenuBuilder\\MenuBuilderServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OptimistDigital\\MenuBuilder\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tarvo Reinpalu",
+                    "email": "tarvoreinpalu@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Optimist Digital",
+                    "email": "info@optimistdigital.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This Laravel Nova package allows you to create and manage menus and menu items.",
+            "keywords": [
+                "builder",
+                "laravel",
+                "menu",
+                "nova",
+                "optimistdigital"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/optimistdigital",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-11-12T13:55:06+00:00"
+        },
+        {
+            "name": "optimistdigital/nova-tailwind",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/optimistdigital/nova-tailwind.git",
+                "reference": "0eceb682f9a275d2d5e3b45917ea12c91c643d11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/optimistdigital/nova-tailwind/zipball/0eceb682f9a275d2d5e3b45917ea12c91c643d11",
+                "reference": "0eceb682f9a275d2d5e3b45917ea12c91c643d11",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "^1.0 || ^2.0 || ^3.0",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "OptimistDigital\\Tailwind\\TailwindServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OptimistDigital\\Tailwind\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tarvo Reinpalu",
+                    "email": "tarvoreinpalu@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Optimist Digital",
+                    "email": "info@optimistdigital.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Tailwind loader for Laravel Nova.",
+            "keywords": [
+                "css",
+                "laravel",
+                "nova",
+                "tailwind"
+            ],
+            "time": "2020-08-31T07:54:36+00:00"
+        },
+        {
+            "name": "optimistdigital/nova-translations-loader",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/optimistdigital/nova-translations-loader.git",
+                "reference": "2c0b99114d778adb62b3f1279a5a651c2737bf8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/optimistdigital/nova-translations-loader/zipball/2c0b99114d778adb62b3f1279a5a651c2737bf8e",
+                "reference": "2c0b99114d778adb62b3f1279a5a651c2737bf8e",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^6.0 || ^7.0 || ^8.0",
+                "laravel/nova": "^2.0 || ^3.0",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OptimistDigital\\NovaTranslationsLoader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "This Laravel Nova package helps developers load translations into their packages.",
+            "keywords": [
+                "laravel",
+                "nova",
+                "optimistdigital",
+                "translations"
+            ],
+            "time": "2020-11-03T10:41:57+00:00"
         },
         {
             "name": "paragonie/random_compat",

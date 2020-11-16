@@ -1,3 +1,6 @@
+const env = require('./.env.js').default
+const isDev = process.env.NODE_ENV !== 'production'
+
 export default {
   server: {
     port: 1780,
@@ -24,6 +27,9 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '@plugins/mixins',
+    '@plugins/inject',
+    '@plugins/axios',
     '@/plugins/element-ui'
   ],
 
@@ -36,10 +42,26 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    ['nuxt-env', {
+      keys: [
+        //{ key: 'THIRD_ENV_VAR', name: 'MY_ENV_VAR' } // Rename the variable
+      ]
+    }],
+    '@nuxtjs/axios',
+    ['cookie-universal-nuxt'],
+    // '@/modules/routes',
   ],
+
+  axios: {
+    baseURL: env.axiosBaseUrl,
+    browserBaseURL: env.apiUrl
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     transpile: [/^element-ui/],
-  }
+  },
+  router: {              // customize nuxt.js router (vue-router).
+    middleware: 'i18n'   // middleware all pages of the application
+  },
 }

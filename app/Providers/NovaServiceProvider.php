@@ -104,7 +104,8 @@ class NovaServiceProvider extends \Laravel\Nova\NovaApplicationServiceProvider
         return [
             new \CustomComponent\AccessControl\AccessControl,
             \ChrisWare\NovaBreadcrumbs\NovaBreadcrumbs::make(),
-            \Bakerkretzmar\NovaSettingsTool\SettingsTool::make()
+            \Bakerkretzmar\NovaSettingsTool\SettingsTool::make(),
+            new \OptimistDigital\MenuBuilder\MenuBuilder,
         ];
     }
 

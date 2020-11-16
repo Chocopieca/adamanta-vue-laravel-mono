@@ -24,6 +24,7 @@
         "laravel/nova": "*",
         "laravel/passport": "^10.0",
         "laravel/tinker": "^2.5",
+        "optimistdigital/nova-menu-builder": "^4.1",
         "predis/predis": "^1.1",
         "prettus/l5-repository": "^2.7"
     },

@@ -14,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/trans', 'Localization\GetController');
+Route::get('/languages', 'Languages\GetActiveController');
+
+//Route::get('/search/{query?}', 'SearchController');
+//Route::get('/search-autocomplete/{query?}', 'SearchAutocompleteController');
+
+Route::group(['prefix' => 'batch'], function () {
+    Route::get('get', 'BatchController@get');
+});
+
+Route::group(['prefix' => 'auth', 'namespace' => 'Auth', 'as' => 'auth.'], function () {
+    Route::post('/login', 'LoginController')->name('login');
+    Route::get('/logout', 'LogoutController')->name('logout');
+    Route::post('/register', 'RegisterController')->name('registration');
+    Route::post('/reset-password', 'ForgotPasswordController')->name('reset_password');
 });

@@ -9,9 +9,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "cookie-universal-nuxt": "^2.1.4",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
     "nuxt": "^2.14.6"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nuxt-env": "^0.1.0"
+  }
 }
