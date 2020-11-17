@@ -113,7 +113,7 @@ class TabsSeeder extends BaseSeeder
             [
                 'name' => 'Меню сайта',
                 'key' => 'sie_menu',
-                'path' => 'resources/nova-menu',
+                'path' => 'resources/nova-menus',
                 'icon' => 'tab',
                 'parent_id' => 9,
                 'active' => 1,

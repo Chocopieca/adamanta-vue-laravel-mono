@@ -23,7 +23,7 @@ return [
 
     'confirm_success' => 'You have successfully confirmed the e-mail and completed the registration!',
     'confirm_success_faq' => 'If you have any questions, please use the FAQ or ask it to our managers.',
-    'confirm_success_best_regards' => 'Best regards, team Knignator.',
+    'confirm_success_best_regards' => 'Best regards, team Adamanta.',
     'confirmation_false_confirmed' => 'Your account has been activated',
     'confirmation_fail_token' => 'Invalid link for activation',
 

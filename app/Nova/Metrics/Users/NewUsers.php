@@ -8,6 +8,8 @@ use App\Models\User;
 
 class NewUsers extends Value
 {
+    public $name = 'Новые Пользователи';
+
     /**
      * Calculate the value of the metric.
      *

@@ -13,6 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // Only for test or local env
+        if (!env('production')) {
+            $this->call(NovaMenuMenusTableSeeder::class);
+            $this->call(NovaMenuMenuItemsTableSeeder::class);
+//            $this->call(ModuleSubPagesTableSeeder::class);
+        }
     }
 }

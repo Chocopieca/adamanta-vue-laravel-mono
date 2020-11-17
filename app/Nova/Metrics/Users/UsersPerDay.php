@@ -8,6 +8,8 @@ use Laravel\Nova\Metrics\Trend;
 
 class UsersPerDay extends Trend
 {
+    public $name = 'График Новых Пользователей';
+
     /**
      * Calculate the value of the metric.
      *

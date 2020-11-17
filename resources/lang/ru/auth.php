@@ -11,7 +11,7 @@ return [
 
     'confirm_success' => 'Вы успешно подтвердили e-mail и завершили регистрацию!',
     'confirm_success_faq' => 'Если у Вас появился какой-либо вопрос, воспользуйтесь FAQ или задайте его нашим менеджерам.',
-    'confirm_success_best_regards' => 'С уважением, команда Knignator.',
+    'confirm_success_best_regards' => 'С уважением, команда Adamanta.',
     'confirmation_false_confirmed' => 'Ваш аккаунт уже был подтвержден.',
     'confirmation_fail_token' => 'Неверная ссылка для активации.',
 

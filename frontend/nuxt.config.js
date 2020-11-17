@@ -16,13 +16,14 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
+      { rel: 'stylesheet', href: env.backUrl + 'css/common.css' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    { src: '@/assets/sass/app/bootstrap', lang: 'sass' },
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -30,7 +31,14 @@ export default {
     '@plugins/mixins',
     '@plugins/inject',
     '@plugins/axios',
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@plugins/font-awesome-icon',
+
+    { src: '@plugins/components/modal.js'},
+    { src: '@plugins/components/form.js' },
+    { src: '@plugins/components/go-to-top.js', mode: 'client'},
+    { src: '@plugins/components/front.js'},
+    { src: '@plugins/components/recaptha.js', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

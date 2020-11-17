@@ -20,7 +20,7 @@ mix
     ], 'public/js/nova.js')
 
     .js(res + 'js/admin/bootstrap.js', 'public/js/admin.js')
-    // .sass(res + 'sass/app.scss', 'public/css/common.css')
+    .sass(res + 'sass/app.scss', 'public/css/common.css')
     .options({
         processCssUrls: false
     })

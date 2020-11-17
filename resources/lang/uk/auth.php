@@ -11,7 +11,7 @@ return [
 
     'confirm_success' => 'Ви успішно підтвердили e-mail та завершили реєстрацію!',
     'confirm_success_faq' => 'Якщо у Вас виникло будь-яке питання, скористайтесь FAQ чи задайте його нашим менеджерам.',
-    'confirm_success_best_regards' => 'З повагою, команда Knignator.',
+    'confirm_success_best_regards' => 'З повагою, команда Adamanta.',
     'confirmation_false_confirmed' => 'Ваш аккаунт вже активовано',
     'confirmation_fail_token' => 'Невiрна ссилка для активацii',
     'select_role' => 'Вкажіть роль, що описує вас як учасника транспортно-експедиційного ринку.',

@@ -30,3 +30,7 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth', 'as' => 'auth.'], funct
     Route::post('/register', 'RegisterController')->name('registration');
     Route::post('/reset-password', 'ForgotPasswordController')->name('reset_password');
 });
+
+Route::get('/sef/{entity_path?}', 'SefController')
+    ->name('entity_path')
+    ->where('entity_path', '^(?!nova|admin.*$).*');

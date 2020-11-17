@@ -8,6 +8,8 @@ use Laravel\Nova\Metrics\Partition;
 
 class UsersPerStatus extends Partition
 {
+    public $name = 'Пользаватели по Группе';
+
     /**
      * Calculate the value of the metric.
      *
