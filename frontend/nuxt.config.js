@@ -57,7 +57,7 @@ export default {
     }],
     '@nuxtjs/axios',
     ['cookie-universal-nuxt'],
-    // '@/modules/routes',
+    '@/modules/routes',
   ],
 
   axios: {
