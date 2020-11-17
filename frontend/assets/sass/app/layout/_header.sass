@@ -1,0 +1,25 @@
+.def-header
+  z-index: 15
+  position: fixed
+  width: 100%
+  color: #fff
+  line-height: inherit
+  padding: 0 10px 0 10px !important
+  background-color: $--header-bg
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)
+
+.def-header .header-block
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.def-header-app
+  height: $header-app-height
+
+@media all and (max-width: 1200px)
+  .def-header-app
+    height: $header-app-mobile-height
+
+  .def-header
+    padding: 0 15px 0 15px !important

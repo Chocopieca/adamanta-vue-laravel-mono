@@ -59,16 +59,11 @@ class NovaMenuMenusRepository extends BaseRepository
 
     public static function getById()
     {
-        $lang = NovaMenuMenu::where(
-            'locale',
-            Language::where('id', config()->get('current_language_id'))->first()->code
-        )->first();
-
         return NovaMenuMenuItem::select(
             'nova_menu_menu_items.*'
         )
             ->where('nova_menu_menu_items.enabled', 1)
-            ->where('nova_menu_menu_items.menu_id', (isset($lang->id) ? $lang->id : 0))
+            ->where('nova_menu_menu_items.locale', Language::where('id', config()->get('current_language_id'))->first()->code)
             ->groupBy('nova_menu_menu_items.id')
             ->orderBy('nova_menu_menu_items.order', 'ASC')->get()->toArray();
     }

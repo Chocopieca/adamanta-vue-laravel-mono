@@ -1,0 +1,184 @@
+#__nuxt
+  .el-main
+    padding: 0 12px 0 12px
+
+  .container
+    padding: 20px 8px 20px 8px
+
+  .el-scrollbar__wrap
+    overflow: auto
+
+  .el-menu
+    border-bottom: 0
+    border-right: none
+
+  .def-sidebar
+    .main-menu > .el-menu-item
+      height: 30px
+      line-height: 30px
+      font-size: 16px
+      padding-left: 15px !important
+
+    .sidebar-genres
+      .el-menu-item, .el-submenu__title
+        height: 24px
+        line-height: 18px
+        padding: 2.5px 15px !important
+      .el-submenu .el-menu-item
+        padding: 2.5px 25px !important
+
+  .el-menu.el-menu--horizontal > .el-menu-item
+    height: 60px
+    line-height: 60px
+    font-family: "Helvetica"
+
+  .img
+    min-height: 90vh
+
+  .el-menu-main, .main-menu, .el-menu-main ul
+    background-color: $--header-bg !important
+
+  .el-menu-footer
+    background-color: $--footer-bg
+
+  .el-menu-footer li, .el-menu-footer li:hover
+    background-color: transparent !important
+
+  .el-menu > .el-menu-item:not(.is-disabled):hover,
+  .el-menu > .el-menu-item:not(.is-disabled):focus,
+  .el-menu > .el-submenu .el-submenu__title:hover
+    background-color: $--color-primary
+
+  .el-dropdown
+    color: #fff
+
+  .el-dropdown-selfdefine
+    cursor: pointer
+
+  .el-dialog__body
+    color: $--header-bg
+    padding: 20px 20px
+    padding-top: 0px
+
+  .el-dialog__title
+    display: block
+    text-align: center
+    color: $--header-bg
+
+  .el-input__inner
+    color: #000
+
+  .el-menu > .el-menu-item,
+  .el-menu > .el-menu-item a,
+  .el-menu > .el-submenu .el-submenu__title,
+  .el-menu > .el-submenu:focus .el-submenu__title,
+  .el-menu > .el-submenu:hover .el-submenu__title
+    color: #fff
+
+  .el-menu > .el-menu-item.is-active, .el-menu > .el-menu-item.is-active a
+    color: #ffad18
+
+  .el-carousel__arrow
+    opacity: 0.8
+    background-color: $--color-primary
+
+  .el-carousel__arrow:hover
+    opacity: 1
+
+  .el-carousel__arrow--right
+    right: 0
+
+  .el-carousel__arrow--left
+    left: 0
+
+  .el-breadcrumb__inner
+    color: $--color-primary
+
+  .el-carousel__item
+    background: #fff
+
+  .el-input__suffix
+    right: 5px
+
+  .el-breadcrumb__item
+      margin-bottom: 10px
+
+  .el-badge
+    z-index: 5
+
+  .el-card
+    border: none
+
+  .el-card.is-hover-shadow:hover, .el-card.is-hover-shadow:focus
+    box-shadow: 0 2px 12px 0 #999
+
+  .el-pagination .btn-prev .el-icon, .el-pagination .btn-next .el-icon
+    font-size: 30px
+    font-weight: 500
+
+  .el-rate__icon
+    margin-right: 0
+
+  .el-button
+    font-size: 12px
+
+body
+  .el-dropdown-menu li div, .el-menu--popup, .el-menu--popup ul li
+    color: $--header-bg
+
+  .el-select-group .el-select-dropdown__item
+    padding-left: 15px
+
+  .el-select-group__wrap
+    padding-bottom: 10px !important
+
+  .select-custom-child .el-select-group li:first-child
+    font-weight: 800
+
+  .select-custom-child .el-select-group li:not(:first-child)
+    padding-left: 25px !important
+    font-size: 13px
+
+  .el-select-dropdown__item.selected
+    background-color: antiquewhite
+    color: brown
+
+  .el-select-dropdown__item.selected:before
+    content: '•️'
+    left: 5px
+    position: absolute
+
+  .el-select-group__wrap:not(:last-of-type)::after
+    left: 10px
+    right: 10px
+    bottom: 5px
+
+  button
+    touch-action: manipulation
+
+  button:focus
+    outline: none !important
+
+  .el-button--primary:focus
+    background-color: $--color-primary
+    border-bottom-color: $--color-primary
+
+  .el-button--primary:hover
+    background: #737481 !important
+    border-color: #737481 !important
+
+  .el-button
+    padding: 12px 10px
+
+  .el-autocomplete-suggestion li
+    padding: 0 10px
+
+  .el-scrollbar__wrap
+    overflow-x: hidden
+
+  .el-notification__content
+    text-align: left
+
+  .el-dropdown-menu__item:not(.is-disabled):hover, .el-dropdown-menu__item:focus
+    color: $--color-black
+

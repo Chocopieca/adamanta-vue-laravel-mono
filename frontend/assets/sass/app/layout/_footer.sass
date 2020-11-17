@@ -1,0 +1,36 @@
+.def-footer
+  display: flex
+  flex: 0 0 auto !important
+  align-items: center
+  z-index: 8
+  width: 100%
+  padding: 0
+  height: $footer-app-height !important
+  #f-first-block
+    background-color: #3f4246
+    height: 180px
+    padding: 15px 10px
+    color: #fff
+  #f-second-block
+    background-color: #25262e
+    height: 50px
+    color: #fff
+    padding-top: 16px
+
+@media (min-width: 1366px)
+  .fh-100
+    height: 100%
+
+@media (max-width: 1024px)
+  .def-footer
+    font-size: 12px
+    height: $footer-app-tablet-height !important
+    #f-first-block
+      height: 230px
+
+@media (max-width: 420px)
+  .def-footer
+    font-size: 12px
+    height: $footer-app-mobile-height !important
+    #f-first-block
+      height: 230px

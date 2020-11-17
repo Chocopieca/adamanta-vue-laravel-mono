@@ -1,0 +1,298 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-btn-arrow-name: 'icon-btn-arrow';
+$icon-btn-arrow-x: 0px;
+$icon-btn-arrow-y: 41px;
+$icon-btn-arrow-offset-x: 0px;
+$icon-btn-arrow-offset-y: -41px;
+$icon-btn-arrow-width: 36px;
+$icon-btn-arrow-height: 36px;
+$icon-btn-arrow-total-width: 131px;
+$icon-btn-arrow-total-height: 106px;
+$icon-btn-arrow-image: 'http://localhost/images/sprite.png';
+$icon-btn-arrow: (0px, 41px, 0px, -41px, 36px, 36px, 131px, 106px, 'http://localhost/images/sprite.png', 'icon-btn-arrow', );
+$icon-btn-minus-name: 'icon-btn-minus';
+$icon-btn-minus-x: 0px;
+$icon-btn-minus-y: 0px;
+$icon-btn-minus-offset-x: 0px;
+$icon-btn-minus-offset-y: 0px;
+$icon-btn-minus-width: 47px;
+$icon-btn-minus-height: 36px;
+$icon-btn-minus-total-width: 131px;
+$icon-btn-minus-total-height: 106px;
+$icon-btn-minus-image: 'http://localhost/images/sprite.png';
+$icon-btn-minus: (0px, 0px, 0px, 0px, 47px, 36px, 131px, 106px, 'http://localhost/images/sprite.png', 'icon-btn-minus', );
+$icon-btn-plus-name: 'icon-btn-plus';
+$icon-btn-plus-x: 52px;
+$icon-btn-plus-y: 0px;
+$icon-btn-plus-offset-x: -52px;
+$icon-btn-plus-offset-y: 0px;
+$icon-btn-plus-width: 47px;
+$icon-btn-plus-height: 36px;
+$icon-btn-plus-total-width: 131px;
+$icon-btn-plus-total-height: 106px;
+$icon-btn-plus-image: 'http://localhost/images/sprite.png';
+$icon-btn-plus: (52px, 0px, -52px, 0px, 47px, 36px, 131px, 106px, 'http://localhost/images/sprite.png', 'icon-btn-plus', );
+$icon-clock-name: 'icon-clock';
+$icon-clock-x: 41px;
+$icon-clock-y: 41px;
+$icon-clock-offset-x: -41px;
+$icon-clock-offset-y: -41px;
+$icon-clock-width: 32px;
+$icon-clock-height: 32px;
+$icon-clock-total-width: 131px;
+$icon-clock-total-height: 106px;
+$icon-clock-image: 'http://localhost/images/sprite.png';
+$icon-clock: (41px, 41px, -41px, -41px, 32px, 32px, 131px, 106px, 'http://localhost/images/sprite.png', 'icon-clock', );
+$icon-email-name: 'icon-email';
+$icon-email-x: 0px;
+$icon-email-y: 82px;
+$icon-email-offset-x: 0px;
+$icon-email-offset-y: -82px;
+$icon-email-width: 30px;
+$icon-email-height: 24px;
+$icon-email-total-width: 131px;
+$icon-email-total-height: 106px;
+$icon-email-image: 'http://localhost/images/sprite.png';
+$icon-email: (0px, 82px, 0px, -82px, 30px, 24px, 131px, 106px, 'http://localhost/images/sprite.png', 'icon-email', );
+$icon-location-name: 'icon-location';
+$icon-location-x: 104px;
+$icon-location-y: 32px;
+$icon-location-offset-x: -104px;
+$icon-location-offset-y: -32px;
+$icon-location-width: 21px;
+$icon-location-height: 30px;
+$icon-location-total-width: 131px;
+$icon-location-total-height: 106px;
+$icon-location-image: 'http://localhost/images/sprite.png';
+$icon-location: (104px, 32px, -104px, -32px, 21px, 30px, 131px, 106px, 'http://localhost/images/sprite.png', 'icon-location', );
+$icon-phone-name: 'icon-phone';
+$icon-phone-x: 104px;
+$icon-phone-y: 0px;
+$icon-phone-offset-x: -104px;
+$icon-phone-offset-y: 0px;
+$icon-phone-width: 27px;
+$icon-phone-height: 27px;
+$icon-phone-total-width: 131px;
+$icon-phone-total-height: 106px;
+$icon-phone-image: 'http://localhost/images/sprite.png';
+$icon-phone: (104px, 0px, -104px, 0px, 27px, 27px, 131px, 106px, 'http://localhost/images/sprite.png', 'icon-phone', );
+$icon-btn-arrow-2x-name: 'icon-btn-arrow@2x';
+$icon-btn-arrow-2x-x: 0px;
+$icon-btn-arrow-2x-y: 82px;
+$icon-btn-arrow-2x-offset-x: 0px;
+$icon-btn-arrow-2x-offset-y: -82px;
+$icon-btn-arrow-2x-width: 72px;
+$icon-btn-arrow-2x-height: 72px;
+$icon-btn-arrow-2x-total-width: 262px;
+$icon-btn-arrow-2x-total-height: 212px;
+$icon-btn-arrow-2x-image: 'http://localhost/images/sprite@2x.png';
+$icon-btn-arrow-2x: (0px, 82px, 0px, -82px, 72px, 72px, 262px, 212px, 'http://localhost/images/sprite@2x.png', 'icon-btn-arrow@2x', );
+$icon-btn-minus-2x-name: 'icon-btn-minus@2x';
+$icon-btn-minus-2x-x: 0px;
+$icon-btn-minus-2x-y: 0px;
+$icon-btn-minus-2x-offset-x: 0px;
+$icon-btn-minus-2x-offset-y: 0px;
+$icon-btn-minus-2x-width: 94px;
+$icon-btn-minus-2x-height: 72px;
+$icon-btn-minus-2x-total-width: 262px;
+$icon-btn-minus-2x-total-height: 212px;
+$icon-btn-minus-2x-image: 'http://localhost/images/sprite@2x.png';
+$icon-btn-minus-2x: (0px, 0px, 0px, 0px, 94px, 72px, 262px, 212px, 'http://localhost/images/sprite@2x.png', 'icon-btn-minus@2x', );
+$icon-btn-plus-2x-name: 'icon-btn-plus@2x';
+$icon-btn-plus-2x-x: 104px;
+$icon-btn-plus-2x-y: 0px;
+$icon-btn-plus-2x-offset-x: -104px;
+$icon-btn-plus-2x-offset-y: 0px;
+$icon-btn-plus-2x-width: 94px;
+$icon-btn-plus-2x-height: 72px;
+$icon-btn-plus-2x-total-width: 262px;
+$icon-btn-plus-2x-total-height: 212px;
+$icon-btn-plus-2x-image: 'http://localhost/images/sprite@2x.png';
+$icon-btn-plus-2x: (104px, 0px, -104px, 0px, 94px, 72px, 262px, 212px, 'http://localhost/images/sprite@2x.png', 'icon-btn-plus@2x', );
+$icon-clock-2x-name: 'icon-clock@2x';
+$icon-clock-2x-x: 82px;
+$icon-clock-2x-y: 82px;
+$icon-clock-2x-offset-x: -82px;
+$icon-clock-2x-offset-y: -82px;
+$icon-clock-2x-width: 64px;
+$icon-clock-2x-height: 64px;
+$icon-clock-2x-total-width: 262px;
+$icon-clock-2x-total-height: 212px;
+$icon-clock-2x-image: 'http://localhost/images/sprite@2x.png';
+$icon-clock-2x: (82px, 82px, -82px, -82px, 64px, 64px, 262px, 212px, 'http://localhost/images/sprite@2x.png', 'icon-clock@2x', );
+$icon-email-2x-name: 'icon-email@2x';
+$icon-email-2x-x: 0px;
+$icon-email-2x-y: 164px;
+$icon-email-2x-offset-x: 0px;
+$icon-email-2x-offset-y: -164px;
+$icon-email-2x-width: 60px;
+$icon-email-2x-height: 48px;
+$icon-email-2x-total-width: 262px;
+$icon-email-2x-total-height: 212px;
+$icon-email-2x-image: 'http://localhost/images/sprite@2x.png';
+$icon-email-2x: (0px, 164px, 0px, -164px, 60px, 48px, 262px, 212px, 'http://localhost/images/sprite@2x.png', 'icon-email@2x', );
+$icon-location-2x-name: 'icon-location@2x';
+$icon-location-2x-x: 208px;
+$icon-location-2x-y: 64px;
+$icon-location-2x-offset-x: -208px;
+$icon-location-2x-offset-y: -64px;
+$icon-location-2x-width: 42px;
+$icon-location-2x-height: 60px;
+$icon-location-2x-total-width: 262px;
+$icon-location-2x-total-height: 212px;
+$icon-location-2x-image: 'http://localhost/images/sprite@2x.png';
+$icon-location-2x: (208px, 64px, -208px, -64px, 42px, 60px, 262px, 212px, 'http://localhost/images/sprite@2x.png', 'icon-location@2x', );
+$icon-phone-2x-name: 'icon-phone@2x';
+$icon-phone-2x-x: 208px;
+$icon-phone-2x-y: 0px;
+$icon-phone-2x-offset-x: -208px;
+$icon-phone-2x-offset-y: 0px;
+$icon-phone-2x-width: 54px;
+$icon-phone-2x-height: 54px;
+$icon-phone-2x-total-width: 262px;
+$icon-phone-2x-total-height: 212px;
+$icon-phone-2x-image: 'http://localhost/images/sprite@2x.png';
+$icon-phone-2x: (208px, 0px, -208px, 0px, 54px, 54px, 262px, 212px, 'http://localhost/images/sprite@2x.png', 'icon-phone@2x', );
+$spritesheet-width: 131px;
+$spritesheet-height: 106px;
+$spritesheet-image: 'http://localhost/images/sprite.png';
+$spritesheet-sprites: ($icon-btn-arrow, $icon-btn-minus, $icon-btn-plus, $icon-clock, $icon-email, $icon-location, $icon-phone, );
+$spritesheet: (131px, 106px, 'http://localhost/images/sprite.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 262px;
+$retina-spritesheet-height: 212px;
+$retina-spritesheet-image: 'http://localhost/images/sprite@2x.png';
+$retina-spritesheet-sprites: ($icon-btn-arrow-2x, $icon-btn-minus-2x, $icon-btn-plus-2x, $icon-clock-2x, $icon-email-2x, $icon-location-2x, $icon-phone-2x, );
+$retina-spritesheet: (262px, 212px, 'http://localhost/images/sprite@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$icon-btn-arrow-group-name: 'icon-btn-arrow';
+$icon-btn-arrow-group: ('icon-btn-arrow', $icon-btn-arrow, $icon-btn-arrow-2x, );
+$icon-btn-minus-group-name: 'icon-btn-minus';
+$icon-btn-minus-group: ('icon-btn-minus', $icon-btn-minus, $icon-btn-minus-2x, );
+$icon-btn-plus-group-name: 'icon-btn-plus';
+$icon-btn-plus-group: ('icon-btn-plus', $icon-btn-plus, $icon-btn-plus-2x, );
+$icon-clock-group-name: 'icon-clock';
+$icon-clock-group: ('icon-clock', $icon-clock, $icon-clock-2x, );
+$icon-email-group-name: 'icon-email';
+$icon-email-group: ('icon-email', $icon-email, $icon-email-2x, );
+$icon-location-group-name: 'icon-location';
+$icon-location-group: ('icon-location', $icon-location, $icon-location-2x, );
+$icon-phone-group-name: 'icon-phone';
+$icon-phone-group: ('icon-phone', $icon-phone, $icon-phone-2x, );
+$retina-groups: ($icon-btn-arrow-group, $icon-btn-minus-group, $icon-btn-plus-group, $icon-clock-group, $icon-email-group, $icon-location-group, $icon-phone-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

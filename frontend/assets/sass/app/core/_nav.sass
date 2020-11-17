@@ -1,0 +1,97 @@
+button:disabled
+  cursor: auto
+  opacity: 0.5
+
+button:disabled:hover
+  border: 1px solid $--color-regular !important
+
+.block-nav-btn
+  height: 170px
+  padding-top: 35px
+
+.nav-btn
+  color: $--color-text-regular
+  height: 40px
+  width: 40px
+  background-color: $--color-black
+  text-align: center
+  border-radius: 4px
+  margin: 1px
+  font-size: 30px
+  line-height: 45px
+  cursor: pointer
+
+#__nuxt .btn-custom
+  border: 1px solid $--color-regular
+  color: $--color-regular
+  padding: 10px
+  border-radius: 0
+
+#__nuxt .btn-custom:hover
+  border: 1px solid $--color-primary
+
+.black-label-btn
+  border: 1px solid #000
+  color: #000
+  padding: 10px 20px
+  text-align: center
+
+.arrow-button
+  transform: rotate(90deg)
+
+.arrow-top
+  transform: rotate(-90deg)
+
+.arrow-left
+  transform: rotate(180deg)
+
+#burgerBtn
+  border-top: 2px solid $--color-primary
+  height: 25px
+  width: 30px
+  box-sizing: border-box
+  position: absolute
+  z-index: 30
+  left: 20px
+  top: 15px
+  cursor: pointer
+  transition: all 0.3s ease-in
+
+#burgerBtn:before
+  content: ""
+  display: block
+  position: absolute
+  height: 2px
+  width: 30px
+  left: 0
+  background: $--color-primary
+  top: 10px
+  transition: all 0.3s ease-in
+
+#burgerBtn:after
+  content: ""
+  display: block
+  position: absolute
+  height: 2px
+  width: 30px
+  left: 0
+  background: $--color-primary
+  bottom: 0
+  transition: all 0.3s ease-in
+
+.navigation #burgerBtn
+  border-color: transparent
+
+.navigation #burgerBtn:before
+  transform: rotate(45deg)
+  width: 33px
+  left: -2px
+
+.navigation #burgerBtn:after
+  transform: rotate(135deg)
+  bottom: 11px
+  width: 33px
+  left: -2px
+
+.toolbar-btn__rotate
+  display: none !important
