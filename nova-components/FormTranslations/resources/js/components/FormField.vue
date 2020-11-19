@@ -11,19 +11,18 @@
                 <div class="py-6 px-8 w-1/2">
                     <select
                         id="language_select"
+                        style="width: 180px;"
                         v-model="language"
-                        class="w-2/6 form-control form-select"
+                        class="form-control form-select"
                         :class="errorClasses"
                         @change="changeSelect($event)"
                     >
                         <option value="" selected disabled>
                             {{__('Choose an option')}}
                         </option>
-
                         <option
                             v-for="option in languages"
                             :value="option.id"
-                            :selected="option.id == language"
                         >
                             {{ option.title }}
                         </option>
@@ -60,6 +59,7 @@
             languages: Nova.config.languages,
         }),
         async created() {
+            console.log(this.languages)
             this.fields = this.field.trans[0].fields;
         },
         methods: {

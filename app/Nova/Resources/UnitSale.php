@@ -1,43 +1,30 @@
 <?php
 
-namespace CustomComponent\AccessControl\Resources;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use CustomComponent\FormTranslations\FormTranslations;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Boolean;
 
-class Role extends \App\Nova\Resources\Resource
+class UnitSale extends Resource
 {
-    /**
-     * Build an "index" query for the given resource.
-     *
-     * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-    public static function indexQuery(NovaRequest $request, $query)
-    {
-        if (empty($request->get('orderBy'))) {
-            $query->getQuery()->orders = [];
-            return $query->orderBy('id', 'asc');
-        }
-    }
+    public static $defaultSort = ['id', 'asc'];
 
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'CustomComponent\\AccessControl\\Models\\Role';
+    public static $model = 'App\\Models\\UnitSale';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'title';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -45,17 +32,17 @@ class Role extends \App\Nova\Resources\Resource
      * @var array
      */
     public static $search = [
-        'id', 'title',
+        'id', 'name'
     ];
 
     public static function label()
     {
-        return 'Роли';
+        return 'Единицы измерения';
     }
 
     public static function singularLabel()
     {
-        return 'Роль';
+        return 'Единицу измерения';
     }
 
     /**
@@ -68,10 +55,22 @@ class Role extends \App\Nova\Resources\Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Название', 'title')
-                ->rules('required', 'max:20')
-                ->sortable(),
-            Boolean::make('Доступ к админ панели', 'access_admin'),
+            Text::make('Название', function () {
+                return isset($this->localDescription->name) ? $this->localDescription->name : '---';
+            })->onlyOnIndex(),
+            Boolean::make('Активная', 'active'),
+
+            FormTranslations::init([
+                'id' => $this->id,
+                'model' => 'UnitSale',
+                'related_id' => 'unit_sale_id',
+                'table' => 'unit_sale_descriptions',
+                'label' => __('admin.labels.description'),
+                'fields' =>  [
+                    Text::make('Название', 'name')
+                        ->rules('required', 'max:10'),
+                ]
+            ])->onlyOnForms(),
         ];
     }
 
@@ -94,7 +93,9 @@ class Role extends \App\Nova\Resources\Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            new \App\Nova\Filters\Active,
+        ];
     }
 
     /**

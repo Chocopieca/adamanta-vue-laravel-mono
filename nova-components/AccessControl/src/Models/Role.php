@@ -19,6 +19,6 @@ class Role extends Model
 
     public static function getRoles()
     {
-        return self::get();
+        return self::where('access_admin', 1)->get();
     }
 }

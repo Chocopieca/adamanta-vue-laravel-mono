@@ -1,43 +1,26 @@
 <?php
 
-namespace CustomComponent\AccessControl\Resources;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 
-class Role extends \App\Nova\Resources\Resource
+class Transaction extends Resource
 {
-    /**
-     * Build an "index" query for the given resource.
-     *
-     * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-    public static function indexQuery(NovaRequest $request, $query)
-    {
-        if (empty($request->get('orderBy'))) {
-            $query->getQuery()->orders = [];
-            return $query->orderBy('id', 'asc');
-        }
-    }
-
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'CustomComponent\\AccessControl\\Models\\Role';
+    public static $model = 'App\\Models\\Transaction';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'title';
+    public static $title = 'id';
 
     /**
      * The columns that should be searched.
@@ -45,17 +28,31 @@ class Role extends \App\Nova\Resources\Resource
      * @var array
      */
     public static $search = [
-        'id', 'title',
+        'id',
     ];
 
     public static function label()
     {
-        return 'Роли';
+        return 'Транзакции';
     }
 
     public static function singularLabel()
     {
-        return 'Роль';
+        return 'Транзакции';
+    }
+
+    public static function authorizedToCreate(Request $request)
+    {
+        return false;
+    }
+    public function authorizedToDelete(Request $request)
+    {
+        return false;
+    }
+
+    public function authorizedToUpdate(Request $request)
+    {
+        return false;
     }
 
     /**
@@ -68,10 +65,16 @@ class Role extends \App\Nova\Resources\Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Название', 'title')
-                ->rules('required', 'max:20')
+            Text::make('Тип', function () {
+                return __('boxes.transaction_method.' . $this->method);
+            }),
+            Text::make('Сервис оплаты', 'payment_system')
                 ->sortable(),
-            Boolean::make('Доступ к админ панели', 'access_admin'),
+            Text::make('Статус', function () {
+                return view('admin.transaction.status', ['status' => $this->status])->render();
+            })->asHtml(),
+            $this->showCreatedAt(),
+            $this->showUpdatedAt()
         ];
     }
 
@@ -94,7 +97,9 @@ class Role extends \App\Nova\Resources\Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            new \App\Nova\Filters\CreatedAt,
+        ];
     }
 
     /**

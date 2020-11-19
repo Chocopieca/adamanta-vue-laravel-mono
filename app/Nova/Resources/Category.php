@@ -2,32 +2,36 @@
 
 namespace App\Nova\Resources;
 
-use Benjaminhirsch\NovaSlugField\TextWithSlug;
-use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use CustomComponent\FormTranslations\FormTranslations;
 use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Fields\Boolean;
+use Benjaminhirsch\NovaSlugField\Slug;
+use Benjaminhirsch\NovaSlugField\TextWithSlug;
+use App\Nova\Traits\Image;
 
-class Page extends Resource
+class Category extends Resource
 {
-    public static $defaultSort = ['id', 'asc'];
+    use Image;
+
+    public static $defaultSort = ['created_at', 'desc'];
 
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\\Models\\Page';
+    public static $model = 'App\\Models\\Category';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'slug';
+    public static $title = 'local_name';
 
     /**
      * The columns that should be searched.
@@ -38,14 +42,23 @@ class Page extends Resource
         'id', 'slug',
     ];
 
+    /**
+     * The relationship columns that should be searched.
+     *
+     * @var array
+     */
+    public static $searchRelations = [
+        'localDescription' => ['name'],
+    ];
+
     public static function label()
     {
-        return 'Страницы';
+        return 'Категории';
     }
 
     public static function singularLabel()
     {
-        return 'Страницу';
+        return 'Категорию';
     }
 
     /**
@@ -58,42 +71,45 @@ class Page extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make(__('admin.labels.name'), function () {
-                return isset($this->localDescription->title) ? $this->localDescription->title : '---';
-            })->onlyOnIndex(),
+            Text::make('Название', 'local_name')->exceptOnForms(),
+            Text::make('Родительская', 'parent_local_name')->exceptOnForms(),
 
-            Text::make('SEO-url', 'slug')->rules('required', 'max:60')->hideFromIndex(),
+            Slug::make('SEO-url', 'slug')->rules('required', 'max:60'),
             TextWithSlug::make('Название для SEO-url', 'slug_generate')
                 ->help('Поле для автогенерации SEO-url.')
                 ->slug('slug')
                 ->hideFromIndex()
                 ->hideFromDetail(),
-            Boolean::make('Активная', 'active'),
-            Boolean::make('Показать хлебные крошки', 'show_title'),
-            Boolean::make('Главная', 'home'),
-            Boolean::make('No Index', 'no_index'),
 
+            $this->customImage('Изображение', 'image', 'authors')
+                ->rules('mimes:png,jpeg,jpg', 'max:2048'),
+
+            Select::make('Родительская категория', 'parent_id')
+                ->options(\App\Models\Category::parentsSelect())
+                ->hideFromIndex(),
+
+            Boolean::make('Активный', 'active')->sortable(),
             FormTranslations::init([
                 'id' => $this->id,
-                'model' => 'Page',
-                'related_id' => 'page_id',
-                'table' => 'page_descriptions',
-                'label' => __('admin.labels.description'),
+                'model' => 'Category',
+                'related_id' => 'category_id',
+                'table' => 'category_descriptions',
+                'label' => 'Описание',
                 'fields' =>  [
-                    Text::make(__('admin.labels.title'), 'title')
+                    Text::make('Название', 'name')
                         ->rules('required', 'max:60'),
-                    Text::make(__('admin.labels.meta_title'), 'meta_title')
-                        ->rules('required', 'max:150'),
-                    Text::make(__('admin.labels.meta_description'), 'meta_description')
+                    Text::make('Meta Описание', 'meta_description')
                         ->rules('required', 'max:300'),
-                    Text::make(__('admin.labels.meta_keywords'), 'meta_keywords')
+                    Text::make('Meta Ключевые слова', 'meta_keywords')
                         ->rules('required', 'max:240'),
-                    NovaTinyMCE::make(__('admin.labels.content'), 'description')
+                    Text::make('Meta Заголовок', 'meta_title')
+                        ->rules('required', 'max:100'),
+                    NovaTinyMCE::make('Описание', 'description')
                         ->options(config()->get('nova.tinimce_options')),
                 ]
             ])->onlyOnForms(),
-
-//            HasMany::make('Модули', 'pageModules', PageModules::class),
+            $this->showCreatedAt(),
+            $this->showUpdatedAt()
         ];
     }
 
@@ -116,7 +132,11 @@ class Page extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+//            new \App\Nova\Filters\Genre\ParentGenres,
+            new \App\Nova\Filters\Active,
+            new \App\Nova\Filters\CreatedAt,
+        ];
     }
 
     /**
@@ -136,8 +156,10 @@ class Page extends Resource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
-    public function actions(Request $request)
-    {
-        return [];
-    }
+//    public function actions(Request $request)
+//    {
+//        return [
+//            new \App\Nova\Actions\Active
+//        ];
+//    }
 }

@@ -3,16 +3,22 @@
 namespace App\Nova\Resources;
 
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
-use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use CustomComponent\FormTranslations\FormTranslations;
 use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Fields\Boolean;
+use App\Nova\Traits\Image;
+use R64\NovaFields\Row;
+use R64\NovaFields\Text as CustomText;
+use R64\NovaFields\Select as CustomSelect;
 
-class Page extends Resource
+class Product extends Resource
 {
+    use Image;
+
     public static $defaultSort = ['id', 'asc'];
 
     /**
@@ -20,7 +26,7 @@ class Page extends Resource
      *
      * @var string
      */
-    public static $model = 'App\\Models\\Page';
+    public static $model = 'App\\Models\\Product';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -40,12 +46,12 @@ class Page extends Resource
 
     public static function label()
     {
-        return 'Страницы';
+        return 'Товары';
     }
 
     public static function singularLabel()
     {
-        return 'Страницу';
+        return 'Товар';
     }
 
     /**
@@ -58,7 +64,7 @@ class Page extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make(__('admin.labels.name'), function () {
+            Text::make('Название', function () {
                 return isset($this->localDescription->title) ? $this->localDescription->title : '---';
             })->onlyOnIndex(),
 
@@ -68,16 +74,35 @@ class Page extends Resource
                 ->slug('slug')
                 ->hideFromIndex()
                 ->hideFromDetail(),
+            $this->customImage('Изображение', 'image', 'authors')
+                ->rules('mimes:png,jpeg,jpg', 'max:2048'),
+            Select::make('Категория', 'category_id')
+                ->options(\App\Models\Category::parentsSelect())
+                ->hideFromIndex(),
             Boolean::make('Активная', 'active'),
-            Boolean::make('Показать хлебные крошки', 'show_title'),
-            Boolean::make('Главная', 'home'),
-            Boolean::make('No Index', 'no_index'),
+            Boolean::make('В наличии', 'availability'),
+
+            Row::make('Фасовки', [
+                CustomText::make('Цена', 'price')
+                    ->fieldClasses('w-full px-8 py-6')
+                    ->hideLabelInForms(),
+                CustomText::make('Вес', 'weight')
+                    ->fieldClasses('w-full px-8 py-6')
+                    ->hideLabelInForms(),
+                CustomSelect::make('Еденица измерения', 'unit_sale_id')
+                    ->options(\App\Models\UnitSale::parentsSelect())
+                    ->fieldClasses('w-full px-8 py-6')
+                    ->hideLabelInForms(),
+            ], 'prices')
+                ->addRowText('Добавить фасовку')
+                ->fieldClasses('w-full px-8 py-6')
+                ->labelClasses('w-1/2 px-8 py-6'),
 
             FormTranslations::init([
                 'id' => $this->id,
-                'model' => 'Page',
-                'related_id' => 'page_id',
-                'table' => 'page_descriptions',
+                'model' => 'Product',
+                'related_id' => 'product_id',
+                'table' => 'product_descriptions',
                 'label' => __('admin.labels.description'),
                 'fields' =>  [
                     Text::make(__('admin.labels.title'), 'title')

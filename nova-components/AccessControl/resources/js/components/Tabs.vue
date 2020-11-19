@@ -1,6 +1,6 @@
 <template>
     <loading-view :loading="loading">
-        <heading class="mb-3">Access to menu</heading>
+        <heading class="mb-3">Доступ в меню</heading>
 
         <loading-card :loading="loading">
             <div class="flex">
@@ -14,7 +14,7 @@
                         <tr>
                             <!-- Field Names -->
                             <th class="">
-                                <span>Name</span>
+                                <span>Название</span>
                             </th>
                             <th></th>
                         </tr>
@@ -32,8 +32,8 @@
                                     @change="changeAction($event, tab.id)"
                                     style="float: right;"
                                 >
-                                    <el-radio-button :label="1" >Yes</el-radio-button>
-                                    <el-radio-button :label="0" >No</el-radio-button>
+                                    <el-radio-button :label="1" >Да</el-radio-button>
+                                    <el-radio-button :label="0" >Нет</el-radio-button>
                                 </el-radio-group>
                             </td>
                         </tr>
@@ -43,7 +43,7 @@
                 <div class="w-1/5 px-8">
                     <div class="row">
                         <div class="text-base text-80 font-bold py-3">
-                            Role
+                            Роль
                         </div>
                     </div>
                     <div class="row">

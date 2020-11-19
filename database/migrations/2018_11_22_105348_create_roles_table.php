@@ -17,6 +17,7 @@ class CreateRolesTable extends BaseMigration
             $table->string('key', 20);
             $table->string('title', 20);
             $table->boolean('not_remove')->default(0);
+            $table->boolean('access_admin')->default(0);
             $table->softDeletes();
         });
 

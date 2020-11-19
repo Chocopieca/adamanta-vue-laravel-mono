@@ -66,8 +66,8 @@
             padding-right: 1.5rem;
         }
         #custom-style .py-6 {
-            padding-top: 1rem;
-            padding-bottom: 0;
+            padding-top: 0.5rem;
+            padding-bottom: 1rem;
         }
         #custom-style .py-4 {
             padding-top: 0.5rem;
@@ -101,11 +101,6 @@
         }
         #custom-style .px-view {
             padding: 1rem;
-        }
-
-        #custom-style .p-3 {
-            padding: .45rem;
-            padding-bottom: 0;
         }
 
         /*multi select component*/

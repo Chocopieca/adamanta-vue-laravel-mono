@@ -1,5 +1,12 @@
 <?php
 return [
+    'transaction_statues' => [
+        'pending' => 'В ожидании',
+        'fail' => 'Ошибка',
+        'cancelled' => 'Отменен',
+        'success' => 'Успех'
+    ],
+
     'http_errors' => [
         '404' => [
            'title' => 'Страница не найдена',

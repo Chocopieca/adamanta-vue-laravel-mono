@@ -1,6 +1,6 @@
 <template>
     <loading-view :loading="false">
-        <heading class="mb-3">Actions</heading>
+        <heading class="mb-3">Действия</heading>
 
         <loading-card :loading="loading">
             <div class="flex">
@@ -16,7 +16,7 @@
                         <tr>
                             <!-- Field Names -->
                             <th class="">
-                                <span>Name</span>
+                                <span>Название</span>
                             </th>
                             <th></th>
                         </tr>
@@ -33,8 +33,8 @@
                                         @change="changeAction($event, action.id)"
                                         style="float: right;"
                                 >
-                                    <el-radio-button :label="1" >Yes</el-radio-button>
-                                    <el-radio-button :label="0" >No</el-radio-button>
+                                    <el-radio-button :label="1" >Да</el-radio-button>
+                                    <el-radio-button :label="0" >Нет</el-radio-button>
                                 </el-radio-group>
                             </td>
                         </tr>
@@ -44,7 +44,7 @@
                 <div class="w-1/5 px-8">
                     <div class="row">
                         <div class="text-base text-80 font-bold py-3">
-                            Tab
+                            Таб
                         </div>
                     </div>
                     <div class="row">
@@ -71,7 +71,7 @@
 
                     <div class="row">
                         <div class="text-base text-80 font-bold py-3">
-                            Role
+                            Роле
                         </div>
                     </div>
                     <div class="row">
@@ -98,7 +98,7 @@
 
                     <div class="row">
                         <div class="text-base text-80 font-bold py-3">
-                            User
+                            Пользаватель
                         </div>
                     </div>
                     <div class="row">
@@ -109,7 +109,7 @@
                                 @change="changeUser($event)"
                         >
                             <option value="0" selected>
-                                Select user
+                                Выберите пользователя
                             </option>
 
                             <option

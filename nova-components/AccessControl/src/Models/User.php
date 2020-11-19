@@ -26,6 +26,8 @@ class User extends Authenticatable
 
     public static function getUsers()
     {
-        return self::select('id', 'first_name', 'last_name')->where('role_id', '!=', 9)->get();
+        return self::select('users.id', 'users.first_name', 'users.last_name')
+            ->leftJoin('roles as r', 'r.id', '=', 'users.role_id')
+            ->where('r.access_admin', 1)->get();
     }
 }

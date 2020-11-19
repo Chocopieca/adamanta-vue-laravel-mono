@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bbae9398ea215732f70409ac09eaea9",
+    "content-hash": "1e5dbf58a326791e08bd97b4ebfc29da",
     "packages": [
+        {
+            "name": "64robots/nova-fields",
+            "version": "0.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/64robots/nova-fields.git",
+                "reference": "1e090c64a827676b88d591b2daca2906ed190bf8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/64robots/nova-fields/zipball/1e090c64a827676b88d591b2daca2906ed190bf8",
+                "reference": "1e090c64a827676b88d591b2daca2906ed190bf8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "R64\\NovaFields\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "R64\\NovaFields\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/beliolfa",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-07-28T10:21:53+00:00"
+        },
         {
             "name": "ampeco/nova-date-range-filter",
             "version": "0.1.1",
@@ -157,6 +204,55 @@
                 "tool"
             ],
             "time": "2019-11-15T19:06:35+00:00"
+        },
+        {
+            "name": "benjaminhirsch/nova-slug-field",
+            "version": "1.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomhatzer/nova-slug-field.git",
+                "reference": "d602e3033ed9c0ba2928a8ce1a7e8c7a9188c048"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomhatzer/nova-slug-field/zipball/d602e3033ed9c0ba2928a8ce1a7e8c7a9188c048",
+                "reference": "d602e3033ed9c0ba2928a8ce1a7e8c7a9188c048",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Benjaminhirsch\\NovaSlugField\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Benjaminhirsch\\NovaSlugField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Hirsch",
+                    "email": "mail@benjaminhirsch.net",
+                    "homepage": "https://www.benjaminhirsch.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Nova field to generate a slugs.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2020-09-23T17:10:16+00:00"
         },
         {
             "name": "bissolli/nova-phone-field",
@@ -6943,6 +7039,64 @@
                 }
             ],
             "time": "2020-11-12T00:07:28+00:00"
+        },
+        {
+            "name": "whitecube/nova-flexible-content",
+            "version": "v0.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whitecube/nova-flexible-content.git",
+                "reference": "6b48d047d864b1d8178d9dae1b3294ea1098d0d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whitecube/nova-flexible-content/zipball/6b48d047d864b1d8178d9dae1b3294ea1098d0d9",
+                "reference": "6b48d047d864b1d8178d9dae1b3294ea1098d0d9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Whitecube\\NovaFlexibleContent\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Whitecube\\NovaFlexibleContent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toon Van den Bos",
+                    "email": "toon@whitecube.be"
+                }
+            ],
+            "description": "Flexible Content & Repeater Fields for Laravel Nova.",
+            "keywords": [
+                "Flexible",
+                "field",
+                "group",
+                "laravel",
+                "layout",
+                "nova",
+                "repeat"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/whitecube",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-10-14T17:15:59+00:00"
         }
     ],
     "packages-dev": [
