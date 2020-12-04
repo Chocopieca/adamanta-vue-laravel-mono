@@ -12,6 +12,7 @@ use Laravel\Nova\Fields\Boolean;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use App\Nova\Traits\Image;
+use Laravel\Nova\Fields\Heading;
 
 class Category extends Resource
 {
@@ -81,7 +82,7 @@ class Category extends Resource
                 ->hideFromIndex()
                 ->hideFromDetail(),
 
-            $this->customImage('Изображение', 'image', 'authors')
+            $this->customImage('Изображение', 'image', 'categories')
                 ->rules('mimes:png,jpeg,jpg', 'max:2048'),
 
             Select::make('Родительская категория', 'parent_id')
@@ -89,12 +90,15 @@ class Category extends Resource
                 ->hideFromIndex(),
 
             Boolean::make('Активный', 'active')->sortable(),
+
+            Heading::make(__('admin.labels.description')),
+
             FormTranslations::init([
                 'id' => $this->id,
                 'model' => 'Category',
                 'related_id' => 'category_id',
                 'table' => 'category_descriptions',
-                'label' => 'Описание',
+                'label' => '',
                 'fields' =>  [
                     Text::make('Название', 'name')
                         ->rules('required', 'max:60'),

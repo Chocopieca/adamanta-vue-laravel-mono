@@ -6,10 +6,12 @@ use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Benjaminhirsch\NovaSlugField\Slug;
 use Laravel\Nova\Fields\Text;
 use CustomComponent\FormTranslations\FormTranslations;
 use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Heading;
 
 class Page extends Resource
 {
@@ -62,7 +64,7 @@ class Page extends Resource
                 return isset($this->localDescription->title) ? $this->localDescription->title : '---';
             })->onlyOnIndex(),
 
-            Text::make('SEO-url', 'slug')->rules('required', 'max:60')->hideFromIndex(),
+            Slug::make('SEO-url', 'slug')->rules('required', 'max:60')->hideFromIndex(),
             TextWithSlug::make('Название для SEO-url', 'slug_generate')
                 ->help('Поле для автогенерации SEO-url.')
                 ->slug('slug')
@@ -73,12 +75,14 @@ class Page extends Resource
             Boolean::make('Главная', 'home'),
             Boolean::make('No Index', 'no_index'),
 
+            Heading::make(__('admin.labels.description')),
+
             FormTranslations::init([
                 'id' => $this->id,
                 'model' => 'Page',
                 'related_id' => 'page_id',
                 'table' => 'page_descriptions',
-                'label' => __('admin.labels.description'),
+                'label' => '',
                 'fields' =>  [
                     Text::make(__('admin.labels.title'), 'title')
                         ->rules('required', 'max:60'),

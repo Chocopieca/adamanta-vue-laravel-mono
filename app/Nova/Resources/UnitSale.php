@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Heading;
 
 class UnitSale extends Resource
 {
@@ -60,12 +61,14 @@ class UnitSale extends Resource
             })->onlyOnIndex(),
             Boolean::make('Активная', 'active'),
 
+            Heading::make(__('admin.labels.description')),
+
             FormTranslations::init([
                 'id' => $this->id,
                 'model' => 'UnitSale',
                 'related_id' => 'unit_sale_id',
                 'table' => 'unit_sale_descriptions',
-                'label' => __('admin.labels.description'),
+                'label' => '',
                 'fields' =>  [
                     Text::make('Название', 'name')
                         ->rules('required', 'max:10'),

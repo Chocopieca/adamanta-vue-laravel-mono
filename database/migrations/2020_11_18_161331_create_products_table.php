@@ -16,7 +16,7 @@ class CreateProductsTable extends BaseMigration
             $table->id();
             $table->unsignedInteger('category_id');
             $table->string('slug', 140)->unique();
-            $table->string('image', 100)->default('');
+            $table->string('image', 100)->nullable();
             $table->boolean('availability')->unsigned()->default(0);
             $table->boolean('active')->unsigned()->default(0);
             $table->unsignedInteger('creator_id')->default(0)->index();

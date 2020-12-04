@@ -32,6 +32,7 @@ class NovaServiceProvider extends \Laravel\Nova\NovaApplicationServiceProvider
 
                 // Load observers
                 Language::observe(\App\Observers\Nova\LanguageObserver::class);
+                \App\Models\Product::observe(\App\Observers\Nova\ProductObserver::class);
 
                 Nova::provideToScript([
                     'languages' => $languages,

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    public $slug_generate = '';
     public $translations = false;
 
     /**
@@ -26,7 +27,12 @@ class Product extends Model
     public function languages()
     {
         return $this->hasMany(PageDescription::class)
-            ->select('product_descriptions.page_id', 'l.code')
+            ->select('product_descriptions.product_id', 'l.code')
             ->leftJoin('languages as l', 'l.id', '=', 'page_descriptions.language_id');
+    }
+
+    public function prices()
+    {
+        return $this->hasMany(ProductPrice::class);
     }
 }

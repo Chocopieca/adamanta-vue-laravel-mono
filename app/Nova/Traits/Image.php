@@ -4,9 +4,9 @@ namespace App\Nova\Traits;
 
 trait Image
 {
-    public function customImage($label, $name, $dir, $fit = false)
+    public function customImage($label, $name, $dir, $fit = false, $custom = false)
     {
-        return \Laravel\Nova\Fields\Image::make($label, $name)
+        return ($custom ? '\\R64\\NovaFields\\Image' : '\\Laravel\\Nova\\Fields\\Image')::make($label, $name)
             ->store(function () use ($name, $dir, $fit) {
                 $fileLarge = 'images/' . $dir . '/' . time() . '.JPEG';
 
