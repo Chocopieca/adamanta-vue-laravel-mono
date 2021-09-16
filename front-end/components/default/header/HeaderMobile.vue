@@ -6,15 +6,16 @@
       temporary
     >
       <div class="grey lighten-3 pa-5">
-        <a href="#">
+        <nuxt-link :to="$lang.link('/')">
           <v-img
-            @click="drawer = !drawer"
             lazy-src="image/logo.svg"
             src="image/logo.svg"
+            alt="Adamanta"
+            @click="drawer = !drawer"
           ></v-img>
-        </a>
+        </nuxt-link>
         <h1 class="light-green--text size18-weight700 ma-0 mb-5">Химия - это просто!</h1>
-        <Search isMobile class="mb-3"/>
+        <Search class="mb-3" is-mobile/>
         <div class="size14-weight400 d-flex align-end justify-center mb-5">
           <v-icon color="black" class="mr-2">mdi-map-marker</v-icon>
           Украина, Харьков
@@ -32,6 +33,7 @@
             fab
             icon
             small
+            @click="$refs.login.toggle()"
           >
             <v-icon color="black">mdi-account-circle</v-icon>
           </v-btn>
@@ -54,23 +56,40 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
+
+    <Dialog ref="login">
+      <LoginForm @forgotPass="$refs['forgot-login'].toggle()"/>
+    </Dialog>
+    <Dialog ref="forgot-login">
+      <ForgotLogin @submit="sendCode"/>
+    </Dialog>
+    <Dialog ref="forgot-pass">
+      <ForgotPassword @changePass="$refs['forgot-pass'].toggle()"/>
+    </Dialog>
   </div>
 </template>
 
 <script>
-import Search from '~~/components/common/search';
-import Language from '~~/components/common/language';
-
 export default {
   name: "HeaderMobile",
   components: {
-    Search,
-    Language,
+    Search: () => import('~~/components/common/Search'),
+    Language: () => import('~~/components/common/Language'),
+    Dialog: () => import('~~/components/common/Dialog'),
+    LoginForm: () => import('~~/components/system/LoginForm'),
+    ForgotLogin: () => import('~~/components/system/ForgotLogin'),
+    ForgotPassword: () => import('~~/components/system/ForgotPassword'),
   },
   data() {
     return {
       drawer: false,
       collapseOnScroll: true,
+    }
+  },
+  methods: {
+    sendCode() {
+      this.$refs['forgot-login'].toggle();
+      this.$refs['forgot-pass'].toggle();
     }
   }
 }

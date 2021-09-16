@@ -3,14 +3,15 @@
     <v-container>
       <v-row justify="center" align="end">
         <v-col>
-          <a href="#">
+          <nuxt-link :to="$lang.link('')">
             <v-img
               lazy-src="image/logo.svg"
               max-height="150"
               max-width="250"
               src="image/logo.svg"
+              alt="Adamanta"
             ></v-img>
-          </a>
+          </nuxt-link>
         </v-col>
         <v-col class="pb-2">
           <h1 class="light-green--text size18-weight700 ma-0">Химия - это просто!</h1>
@@ -30,7 +31,7 @@
         <v-col cols="1">
           <language />
         </v-col>
-        <v-col cols="2">
+        <v-col cols="3">
           <div class="d-flex justify-end header-buttons">
             <Search class="mr-2"/>
             <v-btn
@@ -40,6 +41,7 @@
               fab
               icon
               small
+              @click="$refs.login.toggle()"
             >
               <v-icon color="black">mdi-account-circle</v-icon>
             </v-btn>
@@ -49,6 +51,7 @@
               fab
               icon
               small
+              @click="$refs.login.toggle()"
             >
               <v-icon color="black">mdi-cart</v-icon>
             </v-btn>
@@ -56,19 +59,36 @@
         </v-col>
       </v-row>
     </v-container>
+
+    <Dialog ref="login">
+      <LoginForm @forgotPass="$refs['forgot-login'].toggle()"/>
+    </Dialog>
+    <Dialog ref="forgot-login">
+      <ForgotLogin @submit="sendCode"/>
+    </Dialog>
+    <Dialog ref="forgot-pass">
+      <ForgotPassword @changePass="$refs['forgot-pass'].toggle()"/>
+    </Dialog>
   </v-container>
 </template>
 
 <script>
-import Search from '~~/components/common/search'
-import Language from '~~/components/common/language'
-
 export default {
-  name: "Header",
+  name: "HeaderDesktop",
   components: {
-    Search,
-    Language
+    Search: () => import('~~/components/common/Search'),
+    Language: () => import('~~/components/common/Language'),
+    Dialog: () => import('~~/components/common/Dialog'),
+    LoginForm: () => import('~~/components/system/LoginForm'),
+    ForgotLogin: () => import('~~/components/system/ForgotLogin'),
+    ForgotPassword: () => import('~~/components/system/ForgotPassword'),
   },
+  methods: {
+    sendCode() {
+      this.$refs['forgot-login'].toggle();
+      this.$refs['forgot-pass'].toggle();
+    }
+  }
 }
 </script>
 
