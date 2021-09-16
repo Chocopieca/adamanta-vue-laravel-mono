@@ -24,3 +24,7 @@ npm-debug.log
 .php_cs.cache
 *.swp
 /frontend1
+/*/node_modules
+/*/.nuxt
+/*/.idea
+/*/.eslintcache

@@ -17,12 +17,12 @@
         class="black--text search-input"
         background-color="transparent"
         prepend-inner-icon="mdi-magnify"
-        @click:clear="search = !search"
         solo
         dense
         hide-details
         clearable
         clear-icon="mdi-close"
+        @click:clear="search = !search"
       />
       <v-btn
         v-else
