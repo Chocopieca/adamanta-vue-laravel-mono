@@ -1,0 +1,15 @@
+// Variables you want to modify
+$body-font-family: 'Helvetica', sans-serif !default;
+$font-size-root: 16px !default;
+$line-height-root: 1.5 !default;
+$border-radius-root: 4px !default;
+
+$grid-breakpoints: (
+  'xs': 0,
+  'sm': 340px,
+  'md': 540px,
+  'lg': 1324px - 24px,
+  'xl': 1324px - 24px
+);
+
+@import '~vuetify/src/styles/styles.sass';

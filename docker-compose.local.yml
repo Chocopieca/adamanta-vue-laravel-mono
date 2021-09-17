@@ -23,7 +23,7 @@ services:
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./:/app
     depends_on:
-      - app
+      - node
 
   node:
     build: ./docker/node

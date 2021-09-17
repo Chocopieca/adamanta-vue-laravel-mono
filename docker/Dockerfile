@@ -16,6 +16,7 @@ RUN apt-get update && \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libgd-dev \
+    dh-autoreconf \
     --no-install-recommends
 
 RUN apt-get clean && \
