@@ -36,7 +36,7 @@ services:
     ports:
       - 1780:1780
     volumes:
-      - ./frontend:/app
+      - ./front-end:/app
       - ./storage/app/public:/app/storage
     depends_on:
       - app

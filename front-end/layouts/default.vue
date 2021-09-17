@@ -1,8 +1,6 @@
 <template>
   <v-app>
-    <Header v-if="$vuetify.breakpoint.mdAndUp"/>
-    <HeaderMobile v-else/>
-
+    <Header />
     <!-- Sizes your content based upon application components -->
     <v-main>
 
@@ -20,27 +18,10 @@
 </template>
 
 <script>
-import HeaderMobile from '~~/components/default/header-mobile.vue';
-import Header from '~~/components/default/header.vue';
-
 export default {
   components: {
-    HeaderMobile,
-    Header
+    Header: () => import('~~/components/default/header/Header'),
   },
-  computed: {
-    meta () {
-      return [
-        { charset: 'utf-8' },
-        {
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1, maximum-scale=1 shrink-to-fit=no'
-        },
-        { hid: 'description', name: 'description', content: 'Главная' }
-      ]
-    }
-  },
-
   head () {
     const canonical = `https://loaclhost${this.$route.path
       .toLowerCase()
@@ -55,7 +36,19 @@ export default {
       ],
       link: [{ rel: 'canonical', href: canonical }]
     }
-  }
+  },
+  computed: {
+    meta () {
+      return [
+        { charset: 'utf-8' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1, maximum-scale=1 shrink-to-fit=no'
+        },
+        { hid: 'description', name: 'description', content: 'Главная' }
+      ]
+    }
+  },
 }
 </script>
 

@@ -1,15 +1,18 @@
 // Variables you want to modify
+//@import '~vuetify/src/styles/styles.sass';
+//@import '~vuetify/src/styles/settings/_variables.scss';
+//@import '~vuetify/src/styles/tools/_functions.sass';
+
+
+//@debug map-get($grid-breakpoints, 'md');
 $body-font-family: 'Helvetica', sans-serif !default;
 $font-size-root: 16px !default;
 $line-height-root: 1.5 !default;
 $border-radius-root: 4px !default;
 
-$grid-breakpoints: (
-  'xs': 0,
-  'sm': 340px,
-  'md': 540px,
-  'lg': 1324px - 24px,
-  'xl': 1324px - 24px
+$container-max-widths: (
+  'lg': 1300px,
+  'xl': 1300px
 );
 
 @import '~vuetify/src/styles/styles.sass';
