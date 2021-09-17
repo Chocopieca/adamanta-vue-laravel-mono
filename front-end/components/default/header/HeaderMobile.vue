@@ -6,7 +6,7 @@
       temporary
     >
       <div class="grey lighten-3 pa-5">
-        <nuxt-link :to="$lang.link('/')">
+        <nuxt-link :to="$lang.link('')">
           <v-img
             lazy-src="image/logo.svg"
             src="image/logo.svg"
@@ -33,7 +33,7 @@
             fab
             icon
             small
-            @click="$refs.login.toggle()"
+            @click="$emit('openDialog', 'profile')"
           >
             <v-icon color="black">mdi-account-circle</v-icon>
           </v-btn>
@@ -43,6 +43,7 @@
             fab
             icon
             small
+            @click="$emit('openDialog', 'basket')"
           >
             <v-icon color="black">mdi-cart</v-icon>
           </v-btn>
@@ -56,16 +57,6 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
-
-    <Dialog ref="login">
-      <LoginForm @forgotPass="$refs['forgot-login'].toggle()"/>
-    </Dialog>
-    <Dialog ref="forgot-login">
-      <ForgotLogin @submit="sendCode"/>
-    </Dialog>
-    <Dialog ref="forgot-pass">
-      <ForgotPassword @changePass="$refs['forgot-pass'].toggle()"/>
-    </Dialog>
   </div>
 </template>
 
@@ -75,10 +66,6 @@ export default {
   components: {
     Search: () => import('~~/components/common/Search'),
     Language: () => import('~~/components/common/Language'),
-    Dialog: () => import('~~/components/common/Dialog'),
-    LoginForm: () => import('~~/components/system/LoginForm'),
-    ForgotLogin: () => import('~~/components/system/ForgotLogin'),
-    ForgotPassword: () => import('~~/components/system/ForgotPassword'),
   },
   data() {
     return {
@@ -86,12 +73,6 @@ export default {
       collapseOnScroll: true,
     }
   },
-  methods: {
-    sendCode() {
-      this.$refs['forgot-login'].toggle();
-      this.$refs['forgot-pass'].toggle();
-    }
-  }
 }
 </script>
 

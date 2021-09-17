@@ -58,7 +58,7 @@ export default {
   methods: {
     goToSearchPage() {
       this.search = !this.search
-      this.$router.push({ name: 'SearchPage' })
+      this.$router.push({ name: this.$lang.link('search') })
     }
   }
 }

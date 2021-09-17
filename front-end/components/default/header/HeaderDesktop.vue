@@ -41,7 +41,7 @@
               fab
               icon
               small
-              @click="openDialog('ProfilePage')"
+              @click="$emit('openDialog', 'profile')"
             >
               <v-icon color="black">mdi-account-circle</v-icon>
             </v-btn>
@@ -51,7 +51,7 @@
               fab
               icon
               small
-              @click="openDialog('BasketPage')"
+              @click="$emit('openDialog', 'basket')"
             >
               <v-icon color="black">mdi-cart</v-icon>
             </v-btn>
@@ -59,20 +59,6 @@
         </v-col>
       </v-row>
     </v-container>
-
-    <Dialog ref="login">
-      <LoginForm
-        :link-to="dialog"
-        @forgotPass="$refs['forgot-login'].toggle()"
-        @close="$refs['login'].toggle()"
-      />
-    </Dialog>
-    <Dialog ref="forgot-login">
-      <ForgotLogin @submit="sendCode"/>
-    </Dialog>
-    <Dialog ref="forgot-pass">
-      <ForgotPassword @changePass="$refs['forgot-pass'].toggle()"/>
-    </Dialog>
   </v-container>
 </template>
 
@@ -82,26 +68,7 @@ export default {
   components: {
     Search: () => import('~~/components/common/Search'),
     Language: () => import('~~/components/common/Language'),
-    Dialog: () => import('~~/components/common/Dialog'),
-    LoginForm: () => import('~~/components/system/LoginForm'),
-    ForgotLogin: () => import('~~/components/system/ForgotLogin'),
-    ForgotPassword: () => import('~~/components/system/ForgotPassword'),
   },
-  data() {
-    return {
-      dialog: 'HomePage',
-    }
-  },
-  methods: {
-    sendCode() {
-      this.$refs['forgot-login'].toggle();
-      this.$refs['forgot-pass'].toggle();
-    },
-    openDialog(type) {
-      this.$refs.login.toggle();
-      this.dialog = type;
-    },
-  }
 }
 </script>
 
