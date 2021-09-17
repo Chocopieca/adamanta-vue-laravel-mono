@@ -23,7 +23,7 @@ public/mix-manifest.json
 npm-debug.log
 .php_cs.cache
 *.swp
-/frontend1
+/frontend
 /*/node_modules
 /*/.nuxt
 /*/.idea
