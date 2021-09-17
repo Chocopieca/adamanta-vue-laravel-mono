@@ -38,24 +38,32 @@
           Забыл пароль ?
         </v-btn>
       </v-row>
-      <v-btn
-        class="w-100 mb-6 white--text"
-        color="light-green"
-        rounded
-      >
-        Войти
-      </v-btn>
-      <v-btn
-        class="w-100 mb-6"
-        color="light-green"
-        rounded
-        outlined
-      >
-        Зарегестрироваться
-      </v-btn>
-      <v-btn text small class="w-100 text-underline">
-        Продолжить без регистрации
-      </v-btn>
+      <nuxt-link :to="{ name: linkTo }">
+        <v-btn
+          class="w-100 mb-6 white--text"
+          color="light-green"
+          rounded
+          @click="$emit('close')"
+        >
+          Войти
+        </v-btn>
+      </nuxt-link>
+      <nuxt-link :to="{ name: 'RegistrationPage' }">
+        <v-btn
+          class="w-100 mb-6"
+          color="light-green"
+          rounded
+          outlined
+          @click="$emit('close')"
+        >
+          Зарегестрироваться
+        </v-btn>
+      </nuxt-link>
+      <nuxt-link v-if="linkTo !== 'ProfilePage'" :to="{ name: linkTo }">
+        <v-btn text small class="w-100 text-underline" @click="$emit('close')">
+          Продолжить без регистрации
+        </v-btn>
+      </nuxt-link>
     </v-form>
   </div>
 </template>
@@ -63,6 +71,12 @@
 <script>
 export default {
   name: "LoginForm",
+  props: {
+    linkTo: {
+      type: String,
+      default: 'HomePage',
+    }
+  },
   data() {
     return {
       loginData: '',

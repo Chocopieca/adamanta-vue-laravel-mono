@@ -10,6 +10,7 @@
       hide-details
       clearable
       clear-icon="mdi-close"
+      @keyup.enter="goToSearchPage"
     />
     <template v-else>
       <v-text-field
@@ -23,6 +24,7 @@
         clearable
         clear-icon="mdi-close"
         @click:clear="search = !search"
+        @keydown.enter="goToSearchPage"
       />
       <v-btn
         v-else
@@ -53,6 +55,12 @@ export default {
       search: false,
     }
   },
+  methods: {
+    goToSearchPage() {
+      this.search = !this.search
+      this.$router.push({ name: 'SearchPage' })
+    }
+  }
 }
 </script>
 

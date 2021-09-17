@@ -41,7 +41,7 @@
               fab
               icon
               small
-              @click="$refs.login.toggle()"
+              @click="openDialog('ProfilePage')"
             >
               <v-icon color="black">mdi-account-circle</v-icon>
             </v-btn>
@@ -51,7 +51,7 @@
               fab
               icon
               small
-              @click="$refs.login.toggle()"
+              @click="openDialog('BasketPage')"
             >
               <v-icon color="black">mdi-cart</v-icon>
             </v-btn>
@@ -61,7 +61,11 @@
     </v-container>
 
     <Dialog ref="login">
-      <LoginForm @forgotPass="$refs['forgot-login'].toggle()"/>
+      <LoginForm
+        :link-to="dialog"
+        @forgotPass="$refs['forgot-login'].toggle()"
+        @close="$refs['login'].toggle()"
+      />
     </Dialog>
     <Dialog ref="forgot-login">
       <ForgotLogin @submit="sendCode"/>
@@ -83,11 +87,20 @@ export default {
     ForgotLogin: () => import('~~/components/system/ForgotLogin'),
     ForgotPassword: () => import('~~/components/system/ForgotPassword'),
   },
+  data() {
+    return {
+      dialog: 'HomePage',
+    }
+  },
   methods: {
     sendCode() {
       this.$refs['forgot-login'].toggle();
       this.$refs['forgot-pass'].toggle();
-    }
+    },
+    openDialog(type) {
+      this.$refs.login.toggle();
+      this.dialog = type;
+    },
   }
 }
 </script>

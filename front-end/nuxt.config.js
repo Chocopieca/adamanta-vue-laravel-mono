@@ -76,6 +76,7 @@ export default {
     '@nuxtjs/axios',
     'nuxt-trailingslash-module',
     'cookie-universal-nuxt',
+    '../modules/routes',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
