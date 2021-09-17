@@ -11,10 +11,7 @@
       />
     </Dialog>
     <Dialog ref="forgot-login">
-      <ForgotLogin @submit="sendCode"/>
-    </Dialog>
-    <Dialog ref="forgot-pass">
-      <ForgotPassword @changePass="$refs['forgot-pass'].toggle()"/>
+      <ForgotPassword @changePass="$refs['forgot-login'].toggle()"/>
     </Dialog>
   </div>
 </template>
@@ -27,7 +24,6 @@ export default {
     HeaderDesktop: () => import('~~/components/default/header/HeaderDesktop.vue'),
     Dialog: () => import('~~/components/common/Dialog'),
     LoginForm: () => import('~~/components/system/LoginForm'),
-    ForgotLogin: () => import('~~/components/system/ForgotLogin'),
     ForgotPassword: () => import('~~/components/system/ForgotPassword'),
   },
   data() {
@@ -36,10 +32,6 @@ export default {
     }
   },
   methods: {
-    sendCode() {
-      this.$refs['forgot-login'].toggle();
-      this.$refs['forgot-pass'].toggle();
-    },
     openDialog(type) {
       this.$refs.login.toggle();
       this.dialog = type;
