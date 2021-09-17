@@ -10,10 +10,10 @@ export default ({ app, env, store }, inject) => {
             return (app.$cookies.get('language') || 'ru')
         },
         link: (str, absolute = false) => {
-            let settings = store.getters['settings']
+            const settings = store.getters.settings
             let prefix = ''
 
-            if(settings['localizationEnabled']) {
+            if(settings.localizationEnabled) {
                 prefix = (app.$cookies.get('language') || 'ru') + '/'
             }
 
