@@ -1,36 +1,45 @@
 <template>
   <div class="search">
-    <v-text-field
-      v-if="search"
-      class="black--text search-input"
-      background-color="transparent"
-      prepend-inner-icon="mdi-magnify"
-      solo
-      dense
-      hide-details
-      clearable
-      autofocus
-      clear-icon="mdi-close"
-      @click:clear="search = !search"
-      @keydown.enter="goToSearchPage"
-    />
     <v-btn
-      v-else
       outlined
       fab
       color="light-green"
       icon
       small
-      @click="search = true"
+      @click="$refs.search.toggle()"
     >
       <v-icon color="black">mdi-magnify</v-icon>
     </v-btn>
+    <Dialog ref="search">
+      <v-text-field
+        class="black--text search-input mb-5"
+        background-color="transparent"
+        prepend-inner-icon="mdi-magnify"
+        solo
+        dense
+        hide-details
+        clearable
+        autofocus
+        clear-icon="mdi-close"
+      />
+      <v-btn
+        class="w-100 mb-6 white--text"
+        color="light-green"
+        rounded
+        @click="$refs.search.toggle()"
+      >
+        Поиск
+      </v-btn>
+    </Dialog>
   </div>
 </template>
 
 <script>
 export default {
-  name: "SearchDesktop",
+  name: "SearchMobile",
+  components: {
+    Dialog: () => import('~~/components/common/Dialog'),
+  },
   props: {
     isMobile: {
       type: Boolean,
@@ -40,6 +49,7 @@ export default {
   data() {
     return {
       search: false,
+      dialog: false,
     }
   },
   methods: {
