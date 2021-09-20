@@ -15,7 +15,6 @@
           ></v-img>
         </nuxt-link>
         <h1 class="light-green--text size18-weight700 ma-0 mb-5">Химия - это просто!</h1>
-        <Search class="mb-3" is-mobile/>
         <div class="size14-weight400 d-flex align-end justify-center mb-5">
           <v-icon color="black" class="mr-2">mdi-map-marker</v-icon>
           Украина, Харьков
@@ -26,6 +25,7 @@
         </div>
         <language  class="d-flex align-end justify-center mb-5"/>
         <div class="d-flex align-end justify-center header-buttons mb-3">
+          <SearchWithDialog class="mr-2" is-mobile/>
           <v-btn
             color="light-green"
             class="mr-2"
@@ -49,6 +49,7 @@
           </v-btn>
         </div>
       </div>
+      <NavMenu/>
     </v-navigation-drawer>
 
     <v-app-bar
@@ -64,8 +65,9 @@
 export default {
   name: "HeaderMobile",
   components: {
-    Search: () => import('~~/components/common/Search'),
+    SearchWithDialog: () => import('~~/components/common/SearchWithDialog'),
     Language: () => import('~~/components/common/Language'),
+    NavMenu: () => import('~~/components/default/header/NavMenu.vue')
   },
   data() {
     return {

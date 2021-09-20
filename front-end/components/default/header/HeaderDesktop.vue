@@ -5,10 +5,10 @@
         <v-col>
           <nuxt-link :to="$lang.link('')">
             <v-img
-              lazy-src="image/logo.svg"
+              :lazy-src="logoLink"
               max-height="150"
               max-width="250"
-              src="image/logo.svg"
+              :src="logoLink"
               alt="Adamanta"
             ></v-img>
           </nuxt-link>
@@ -59,6 +59,7 @@
         </v-col>
       </v-row>
     </v-container>
+    <NavMenu/>
   </v-container>
 </template>
 
@@ -68,7 +69,13 @@ export default {
   components: {
     Search: () => import('~~/components/common/Search'),
     Language: () => import('~~/components/common/Language'),
+    NavMenu: () => import('~~/components/default/header/NavMenu.vue')
   },
+  data() {
+    return {
+      logoLink: 'image/logo.svg',
+    }
+  }
 }
 </script>
 
