@@ -15,4 +15,6 @@ $container-max-widths: (
   'xl': 1300px
 );
 
+$btn-text-transform: none;
+
 @import '~vuetify/src/styles/styles.sass';
