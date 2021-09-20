@@ -26,14 +26,29 @@ export function createRouter () {
       component: () => import('~/pages/SearchPage').then(m => m.default || m)
     },
     {
-      path: '/search',
-      name: 'SearchPage',
-      component: () => import('~/pages/SearchPage').then(m => m.default || m)
-    },
-    {
       path: '/registration',
       name: 'RegistrationPage',
       component: () => import('~/pages/RegistrationPage').then(m => m.default || m)
+    },
+    {
+      path: '/category/:category',
+      name: 'CategoryPage',
+      component: () => import('~/pages/product/CategoryPage').then(m => m.default || m)
+    },
+    {
+      path: '/contacts',
+      name: 'ContactPage',
+      component: () => import('~/pages/ContactPage').then(m => m.default || m)
+    },
+    {
+      path: '/order_info',
+      name: 'OrderInfoPage',
+      component: () => import('~/pages/OrderInfoPage').then(m => m.default || m)
+    },
+    {
+      path: '/reviews',
+      name: 'ReviewsPage',
+      component: () => import('~/pages/ReviewsPage').then(m => m.default || m)
     },
   ]
 

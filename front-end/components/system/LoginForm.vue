@@ -38,7 +38,7 @@
           Забыл пароль ?
         </v-btn>
       </v-row>
-      <nuxt-link class="text-underline-none"  :to="$lang.link(linkTo)">
+      <nuxt-link :to="$lang.link(linkTo)">
         <v-btn
           class="w-100 mb-6 white--text"
           color="light-green"
@@ -48,7 +48,7 @@
           Войти
         </v-btn>
       </nuxt-link>
-      <nuxt-link class="text-underline-none" :to="$lang.link('registration')">
+      <nuxt-link :to="$lang.link('registration')">
         <v-btn
           class="w-100 mb-6"
           color="light-green"
@@ -59,7 +59,7 @@
           Зарегестрироваться
         </v-btn>
       </nuxt-link>
-      <nuxt-link v-if="linkTo !== 'ProfilePage'" :to="{ name: $lang.link(linkTo) }">
+      <nuxt-link v-if="linkTo !== 'ProfilePage'" :to="$lang.link(linkTo)">
         <v-btn text small class="w-100 text-underline" @click="$emit('close')">
           Продолжить без регистрации
         </v-btn>
