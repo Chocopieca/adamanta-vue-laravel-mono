@@ -17,4 +17,8 @@ $container-max-widths: (
 
 $btn-text-transform: none;
 
+//@debug $carousel-controls-bg;
+$carousel-controls-bg: transparent;
+
 @import '~vuetify/src/styles/styles.sass';
+$carousel-controls-bg: transparent;

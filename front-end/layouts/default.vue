@@ -5,7 +5,7 @@
     <v-main>
 
       <!-- Provides the application the proper gutter -->
-      <v-container fluid>
+      <v-container fluid class="pa-0">
         <!-- If using vue-router -->
         <nuxt></nuxt>
       </v-container>

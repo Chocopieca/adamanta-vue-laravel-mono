@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderDesktop @openDialog="openDialog" v-if="$vuetify.breakpoint.mdAndUp"/>
+    <HeaderDesktop @openDialog="openDialog" v-if="$vuetify.breakpoint.lgAndUp"/>
     <HeaderMobile @openDialog="openDialog" v-else/>
 
     <Dialog ref="login">
