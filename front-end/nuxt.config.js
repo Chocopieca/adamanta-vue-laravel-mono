@@ -40,7 +40,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'normalize.css',
-    { src: '@/assets/bootstrap', lang: 'scss' },
+  { src: '@/assets/bootstrap', lang: 'scss' },
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -48,10 +48,10 @@ export default {
     '@plugins/mixins',
     '@plugins/inject',
     '@plugins/axios',
-    // '@plugins/vuetify',
 
     { src: '@plugins/components/go-to-top.js', mode: 'client'},
     { src: '@plugins/components/front.js'},
+    { src: '@plugins/components/vue-slick-carousel.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
