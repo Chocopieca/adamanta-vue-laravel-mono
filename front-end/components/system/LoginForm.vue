@@ -6,17 +6,15 @@
       ref="form"
       lazy-validation
     >
-      <v-text-field
+      <TextField
         v-model="loginData"
         placeholder="E-mail / Phone"
-        outlined
         required
       />
 
-      <v-text-field
+      <TextField
         v-model="loginPassword"
         placeholder="Пароль"
-        outlined
         required
       />
 
@@ -29,40 +27,43 @@
           required
         />
 
-        <v-btn
+        <Button
+          :color-text="vuetifyMainBlack"
+          :color-button="vuetifyTransparent"
+          content="Забыл пароль ?"
           text
           small
           class="text-underline"
-          @click="$emit('forgotPass')"
-        >
-          Забыл пароль ?
-        </v-btn>
+          @submit="$emit('forgotPass')"
+        />
       </v-row>
       <nuxt-link :to="$lang.link(linkTo)">
-        <v-btn
-          class="w-100 mb-6 white--text"
-          color="light-green"
-          rounded
-          @click="$emit('close')"
-        >
-          Войти
-        </v-btn>
+        <Button
+          content="Войти"
+          class="w-100 mb-6"
+          @submit="$emit('close')"
+        />
       </nuxt-link>
       <nuxt-link :to="$lang.link('registration')">
-        <v-btn
+        <Button
+          content="Зарегестрироваться"
+          :color-button="vuetifyTransparent"
+          :color-text="vuetifyMainBlack"
           class="w-100 mb-6"
-          color="light-green"
-          rounded
           outlined
-          @click="$emit('close')"
-        >
-          Зарегестрироваться
-        </v-btn>
+          @submit="$emit('close')"
+        />
       </nuxt-link>
       <nuxt-link v-if="linkTo !== 'ProfilePage'" :to="$lang.link(linkTo)">
-        <v-btn text small class="w-100 text-underline" @click="$emit('close')">
-          Продолжить без регистрации
-        </v-btn>
+        <Button
+          :color-text="vuetifyMainBlack"
+          :color-button="vuetifyTransparent"
+          content="Продолжить без регистрации"
+          text
+          small
+          class="w-100 text-underline"
+          @submit="$emit('close')"
+        />
       </nuxt-link>
     </v-form>
   </div>
