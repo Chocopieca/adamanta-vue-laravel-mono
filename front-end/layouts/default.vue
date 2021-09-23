@@ -5,7 +5,7 @@
     <v-main>
 
       <!-- Provides the application the proper gutter -->
-      <v-container fluid class="pa-0">
+      <v-container fluid class="pa-0 mt-124">
         <!-- If using vue-router -->
         <nuxt></nuxt>
       </v-container>
@@ -53,5 +53,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '~vuetify/src/styles/styles.sass';
 
+.mt-124 {
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    margin-top: 124px;
+  }
+}
 </style>
