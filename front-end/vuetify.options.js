@@ -17,6 +17,7 @@ export default {
     options: { customProperties: true },
     themes: {
       light: {
+        anchor: "#000000",
         primary: colors.blue.darken2,
         accent: colors.grey.darken3,
         secondary: colors.amber.darken3,

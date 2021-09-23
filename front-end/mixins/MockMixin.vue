@@ -3,6 +3,24 @@ export default {
   name: "MockMixin",
   data() {
     return {
+      pages: [
+        {
+          title: 'Главная',
+          link: ''
+        },
+        {
+          title: 'Контакты',
+          link: 'contacts'
+        },
+        {
+          title: 'Доставка и оплата',
+          link: 'order_info'
+        },
+        {
+          title: 'Отзывы',
+          link: 'reviews'
+        },
+      ],
       bannerSlides: [
         {
           title: 'Lorem ipsum dolor sit amet',
@@ -29,42 +47,89 @@ export default {
         {
           icon: 'icons/category1.svg',
           title: 'Химия для дома',
-          link: 'category/khimiya_dlya_doma'
+          link: 'химия_для_дома'
         },
         {
           icon: 'icons/category1.svg',
           title: 'Химия для дома',
-          link: 'category/khimiya_dlya_doma'
+          link: 'химия_для_дома'
         },
         {
           icon: 'icons/category2.svg',
           title: 'Агрохимия',
-          link: 'category/agrokhimiya'
+          link: 'агрохимия'
         },
         {
           icon: 'icons/category3.svg',
           title: 'Техническая химия',
-          link: 'category/tekhnicheskaya_khimiya'
+          link: 'техническая_химия'
         },
         {
           icon: 'icons/category1.svg',
           title: 'Химия для дома',
-          link: 'category/khimiya_dlya_doma'
+          link: 'химия_для_дома'
         },
         {
           icon: 'icons/category1.svg',
           title: 'Химия для дома',
-          link: 'category/khimiya_dlya_doma'
+          link: 'химия_для_дома'
         },
         {
           icon: 'icons/category2.svg',
           title: 'Агрохимия',
-          link: 'category/agrokhimiya'
+          link: 'агрохимия'
         },
         {
           icon: 'icons/category3.svg',
           title: 'Техническая химия',
-          link: 'category/tekhnicheskaya_khimiya'
+          link: 'техническая_химия'
+        },
+      ],
+      categoryGroups: [
+        {
+          icon: 'icons/group1.svg',
+          title: 'Моющие и чистящие средства',
+          link: 'моющие_и_чистящие_средства'
+        },
+        {
+          icon: 'icons/group2.svg',
+          title: 'Дезинфицирующие средства',
+          link: 'дезинфицирующие_средства'
+        },
+        {
+          icon: 'icons/group3.svg',
+          title: 'Средства для кухни',
+          link: 'средства_для_кухни'
+        },
+        {
+          icon: 'icons/group4.svg',
+          title: 'Уход за домом',
+          link: 'уход_за_домом'
+        },
+        {
+          icon: 'icons/group1.svg',
+          title: 'Моющие и чистящие средства',
+          link: 'моющие_и_чистящие_средства'
+        },
+        {
+          icon: 'icons/group2.svg',
+          title: 'Дезинфицирующие средства',
+          link: 'дезинфицирующие_средства'
+        },
+        {
+          icon: 'icons/group3.svg',
+          title: 'Средства для кухни',
+          link: 'средства_для_кухни'
+        },
+        {
+          icon: 'icons/group4.svg',
+          title: 'Уход за домом',
+          link: 'уход_за_домом'
+        },
+        {
+          icon: 'icons/group1.svg',
+          title: 'Моющие и чистящие средства',
+          link: 'моющие_и_чистящие_средства'
         },
       ],
       benefits: [

@@ -31,9 +31,20 @@ export function createRouter () {
       component: () => import('~/pages/RegistrationPage').then(m => m.default || m)
     },
     {
-      path: '/category/:category',
-      name: 'CategoryPage',
-      component: () => import('~/pages/product/CategoryPage').then(m => m.default || m)
+      path: '/:category',
+      name: 'CategoryListPage',
+      props: (route) => ({
+        category: route.params.category
+      }),
+      component: () => import('~/pages/product/CategoryListPage').then(m => m.default || m),
+    },
+    {
+      path: '/:category/:group',
+      component: () => import('~/pages/product/GroupListPage').then(m => m.default || m),
+      props: (route) => ({
+        category: route.params.category,
+        group: route.params.group,
+      }),
     },
     {
       path: '/contacts',

@@ -7,6 +7,7 @@
     with-arrow
     with-dots
     infinite
+    autoplay
   >
     <template #slides>
       <div v-for="(item, index) in bannerSlides" :key="index">

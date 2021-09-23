@@ -162,8 +162,12 @@ export default {
   }
 }
 
-::v-deep.carousel .slick-dots {
-  display: none !important;
+::v-deep.carousel {
+  overflow: hidden;
+
+  .slick-dots {
+    display: none !important;
+  }
 }
 
 .banner-side-arrows {
