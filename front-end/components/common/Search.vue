@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <v-text-field
-      v-if="isMobile"
+      v-if="search"
       class="black--text search-input"
       background-color="transparent"
       prepend-inner-icon="mdi-magnify"
@@ -9,41 +9,28 @@
       dense
       hide-details
       clearable
+      autofocus
       clear-icon="mdi-close"
-      @keyup.enter="goToSearchPage"
+      @click:clear="search = !search"
+      @keydown.enter="goToSearchPage"
     />
-    <template v-else>
-      <v-text-field
-        v-if="search"
-        class="black--text search-input"
-        background-color="transparent"
-        prepend-inner-icon="mdi-magnify"
-        solo
-        dense
-        hide-details
-        clearable
-        clear-icon="mdi-close"
-        @click:clear="search = !search"
-        @keydown.enter="goToSearchPage"
-      />
-      <v-btn
-        v-else
-        outlined
-        fab
-        color="light-green"
-        icon
-        small
-        @click="search = true"
-      >
-        <v-icon color="black">mdi-magnify</v-icon>
-      </v-btn>
-    </template>
+    <v-btn
+      v-else
+      outlined
+      fab
+      color="light-green"
+      icon
+      small
+      @click="search = true"
+    >
+      <v-icon color="black">mdi-magnify</v-icon>
+    </v-btn>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Search",
+  name: "SearchDesktop",
   props: {
     isMobile: {
       type: Boolean,

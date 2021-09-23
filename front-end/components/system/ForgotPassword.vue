@@ -6,20 +6,17 @@
         <v-divider class="mb-6"/>
         <v-form ref="form" lazy-validation>
           <div class="size16-weight400 mb-3">Для смены пароля введите логин</div>
-          <v-text-field
+          <TextField
             v-model="forgotData"
             placeholder="e-mail / phone"
-            outlined
             required
           />
-          <v-btn
-            class="w-100 mb-6 white--text"
-            color="light-green"
-            rounded
-            @click="step++"
-          >
-            Отправить код
-          </v-btn>
+          <Button
+            content="Отправить код"
+            :color-button="vuetifyMainGreen"
+            class="w-100 mb-6"
+            @submit="step++"
+          />
         </v-form>
       </v-window-item>
       <v-window-item :value="2">
@@ -30,38 +27,34 @@
           lazy-validation
         >
           <div class="size16-weight400 mb-3">Введите код</div>
-          <v-text-field
+          <TextField
             v-model="enteredCode"
             placeholder="Код"
-            outlined
             required
           />
 
           <div class="size16-weight400 mb-3">Введите пароль</div>
-          <v-text-field
-            v-model="forgotPassword"
-            placeholder="Пароль"
-            :rules="(v) => v !== copyPassword || 'Пароль не совподает'"
-            outlined
+
+          <TextField
+            v-model="enteredCode"
+            placeholder="Код"
+            :rules="[(v) => v !== copyPassword || 'Пароль не совподает']"
             required
           />
 
           <div class="size16-weight400 mb-3">Подтвердите пароль</div>
-          <v-text-field
+          <TextField
             v-model="copyPassword"
             placeholder="Пароль"
-            outlined
             required
           />
 
-          <v-btn
-            class="w-100 mb-6 white--text"
-            color="light-green"
-            rounded
-            @click="submit"
-          >
-            Подтвердить
-          </v-btn>
+          <Button
+            content="Подтвердить"
+            :color-button="vuetifyMainGreen"
+            class="w-100 mb-6"
+            @submit="submit"
+          />
         </v-form>
       </v-window-item>
     </v-window>

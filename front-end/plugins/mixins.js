@@ -27,7 +27,37 @@ Vue.mixin({
         },
         getDeviceMode() {
             return this.$root.device_mode
-        }
+        },
+        vuetifyBreakpoint() {
+          return this.$vuetify.breakpoint
+        },
+        vuetifyMainGreen() {
+          return this.$vuetify.theme.themes.light.main_green;
+        },
+        vuetifyMainBlue() {
+          return this.$vuetify.theme.themes.light.main_blue;
+        },
+        vuetifyMainBlack_blue() {
+          return this.$vuetify.theme.themes.light.main_black_blue;
+        },
+        vuetifyMainWhite() {
+          return this.$vuetify.theme.themes.light.main_white;
+        },
+        vuetifyMainGray() {
+          return this.$vuetify.theme.themes.light.main_gray;
+        },
+        vuetifyWarning() {
+          return this.$vuetify.theme.themes.light.warning;
+        },
+        vuetifyError() {
+          return this.$vuetify.theme.themes.light.error;
+        },
+        vuetifyMainBlack() {
+          return this.$vuetify.theme.themes.light.main_black;
+        },
+        vuetifyTransparent() {
+          return '#00000000';
+        },
     },
     methods: {
         $t(label, defLabel = '') {

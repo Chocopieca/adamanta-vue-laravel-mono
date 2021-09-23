@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderDesktop @openDialog="openDialog" v-if="$vuetify.breakpoint.mdAndUp"/>
+    <HeaderDesktop @openDialog="openDialog" v-if="$vuetify.breakpoint.lgAndUp" class="header-fixed"/>
     <HeaderMobile @openDialog="openDialog" v-else/>
 
     <Dialog ref="login">
@@ -40,6 +40,9 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.header-fixed {
+  position: fixed;
+  z-index: 1;
+}
 </style>

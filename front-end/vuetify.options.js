@@ -28,6 +28,8 @@ export default {
         main_blue: "#236AB8",
         main_black_blue: "#091D34",
         main_white: "#FFFFFF",
+        main_gray: '#787885',
+        main_black: '#000',
       }
     }
   }

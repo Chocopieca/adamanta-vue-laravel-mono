@@ -5,25 +5,34 @@
         <v-col>
           <nuxt-link :to="$lang.link('')">
             <v-img
-              lazy-src="image/logo.svg"
+              :lazy-src="logoLink"
               max-height="150"
               max-width="250"
-              src="image/logo.svg"
+              :src="logoLink"
               alt="Adamanta"
             ></v-img>
           </nuxt-link>
         </v-col>
         <v-col class="pb-2">
-          <h1 class="light-green--text size18-weight700 ma-0">Химия - это просто!</h1>
+          <h1
+            class="light-green--text ma-0"
+            :class="vuetifyBreakpoint.xl ? 'size18-weight700' : 'size12-weight700'"
+          >Химия - это просто!</h1>
         </v-col>
         <v-col>
-          <div class="size14-weight400 d-flex align-end">
+          <div
+            class="d-flex align-end"
+            :class="vuetifyBreakpoint.xl ? 'size14-weight400' : 'size10-weight400'"
+          >
             <v-icon color="black" class="mr-2">mdi-map-marker</v-icon>
             Украина, Харьков
           </div>
         </v-col>
         <v-col>
-          <div class="size14-weight400 d-flex align-end">
+          <div
+            class="d-flex align-end"
+            :class="vuetifyBreakpoint.xl ? 'size14-weight400' : 'size10-weight400'"
+          >
             <v-icon color="black" class="mr-2">mdi-phone</v-icon>
             +380993177752
           </div>
@@ -31,7 +40,7 @@
         <v-col cols="1">
           <language />
         </v-col>
-        <v-col cols="3">
+        <v-col cols="2" lg="3">
           <div class="d-flex justify-end header-buttons">
             <Search class="mr-2"/>
             <v-btn
@@ -59,6 +68,7 @@
         </v-col>
       </v-row>
     </v-container>
+    <NavMenu/>
   </v-container>
 </template>
 
@@ -68,7 +78,13 @@ export default {
   components: {
     Search: () => import('~~/components/common/Search'),
     Language: () => import('~~/components/common/Language'),
+    NavMenu: () => import('~~/components/default/header/NavMenu.vue')
   },
+  data() {
+    return {
+      logoLink: 'image/logo.svg',
+    }
+  }
 }
 </script>
 
