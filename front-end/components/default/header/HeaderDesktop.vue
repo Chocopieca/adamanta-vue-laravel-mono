@@ -5,10 +5,10 @@
         <v-col>
           <nuxt-link :to="$lang.link('')">
             <v-img
-              :lazy-src="logoLink"
+              :lazy-src="baseUrl + logoLink"
               max-height="150"
               max-width="250"
-              :src="logoLink"
+              :src="baseUrl + logoLink"
               alt="Adamanta"
             ></v-img>
           </nuxt-link>
@@ -84,7 +84,7 @@ export default {
     return {
       logoLink: 'image/logo.svg',
     }
-  }
+  },
 }
 </script>
 

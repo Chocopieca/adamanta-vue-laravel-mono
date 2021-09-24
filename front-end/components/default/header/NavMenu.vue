@@ -21,9 +21,9 @@
           <v-list>
             <template v-for="(category, index) in navCategory">
               <template v-if="showNavItems(index)">
-                <nuxt-link :to="$lang.link(`${category.link}`)" :key="index">
+                <nuxt-link :to="$lang.link(`category/${category.link}`)" :key="index">
                   <v-list-item v-ripple class="py-1" @click="isShowItems = false">
-                    <v-img width="56" height="56" :src="category.icon" class="mr-3"/>
+                    <v-img width="56" height="56" :src="baseUrl + category.icon" class="mr-3"/>
                     <v-list-item-title>{{ category.title }}</v-list-item-title>
                   </v-list-item>
                 </nuxt-link>

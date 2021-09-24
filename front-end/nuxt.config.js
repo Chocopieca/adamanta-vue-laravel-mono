@@ -74,7 +74,7 @@ export default {
   modules: [
     ['nuxt-env', {
       keys: [
-        // { key: 'THIRD_ENV_VAR', name: 'MY_ENV_VAR' } // Rename the variable
+        { key: 'appBase', default: env.appBase },
       ]
     }],
     // https://go.nuxtjs.dev/axios
@@ -83,6 +83,10 @@ export default {
     'cookie-universal-nuxt',
     '../modules/routes',
   ],
+
+  env: {
+    // test: 'test123'
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

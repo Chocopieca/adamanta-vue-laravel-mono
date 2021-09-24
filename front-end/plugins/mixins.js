@@ -58,6 +58,9 @@ Vue.mixin({
         vuetifyTransparent() {
           return '#00000000';
         },
+        baseUrl() {
+          return this.$env.appBase;
+        },
     },
     methods: {
         $t(label, defLabel = '') {
