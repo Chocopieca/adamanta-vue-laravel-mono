@@ -1,8 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 const env = require('./.env.js').default
 const isDev = process.env.NODE_ENV !== 'production'
-const imageminMozjpeg = require('imagemin-mozjpeg')
-const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 export default {
   mode: 'universal',
@@ -177,28 +175,6 @@ export default {
           }
         }
       ]
-      const imageMinPlugin = new ImageminPlugin({
-        pngquant: {
-          quality: '5-30',
-          speed: 7,
-          strip: true
-        },
-        jpegtran: {
-          progressive: true
-
-        },
-        gifsicle: {
-          interlaced: true
-        },
-        plugins: [
-          imageminMozjpeg({
-            quality: 70,
-            progressive: true
-          })
-
-        ]
-      })
-      if (!ctx.isDev) config.plugins.push(imageMinPlugin)
 
       config.module.rules.forEach(rule => {
         if (rule.test.toString() === ORIGINAL_TEST) {
