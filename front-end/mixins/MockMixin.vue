@@ -260,6 +260,14 @@ export default {
         address: 'Харьков, ул Пушкинская, 10',
         working_time: 'пн-вс 09:00 - 18:00',
       },
+      order_info: {
+        delivery_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n' +
+          'Imperdiet lectus vestibulum sit cum id molestie purus at mattis. Integer pellentesque faucibus lacinia lorem lorem. \n' +
+          'Sed egestas egestas mauris mi tristique facilisi purus. Cursus aliquet purus amet suscipit at eu lorem tristique. Faucibus urna, semper  gravida at laoreet suspendisse amet, quam eget. Nisi ridiculus quam ipsum eu sit molestie pellentesque. In praesent  venenatis pharetra ullamcorper fermentum, dictum. Ipsum penatibus volutpat metus, ac tortor risus. Libero, cras maecenas turpis nam ac.',
+        payment_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n' +
+          'Imperdiet lectus vestibulum sit cum id molestie purus at mattis. Integer pellentesque faucibus lacinia lorem lorem. \n' +
+          'Sed egestas egestas mauris mi tristique facilisi purus. Cursus aliquet purus amet suscipit at eu lorem tristique. Faucibus urna, semper  gravida at laoreet suspendisse amet, quam eget. Nisi ridiculus quam ipsum eu sit molestie pellentesque. In praesent  venenatis pharetra ullamcorper fermentum, dictum. Ipsum penatibus volutpat metus, ac tortor risus. Libero, cras maecenas turpis nam ac.',
+      },
 
     }
   }
