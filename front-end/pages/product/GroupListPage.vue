@@ -1,16 +1,6 @@
 <template>
   <v-container class="pa-0">
-    <v-breadcrumbs :items="breadcrumbs" divider="/" class="pa-3">
-      <template v-slot:item="{ item }">
-        <v-breadcrumbs-item
-          nuxt
-          exact
-          :to="item.href"
-        >
-          {{ item.text }}
-        </v-breadcrumbs-item>
-      </template>
-    </v-breadcrumbs>
+    <Breadcrumbs :items="breadcrumbs"/>
     <div>{{ group }}</div>
   </v-container>
 </template>
@@ -18,6 +8,9 @@
 <script>
 export default {
   name: "GroupListPage",
+  components: {
+    Breadcrumbs: () => import('~~/components/common/Breadcrumbs'),
+  },
   props: {
     category: {
       type: String,
@@ -37,11 +30,11 @@ export default {
         },
         {
           text: this.textConvertor(this.category),
-          href: `/${this.category}`,
+          href: `/category/${this.category}`,
         },
         {
           text: this.textConvertor(this.group),
-          href: `/${this.category}/${this.group}`,
+          href: `/category/${this.category}/${this.group}`,
         },
       ]
     }
