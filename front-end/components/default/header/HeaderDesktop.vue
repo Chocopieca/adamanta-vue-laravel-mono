@@ -14,10 +14,10 @@
           </nuxt-link>
         </v-col>
         <v-col class="pb-2">
-          <h1
+          <h2
             class="light-green--text ma-0"
             :class="vuetifyBreakpoint.xl ? 'size18-weight700' : 'size12-weight700'"
-          >Химия - это просто!</h1>
+          >Химия - это просто!</h2>
         </v-col>
         <v-col>
           <div
