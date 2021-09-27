@@ -250,7 +250,17 @@ export default {
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo est sed vitae molestie velit aenean nisl. Lorem egestas fermentum mattis etiam. Lorem urna enim sed integer vel est. Velit faucibus vestibulum massa feugiat tincidunt viverra lobortis magna. Velit faucibus vestibulum massa. Velit faucibus vestibulum massa.',
           date: new Date,
         },
-      ]
+      ],
+      contacts: {
+        numbers: [
+          '+38 (099) 000 00 00',
+          '+38 (099) 000 00 00',
+          '+38 (099) 000 00 00',
+        ],
+        address: 'Харьков, ул Пушкинская, 10',
+        working_time: 'пн-вс 09:00 - 18:00',
+      },
+
     }
   }
 }

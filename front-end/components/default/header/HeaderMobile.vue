@@ -14,7 +14,7 @@
             @click="drawer = !drawer"
           ></v-img>
         </nuxt-link>
-        <h1 class="light-green--text size18-weight700 ma-0 mb-5">Химия - это просто!</h1>
+        <h2 class="light-green--text size18-weight700 ma-0 mb-5">Химия - это просто!</h2>
         <div class="size14-weight400 d-flex align-end justify-center mb-5">
           <v-icon color="black" class="mr-2">mdi-map-marker</v-icon>
           Украина, Харьков

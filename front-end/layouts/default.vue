@@ -4,9 +4,7 @@
     <!-- Sizes your content based upon application components -->
     <v-main>
 
-      <!-- Provides the application the proper gutter -->
       <v-container fluid class="pa-0 mt-124">
-        <!-- If using vue-router -->
         <nuxt></nuxt>
       </v-container>
     </v-main>
