@@ -20,8 +20,6 @@
     "cross-env": "^7.0.3",
     "cssnano": "^5.0.8",
     "cssnano-preset-advanced": "^5.1.4",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-webpack-plugin": "^2.4.2",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.15.7",
     "nuxt-trailingslash-module": "^1.2.0",

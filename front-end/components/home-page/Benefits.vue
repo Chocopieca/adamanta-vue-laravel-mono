@@ -8,7 +8,7 @@
       </p>
     </v-col>
     <v-col v-for="(item, index) in benefits" :key="index" cols="12" sm="4" class="flex-center flex-column pa-10">
-      <v-img :src="item.icon" contain width="80" height="80" class="mb-5"/>
+      <v-img :src="baseUrl + item.icon" contain width="80" height="80" class="mb-5"/>
       <h3 class="size22-weight700 mb-5">{{ item.title }}</h3>
       <p class="align-center size14-weight400">{{ item.content }}</p>
     </v-col>

@@ -11,7 +11,7 @@
   >
     <template #slides>
       <div v-for="(item, index) in bannerSlides" :key="index">
-        <v-img :src="item.background" cover :height="vuetifyBreakpoint.lgAndUp ? 700 : 500">
+        <v-img :src="baseUrl + item.background" cover :height="vuetifyBreakpoint.lgAndUp ? 700 : 500">
           <v-container class="pt-16">
             <v-col sm="8" md="8" lg="6" class="banner-content">
               <h2

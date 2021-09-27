@@ -12,7 +12,7 @@
       <template #slides>
         <div v-for="(item, index) in popularProducts" :key="index">
           <v-card class="ma-3" elevation="0">
-            <v-img :src="item.image" height="102px" />
+            <v-img :src="baseUrl + item.image" height="102px" />
 
             <v-card-title>{{ item.title }}</v-card-title>
 

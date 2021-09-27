@@ -20,23 +20,13 @@
           </template>
           <v-list>
             <template v-for="(category, index) in navCategory">
-              <template v-if="showNavItems(index)">
-                <nuxt-link :to="$lang.link(`${category.link}`)" :key="index">
-                  <v-list-item v-ripple class="py-1" @click="isShowItems = false">
-                    <v-img width="56" height="56" :src="category.icon" class="mr-3"/>
-                    <v-list-item-title>{{ category.title }}</v-list-item-title>
-                  </v-list-item>
-                </nuxt-link>
-              </template>
+              <nuxt-link :to="$lang.link(`category/${category.link}`)" :key="index">
+                <v-list-item v-ripple class="py-1" @click="isShowItems = false">
+                  <v-img width="56" height="56" :src="baseUrl + category.icon" class="mr-3"/>
+                  <v-list-item-title>{{ category.title }}</v-list-item-title>
+                </v-list-item>
+              </nuxt-link>
             </template>
-            <v-list-item v-if="!isShowItems" v-ripple @click.stop.prevent="toggleNavMenu">
-              <v-icon class="pl-4 pr-5">mdi-dots-horizontal</v-icon>
-              <v-list-item-title>Еще</v-list-item-title>
-            </v-list-item>
-            <v-list-item v-else v-ripple @click.stop.prevent="toggleNavMenu">
-              <v-icon class="pl-4 pr-5">mdi-dots-horizontal</v-icon>
-              <v-list-item-title>Убрать</v-list-item-title>
-            </v-list-item>
           </v-list>
         </v-menu>
 
@@ -65,9 +55,6 @@ export default {
     toggleNavMenu() {
       this.isShowItems = !this.isShowItems;
     },
-    showNavItems(index) {
-      return this.isShowItems || index < 3
-    }
   }
 }
 </script>

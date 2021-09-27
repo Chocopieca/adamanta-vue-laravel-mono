@@ -8,8 +8,8 @@
       <div class="grey lighten-3 pa-5">
         <nuxt-link :to="$lang.link('')">
           <v-img
-            lazy-src="image/logo.svg"
-            src="image/logo.svg"
+            :lazy-src="baseUrl + logoLink"
+            :src="baseUrl + logoLink"
             alt="Adamanta"
             @click="drawer = !drawer"
           ></v-img>
@@ -73,6 +73,7 @@ export default {
     return {
       drawer: false,
       collapseOnScroll: true,
+      logoLink: 'image/logo.svg',
     }
   },
 }

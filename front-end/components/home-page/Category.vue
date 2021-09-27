@@ -16,7 +16,7 @@
             height="174"
             @click="routeToCategory(item.link)"
           >
-            <v-img :src="item.icon" contain height="88" width="88"/>
+            <v-img :src="baseUrl + item.icon" contain height="88" width="88"/>
             <div class="size18-weight700">{{ item.title }}</div>
           </v-card>
         </div>
@@ -36,7 +36,7 @@ export default {
   mixins: [MockMixin],
   methods: {
     routeToCategory(link) {
-      this.$router.push(link);
+      this.$router.push(`category/${link}`);
     },
   }
 }

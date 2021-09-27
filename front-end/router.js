@@ -31,7 +31,7 @@ export function createRouter () {
       component: () => import('~/pages/RegistrationPage').then(m => m.default || m)
     },
     {
-      path: '/:category',
+      path: '/category/:category',
       name: 'CategoryListPage',
       props: (route) => ({
         category: route.params.category
@@ -39,7 +39,7 @@ export function createRouter () {
       component: () => import('~/pages/product/CategoryListPage').then(m => m.default || m),
     },
     {
-      path: '/:category/:group',
+      path: '/category/:category/:group',
       component: () => import('~/pages/product/GroupListPage').then(m => m.default || m),
       props: (route) => ({
         category: route.params.category,

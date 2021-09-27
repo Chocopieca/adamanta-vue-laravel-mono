@@ -1,6 +1,6 @@
 FROM php:7.3-fpm
 
-RUN apt-get update && \
+RUN apt-get update -y && \
     apt-get install -y \
     git \
     libpq-dev \
@@ -16,7 +16,6 @@ RUN apt-get update && \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libgd-dev \
-    dh-autoreconf \
     --no-install-recommends
 
 RUN apt-get clean && \
