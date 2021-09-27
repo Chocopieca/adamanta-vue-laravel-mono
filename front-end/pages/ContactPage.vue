@@ -2,7 +2,7 @@
   <v-container class="pa-0">
     <Breadcrumbs :items="breadcrumbs"/>
     <div class="px-3">
-      <h1 class="mb-5">Контакты</h1>
+      <h1 class="mb-5 size20-weight700">Контакты</h1>
       <v-row no-gutters>
         <v-col cols="12" md="2" class="mb-10">
           <span :style="`color: ${vuetifyMainBlue};`">Телефон</span>
@@ -31,10 +31,10 @@ import MockMixin from "../mixins/MockMixin";
 
 export default {
   name: "ContactPage",
-  mixins: [MockMixin],
   components: {
     Breadcrumbs: () => import('~~/components/common/Breadcrumbs'),
   },
+  mixins: [MockMixin],
   data() {
     return {
       breadcrumbs: [

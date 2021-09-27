@@ -3,7 +3,7 @@
     <v-container>
       <v-row  no-gutters align="center">
         <v-menu offset-y>
-          <template v-slot:activator="{ on, attrs }">
+          <template #activator="{ on, attrs }">
             <v-btn
               class="size18-weight700 mr-5 mb-5 mb-md-0"
               color="primary"
@@ -20,7 +20,7 @@
           </template>
           <v-list>
             <template v-for="(category, index) in navCategory">
-              <nuxt-link :to="$lang.link(`category/${category.link}`)" :key="index">
+              <nuxt-link :key="index" :to="$lang.link(`category/${category.link}`)">
                 <v-list-item v-ripple class="py-1" @click="isShowItems = false">
                   <v-img width="56" height="56" :src="baseUrl + category.icon" class="mr-3"/>
                   <v-list-item-title>{{ category.title }}</v-list-item-title>
@@ -31,7 +31,7 @@
         </v-menu>
 
         <template v-for="(page, index) in pages">
-          <nuxt-link :to="$lang.link(page.link)" :key="index">
+          <nuxt-link :key="index" :to="$lang.link(page.link)">
             <v-btn text class="mr-5">
               <span class="size18-weight700">{{ page.title }}</span>
             </v-btn>

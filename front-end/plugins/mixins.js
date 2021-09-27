@@ -122,5 +122,15 @@ Vue.mixin({
 
             history.pushState({}, null, this.$route.path + (params.length ? '?' + params : ''))
         },
+        dateConvertor(timestamp = new Date) {
+          let month = String(timestamp.getMonth() + 1);
+          let day = String(timestamp.getDate());
+          const year = String(timestamp.getFullYear());
+
+          if (month.length < 2) month = '0' + month;
+          if (day.length < 2) day = '0' + day;
+
+          return `${day}.${month}.${year}`;
+        },
     }
 })
