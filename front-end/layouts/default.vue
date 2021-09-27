@@ -11,9 +11,7 @@
       </v-container>
     </v-main>
 
-    <v-footer app>
-      <!-- -->
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
 
@@ -21,6 +19,7 @@
 export default {
   components: {
     Header: () => import('~~/components/default/header/Header'),
+    Footer: () => import('~~/components/default/footer/Footer'),
   },
   head () {
     const canonical = `https://loaclhost${this.$route.path
