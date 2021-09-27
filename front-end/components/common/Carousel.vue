@@ -1,6 +1,12 @@
 <template>
   <div class="position-relative">
-    <VueSlickCarousel ref="carousel" v-bind="settings" class="carousel" :style="`max-height: ${maxHeight}px`" @afterChange="currentSlide = $event">
+    <VueSlickCarousel
+      ref="carousel"
+      v-bind="settings"
+      class="carousel"
+      :style="`max-height: ${maxHeight}px`"
+      @afterChange="currentSlide = $event"
+    >
       <slot name="slides"></slot>
     </VueSlickCarousel>
 
@@ -99,6 +105,7 @@ export default {
         "autoplay": this.autoplay,
         "accessibility": true,
         "arrows": false,
+        'lazyLoad': 'ondemand',
         "responsive": [
           {
             "breakpoint": 1264,

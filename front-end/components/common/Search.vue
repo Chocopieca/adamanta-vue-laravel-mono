@@ -6,11 +6,13 @@
       background-color="transparent"
       prepend-inner-icon="mdi-magnify"
       solo
+      flat
       dense
       hide-details
       clearable
       autofocus
       clear-icon="mdi-close"
+      @blur="search = !search"
       @click:clear="search = !search"
       @keydown.enter="goToSearchPage"
     />
