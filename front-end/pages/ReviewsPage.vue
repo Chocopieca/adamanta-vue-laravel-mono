@@ -5,11 +5,24 @@
       <h1 class="mb-5 size20-weight700">Отзывы</h1>
       <v-row no-gutters class="mb-md-16">
         <template v-for="(item, index) in reviews">
-          <v-col :key="index" cols="12" md="3">
-            <ReviewCard :item="item" @openDialog="openDialog(item)"/>
-          </v-col>
+          <template v-if="index < displayedReviews">
+            <v-col :key="index" cols="12" md="3">
+              <ReviewCard :item="item" @openDialog="openDialog(item)"/>
+            </v-col>
+          </template>
         </template>
       </v-row>
+
+      <div class="flex-center mb-md-16">
+        <Button
+          :color-text="vuetifyMainWhite"
+          content="Еще отзывы"
+          :min-height="54"
+          :max-width="246"
+          class="size18-weight700 w-100"
+          @submit="displayedReviews += 4"
+        />
+      </div>
 
       <div class="mb-md-16">
         <PopularProducts />
@@ -45,6 +58,7 @@ export default {
         },
       ],
       currentReview: {},
+      displayedReviews: 8,
     }
   },
   methods: {
