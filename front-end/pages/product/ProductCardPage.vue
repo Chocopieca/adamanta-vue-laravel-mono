@@ -1,15 +1,17 @@
 <template>
-  <v-container class="pa-0">
-    <Breadcrumbs :items="breadcrumbs"/>
-    <div>{{ group }}</div>
-  </v-container>
+  <CommonPagesLayout :breadcrumbs="breadcrumbs">
+    <div>{{ product }}</div>
+  </CommonPagesLayout>
 </template>
 
 <script>
+import MockMixin from "../../mixins/MockMixin";
+
 export default {
-  name: "GroupListPage",
+  name: "ProductCardPage",
+  mixins: [MockMixin],
   components: {
-    Breadcrumbs: () => import('~~/components/common/Breadcrumbs'),
+    CommonPagesLayout: () => import('~~/components/feature/CommonPagesLayout'),
   },
   props: {
     category: {
@@ -17,6 +19,10 @@ export default {
       default: ''
     },
     group: {
+      type: String,
+      default: ''
+    },
+    product: {
       type: String,
       default: ''
     },
@@ -36,19 +42,12 @@ export default {
           text: this.textConvertor(this.group),
           href: `/category/${this.category}/${this.group}`,
         },
+        {
+          text: this.textConvertor(this.product),
+          href: `/category/${this.category}/${this.group}/${this.product}`,
+        },
       ]
     }
   },
-  methods: {
-    textConvertor(text) {
-      const regExp = /\w/ig;
-      const newText = text.replace(regExp, ' ');
-      return `${newText[0].toUpperCase()}${newText.slice(1)}`;
-    }
-  }
 }
 </script>
-
-<style scoped lang="scss">
-
-</style>

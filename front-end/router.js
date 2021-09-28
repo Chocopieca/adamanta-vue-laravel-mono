@@ -40,10 +40,19 @@ export function createRouter () {
     },
     {
       path: '/category/:category/:group',
-      component: () => import('~/pages/product/GroupListPage').then(m => m.default || m),
+      component: () => import('~/pages/product/ProductListPage').then(m => m.default || m),
       props: (route) => ({
         category: route.params.category,
         group: route.params.group,
+      }),
+    },
+    {
+      path: '/category/:category/:group/:product',
+      component: () => import('~/pages/product/ProductCardPage').then(m => m.default || m),
+      props: (route) => ({
+        category: route.params.category,
+        group: route.params.group,
+        product: route.params.product,
       }),
     },
     {
