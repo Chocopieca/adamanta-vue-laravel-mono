@@ -1,5 +1,5 @@
 <template>
-  <div class="position-relative">
+  <div class="position-relative pa-3">
     <h2 class="mb-md-16">Популярные товары</h2>
     <Carousel
       siad-arrow

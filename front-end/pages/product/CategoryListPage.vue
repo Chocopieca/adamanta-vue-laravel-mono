@@ -1,6 +1,5 @@
 <template>
-  <v-container class="pa-0">
-    <Breadcrumbs :items="breadcrumbs"/>
+  <CommonPagesLayout :breadcrumbs="breadcrumbs">
     <v-row no-gutters class="mb-md-100 mb-16">
       <v-col v-for="(item, index) in categoryGroups" :key="index" cols="12" sm="6" md="4" class="pa-3">
         <nuxt-link :to="$lang.link(`category/${category}/${item.link}`)">
@@ -11,20 +10,16 @@
         </nuxt-link>
       </v-col>
     </v-row>
-
-    <PopularProducts class="mb-md-100 mb-16" />
-
-  </v-container>
+  </CommonPagesLayout>
 </template>
 
 <script>
 import MockMixin from "../../mixins/MockMixin";
 
 export default {
-  name: "CategoryList",
+  name: "CategoryListPage",
   components: {
-    PopularProducts: () => import('~~/components/home-page/PopularProducts'),
-    Breadcrumbs: () => import('~~/components/common/Breadcrumbs'),
+    CommonPagesLayout: () => import('~~/components/feature/CommonPagesLayout'),
   },
   mixins: [MockMixin],
   props: {
@@ -47,13 +42,6 @@ export default {
       ]
     }
   },
-  methods: {
-    textConvertor(text) {
-      const regExp = /\w/ig;
-      const newText = text.replace(regExp, ' ');
-      return `${newText[0].toUpperCase()}${newText.slice(1)}`;
-    }
-  }
 }
 </script>
 

@@ -315,6 +315,152 @@ export default {
           date: new Date,
         },
       ],
+      categoryProducts: [
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: true,
+          price: {
+            value: 1,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: false,
+          price: {
+            value: 11,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: true,
+          price: {
+            value: 111,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: false,
+          price: {
+            value: 1111,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: true,
+          price: {
+            value: 11111,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: true,
+          price: {
+            value: 777,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: true,
+          price: {
+            value: 1,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: false,
+          price: {
+            value: 11,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: true,
+          price: {
+            value: 111,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: false,
+          price: {
+            value: 1111,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: true,
+          price: {
+            value: 11111,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'СОДА ПИЩЕВАЯ',
+          link: 'сода_пищевая',
+          type: 'Оптом и в розницу',
+          available: true,
+          price: {
+            value: 777,
+            currency: '₴',
+            weight: '500 г'
+          }
+        },
+      ],
       contacts: {
         numbers: [
           '+38 (099) 000 00 00',
