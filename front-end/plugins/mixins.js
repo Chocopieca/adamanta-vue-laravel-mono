@@ -132,5 +132,10 @@ Vue.mixin({
 
           return `${day}.${month}.${year}`;
         },
+        textConvertor(text) {
+          const regExp = /\w/ig;
+          const newText = text.replace(regExp, ' ');
+          return `${newText[0].toUpperCase()}${newText.slice(1)}`;
+        },
     }
 })
