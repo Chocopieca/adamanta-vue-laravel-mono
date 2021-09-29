@@ -10,7 +10,7 @@
     :rounded="rounded"
     @click="$emit('submit')"
   >
-    <span v-if="content" :class="icon ? 'flex-center mt-1 mr-5' : ''">{{ content }}</span>
+    <span v-if="content" :class="icon ? 'flex-center mt-1 mr-5' : ''" class="pt-1">{{ content }}</span>
     <v-icon v-if="icon">{{ icon }}</v-icon>
   </v-btn>
 </template>

@@ -1,25 +1,32 @@
 <template>
-  <div class="position-relative">
-    <h2 class="mb-md-16">Отзывы</h2>
-    <Carousel
-      siad-arrow
-      :with-side-arrow="vuetifyBreakpoint.lgAndUp"
-      :slides-to-show="[1, 2, 3, 3]"
-      :banner-slides="reviews"
-      :with-arrow="false"
-      :with-dots="false"
-    >
-      <template #slides>
-        <template v-for="(item, index) in lastReviews">
-          <div :key="index">
-            <ReviewCard :item="item" @openDialog="openDialog(item)"/>
-          </div>
+  <v-lazy
+    v-model="isActive"
+    :options="{ threshold: .5 }"
+    min-height="200"
+    transition="fade-transition"
+  >
+    <div class="position-relative">
+      <h2 class="mb-md-16">Отзывы</h2>
+      <Carousel
+        siad-arrow
+        :with-side-arrow="vuetifyBreakpoint.lgAndUp"
+        :slides-to-show="[1, 2, 3, 3]"
+        :banner-slides="reviews"
+        :with-arrow="false"
+        :with-dots="false"
+      >
+        <template #slides>
+          <template v-for="(item, index) in lastReviews">
+            <div :key="index">
+              <ReviewCard :item="item" @openDialog="openDialog(item)"/>
+            </div>
+          </template>
         </template>
-      </template>
-    </Carousel>
+      </Carousel>
 
-    <ReviewsDialog ref="review" :current-review="currentReview"/>
-  </div>
+      <ReviewsDialog ref="review" :current-review="currentReview"/>
+    </div>
+  </v-lazy>
 </template>
 
 <script>
@@ -36,6 +43,7 @@ export default {
   data() {
     return {
       currentReview: {},
+      isActive: false,
     }
   },
   computed: {

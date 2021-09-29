@@ -1,10 +1,11 @@
 <template>
   <v-breadcrumbs :items="items" divider="/" class="pa-3">
-    <template v-slot:item="{ item }">
+    <template #item="{ item }">
       <v-breadcrumbs-item
         nuxt
         exact
         :to="item.href"
+        :class="vuetifyBreakpoint.mdAndUp ? 'size14-weight400' : 'size10-weight400'"
       >
         {{ item.text }}
       </v-breadcrumbs-item>

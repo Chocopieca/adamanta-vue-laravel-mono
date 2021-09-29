@@ -5,6 +5,7 @@
     :placeholder="placeholder"
     :outlined="outlined"
     :required="required"
+    :dense="dence"
   />
 </template>
 
@@ -27,6 +28,10 @@ export default {
     outlined: {
       type: Boolean,
       default: true
+    },
+    dense: {
+      type: Boolean,
+      default: false
     },
     required: {
       type: Boolean,

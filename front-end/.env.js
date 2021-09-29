@@ -7,7 +7,6 @@ export default {
     baseUrl: base,
     backUrl: back,
     assetUrl: base + 'storage/',
-    appBase: 'http://172.20.0.7:1780/',
     apiUrl: base + 'api/',
     axiosBaseUrl: 'http://webserver/api/',
 

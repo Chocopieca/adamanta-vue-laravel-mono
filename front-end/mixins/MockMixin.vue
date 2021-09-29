@@ -3,6 +3,10 @@ export default {
   name: "MockMixin",
   data() {
     return {
+      user: {
+        avatar: 'image/avatar1.svg',
+        full_name: 'Кристина Емец',
+      },
       pages: [
         {
           title: 'Главная',
@@ -159,6 +163,9 @@ export default {
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
+          product: 'сода_пищевая',
           available: true,
           price: {
             value: 1,
@@ -169,6 +176,9 @@ export default {
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
+          product: 'сода_пищевая',
           available: false,
           price: {
             value: 11,
@@ -179,6 +189,9 @@ export default {
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
+          product: 'сода_пищевая',
           available: true,
           price: {
             value: 111,
@@ -189,6 +202,9 @@ export default {
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
+          product: 'сода_пищевая',
           available: false,
           price: {
             value: 1111,
@@ -199,6 +215,9 @@ export default {
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
+          product: 'сода_пищевая',
           available: true,
           price: {
             value: 11111,
@@ -209,6 +228,9 @@ export default {
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
+          product: 'сода_пищевая',
           available: true,
           price: {
             value: 777,
@@ -478,7 +500,94 @@ export default {
           'Imperdiet lectus vestibulum sit cum id molestie purus at mattis. Integer pellentesque faucibus lacinia lorem lorem. \n' +
           'Sed egestas egestas mauris mi tristique facilisi purus. Cursus aliquet purus amet suscipit at eu lorem tristique. Faucibus urna, semper  gravida at laoreet suspendisse amet, quam eget. Nisi ridiculus quam ipsum eu sit molestie pellentesque. In praesent  venenatis pharetra ullamcorper fermentum, dictum. Ipsum penatibus volutpat metus, ac tortor risus. Libero, cras maecenas turpis nam ac.',
       },
-
+      productCard: {
+        image: 'image/product-image.svg',
+        title: 'СОДА ПИЩЕВАЯ',
+        link: 'сода_пищевая',
+        type: 'Оптом и в розницу',
+        category: 'химия_для_дома',
+        group: 'моющие_и_чистящие_средства',
+        product: 'сода_пищевая',
+        available: true,
+        price: [
+          {
+            value: 10,
+            currency: '₴',
+            weight: '500 г'
+          },
+          {
+            value: 20,
+            currency: '₴',
+            weight: '1 кг'
+          },
+          {
+            value: 100,
+            currency: '₴',
+            weight: '5 кг'
+          }
+        ],
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla integer porttitor at mi enim pellentesque nunc. Sit velit sodales in tempor, nunc vestibulum. Bibendum nec nec cursus morbi. Lacus, pretium quisque imperdiet id accumsan augue eget. Elementum feugiat nec eu viverra etiam diam fusce. Facilisi adipiscing dolor fames dictumst sit sollicitudin volutpat at. Elit bibendum dui eu ornare. Iaculis tellus tellus neque at augue. Magna sed lorem parturient euismod velit, dolor ut posuere.',
+        usage: [
+          'Экологически чистое средство для мытья посуды с легкостью отмывает жир...',
+          'Легко отмывает пригоревший жир сосковороды, кастрюли. При кипячении ',
+          'Чистит и дезинфицирует ванну, раковинну, кафель. Гипоалергенное средство ...',
+          'Отбеливает зубы, снимает налет, освежает дыхание...',
+          'Чистит ювелирные изделия, столовое серебро...',
+          'Используеться в качестве разрыхлителя привыпечке. Кроме того ...',
+          'Усиливает действие стирального порошка, смягчает воду..',
+          'Чистит мягкую мебель и ковры...',
+        ],
+        reviews: [
+          {
+            avatar: 'image/avatar1.svg',
+            full_name: 'Кристина Емец',
+            stars: 4,
+            title: 'Lorem ipsum',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo est sed vitae molestie velit aenean nisl. Lorem egestas fermentum mattis etiam. Lorem urna enim sed integer vel est. Velit faucibus vestibulum massa feugiat tincidunt viverra lobortis magna. Velit faucibus vestibulum massa. Velit faucibus vestibulum massa.',
+            date: new Date,
+          },
+          {
+            avatar: 'image/avatar1.svg',
+            full_name: 'Кристина Емец',
+            stars: 4,
+            title: 'Lorem ipsum',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo est sed vitae molestie velit aenean nisl. Lorem egestas fermentum mattis etiam. Lorem urna enim sed integer vel est. Velit faucibus vestibulum massa feugiat tincidunt viverra lobortis magna. Velit faucibus vestibulum massa. Velit faucibus vestibulum massa.',
+            date: new Date,
+          },
+          {
+            avatar: 'image/avatar1.svg',
+            full_name: 'Кристина Емец',
+            stars: 4,
+            title: 'Lorem ipsum',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo est sed vitae molestie velit aenean nisl. Lorem egestas fermentum mattis etiam. Lorem urna enim sed integer vel est. Velit faucibus vestibulum massa feugiat tincidunt viverra lobortis magna. Velit faucibus vestibulum massa. Velit faucibus vestibulum massa.',
+            date: new Date,
+          },
+          {
+            avatar: 'image/avatar1.svg',
+            full_name: 'Кристина Емец',
+            stars: 4,
+            title: 'Lorem ipsum',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo est sed vitae molestie velit aenean nisl. Lorem egestas fermentum mattis etiam. Lorem urna enim sed integer vel est. Velit faucibus vestibulum massa feugiat tincidunt viverra lobortis magna. Velit faucibus vestibulum massa. Velit faucibus vestibulum massa.',
+            date: new Date,
+          },
+          {
+            avatar: 'image/avatar1.svg',
+            full_name: 'Кристина Емец',
+            stars: 4,
+            title: 'Lorem ipsum',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo est sed vitae molestie velit aenean nisl. Lorem egestas fermentum mattis etiam. Lorem urna enim sed integer vel est. Velit faucibus vestibulum massa feugiat tincidunt viverra lobortis magna. Velit faucibus vestibulum massa. Velit faucibus vestibulum massa.',
+            date: new Date,
+          },
+          {
+            avatar: 'image/avatar1.svg',
+            full_name: 'Кристина Емец',
+            stars: 4,
+            title: 'Lorem ipsum',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo est sed vitae molestie velit aenean nisl. Lorem egestas fermentum mattis etiam. Lorem urna enim sed integer vel est. Velit faucibus vestibulum massa feugiat tincidunt viverra lobortis magna. Velit faucibus vestibulum massa. Velit faucibus vestibulum massa.',
+            date: new Date,
+          },
+        ]
+      },
     }
   }
 }

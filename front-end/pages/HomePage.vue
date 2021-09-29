@@ -2,7 +2,7 @@
   <v-container fluid class="pa-0">
     <Banner />
 
-    <v-container class="pa-0 mb-md-150">
+    <v-container class="pa-0">
       <Category />
     </v-container>
 
