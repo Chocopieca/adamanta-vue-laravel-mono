@@ -8,14 +8,13 @@ export default {
     modern: 'client'
   }),
 
-  static: {
-    prefix: false
-  },
 
   server: {
     port: 1780,
     host: '0.0.0.0',
   },
+
+  serverMiddleware: ['~/middleware/NuxtServerLogger'],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -72,7 +71,7 @@ export default {
   modules: [
     ['nuxt-env', {
       keys: [
-        { key: 'appBase', default: env.appBase },
+        { key: 'appBase', default: env.baseUrl },
       ]
     }],
     // https://go.nuxtjs.dev/axios
@@ -81,10 +80,6 @@ export default {
     'cookie-universal-nuxt',
     '../modules/routes',
   ],
-
-  env: {
-    // test: 'test123'
-  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

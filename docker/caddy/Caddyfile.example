@@ -12,6 +12,7 @@ https://back.adamanta.com.ua {
     #errors /var/log/caddy/error.log
 
     tls back.adamanta@gmail.com
+    #tls self_signed
 }
 
 https://adamanta.com.ua {
@@ -24,4 +25,5 @@ https://adamanta.com.ua {
     #errors /var/log/caddy/error.log
 
     tls adamanta@gmail.com
+    #tls self_signed
 }
