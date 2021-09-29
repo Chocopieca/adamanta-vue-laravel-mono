@@ -10,7 +10,7 @@
 
     <v-card-title>
       <v-avatar size="64">
-        <img alt="user" :src="item.avatar">
+        <img alt="user" :src="baseUrl + item.avatar">
       </v-avatar>
       <div class="ml-3">
         <div :class="vuetifyBreakpoint.xl ? 'size16-weight700' : 'size14-weight700'">{{ item.full_name }}</div>

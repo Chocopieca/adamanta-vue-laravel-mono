@@ -12,7 +12,7 @@
       <v-card-title class="d-flex justify-space-between">
         <div class="d-flex">
           <v-avatar size="64">
-            <img alt="user" :src="currentReview.avatar">
+            <img alt="user" :src="baseUrl + currentReview.avatar">
           </v-avatar>
 
           <div class="ml-3">
