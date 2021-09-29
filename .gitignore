@@ -28,3 +28,5 @@ npm-debug.log
 /*/.nuxt
 /*/.idea
 /*/.eslintcache
+/*/dist
+/front-end/.env.js
