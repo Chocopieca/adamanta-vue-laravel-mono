@@ -8,9 +8,8 @@
         </v-container>
 
         <v-container v-if="tab.name === 'usage'" class="my-10 pa-md-0">
-          <div v-for="(content, id) in productCard.usage" :key="id" class="mb-3">
-            <span>{{ id + 1 }}:</span> {{ content }}
-            <v-divider />
+          <div v-for="(content, id) in productCard.usage" :key="id" class="my-5">
+            <span class="usage-id">{{ id + 1 }}</span> {{ content }}
           </div>
         </v-container>
 
@@ -127,3 +126,12 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+.usage-id {
+  background: var(--v-main_green-base);
+  border-radius: 50%;
+  color: white;
+  padding: 7px 10px;
+}
+</style>
