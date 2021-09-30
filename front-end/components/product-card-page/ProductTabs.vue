@@ -63,42 +63,23 @@
                   :color-button="vuetifyMainGreen"
                   class="w-100"
                   :max-width="200"
+                  @submit="openSuccessReviewDialog"
                 />
               </v-col>
             </v-row>
           </div>
 
-          <div>
-            <h3 class="size20-weight700">Отзывы</h3>
-            <v-row no-gutters class="pa-0">
-              <v-col
-                v-for="(review, reviewIndex) in productCard.reviews"
-                :key="reviewIndex"
-                md="4"
-                class="pa-0"
-              >
-                <template v-if="index < displayedReviews">
-                  <ReviewCard :item="review" @openDialog="openDialog(review)"/>
-                </template>
-              </v-col>
-            </v-row>
-          </div>
-
-          <div class="flex-center mb-md-16">
-            <Button
-              :color-text="vuetifyMainWhite"
-              content="Еще отзывы"
-              :min-height="54"
-              :max-width="246"
-              class="size18-weight700 w-100"
-              @submit="displayedReviews += 4"
-            />
-          </div>
+          <ReviewsList
+            :reviews="productCard.reviews"
+            :number-of-cards="3"
+            :adding-cars="3"
+            :card-cols-in-row="4"
+          />
         </v-container>
       </v-tab-item>
     </Tabs>
 
-    <ReviewsDialog ref="review" :current-review="currentReview"/>
+    <SuccessReviewDialog ref="successReview"/>
   </div>
 </template>
 
@@ -110,8 +91,8 @@ export default {
   name: "ProductTabs",
   components: {
     Tabs: () => import('~~/components/common/Tabs'),
-    ReviewCard: () => import('~~/components/reviews-page/ReviewCard'),
-    ReviewsDialog: () => import('~~/components/reviews-page/ReviewsDialog'),
+    ReviewsList: () => import('~~/components/common/ReviewsList'),
+    SuccessReviewDialog: () => import('~~/components/product-card-page/SuccessReviewDialog'),
   },
   mixins: [MockMixin],
   data() {
@@ -140,9 +121,8 @@ export default {
     }
   },
   methods: {
-    openDialog(item) {
-      this.currentReview = item;
-      this.$refs.review.openDialog();
+    openSuccessReviewDialog() {
+      this.$refs.successReview.openDialog();
     },
   }
 }
