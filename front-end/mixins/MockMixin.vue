@@ -3,7 +3,7 @@ export default {
   name: "MockMixin",
   data() {
     return {
-      user: {
+      userProfile: {
         avatar: 'image/avatar1.svg',
         full_name: 'Кристина Емец',
       },
