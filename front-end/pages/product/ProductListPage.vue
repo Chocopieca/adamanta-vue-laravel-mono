@@ -53,6 +53,7 @@
         v-model="page"
         :length="productPages"
         :total-visible="7"
+        circle
       ></v-pagination>
     </div>
 

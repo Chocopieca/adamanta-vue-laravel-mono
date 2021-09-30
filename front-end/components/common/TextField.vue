@@ -5,7 +5,7 @@
     :placeholder="placeholder"
     :outlined="outlined"
     :required="required"
-    :dense="dence"
+    :dense="dense"
   />
 </template>
 
