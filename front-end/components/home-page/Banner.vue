@@ -27,7 +27,8 @@
                 content="Купить"
                 :min-height="54"
                 :max-width="246"
-                class="size18-weight700 w-100"
+                font-size="size18-weight700"
+                class="w-100"
               />
             </v-col>
           </v-container>

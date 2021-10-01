@@ -11,7 +11,8 @@
               content="Подписаться"
               :color-button="vuetifyTransparent"
               :color-text="vuetifyMainWhite"
-              class="size16-weight700 w-100"
+              font-size="size16-weight700"
+              class="w-100"
               outlined
               @submit="$emit('close')"
             />
