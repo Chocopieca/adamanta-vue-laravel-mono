@@ -16,6 +16,11 @@ export function createRouter () {
       component: () => import('~/pages/BasketPage').then(m => m.default || m)
     },
     {
+      path: '/checkout',
+      name: 'CheckoutPage',
+      component: () => import('~/pages/CheckoutPage').then(m => m.default || m)
+    },
+    {
       path: '/profile',
       name: 'ProfilePage',
       component: () => import('~/pages/ProfilePage').then(m => m.default || m)
