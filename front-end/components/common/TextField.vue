@@ -6,12 +6,17 @@
     :outlined="outlined"
     :required="required"
     :dense="dense"
+    @click="$emit('input', $event.target.value)"
   />
 </template>
 
 <script>
 export default {
   name: "TextField",
+  model: {
+    prop: 'value',
+    event: 'input',
+  },
   props: {
     value: {
       type: String,
