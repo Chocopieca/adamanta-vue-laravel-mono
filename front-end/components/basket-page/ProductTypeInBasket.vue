@@ -86,7 +86,7 @@ export default {
   },
   data() {
     return {
-      productType: 0,
+      productType: null,
       count: null,
     }
   },
@@ -112,6 +112,7 @@ export default {
   },
   mounted() {
     this.count = this.order.count
+    this.productType = this.order.selectedWeight
   },
   methods: {
     changeProductType(type) {

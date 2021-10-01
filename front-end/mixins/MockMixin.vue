@@ -488,6 +488,7 @@ export default {
           productId: 123,
           inBasket: true,
           count: 1,
+          selectedWeight: 0,
           product: {
             image: 'image/popularProduct.svg',
             title: 'СОДА ПИЩЕВАЯ',
@@ -517,6 +518,7 @@ export default {
           productId: 124,
           inBasket: true,
           count: 1,
+          selectedWeight: 0,
           product: {
             image: 'image/popularProduct.svg',
             title: 'СОДА ПИЩЕВАЯ',
