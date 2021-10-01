@@ -10,9 +10,9 @@
         </v-col>
         <v-col cols="12" md="3">
           <h2 class="mb-5 size20-weight700">Итог заказа</h2>
-          <div><span class="mr-10 size18-weight400">Итог</span> {{ priceSum }}₴</div>
+          <div><span class="mr-10 size18-weight400">{{ sumProductInOrder }}</span> {{ sumPriceInOrder }}₴</div>
           <v-divider class="mb-5"/>
-          <div class="mb-5 size24-weight700"><span class="mr-10">К оплате</span> {{ priceSum }}₴</div>
+          <div class="mb-5 size24-weight700"><span class="mr-10">К оплате</span> {{ sumPriceInOrder }}₴</div>
 
           <Button
             :color-text="vuetifyMainWhite"
@@ -61,8 +61,25 @@ export default {
           href: `/basket`,
         },
       ],
-      priceSum: 10,
+      prices: [],
     }
   },
+  computed: {
+    sumProductInOrder() {
+      let total = 0;
+      this.productsInOrder.forEach(item => {
+        total += item.count
+      })
+      const text = total === 1 ? 'товар' : total < 5 ? 'товара' : 'товаров';
+      return `${total} ${text} на сумму`
+    },
+    sumPriceInOrder() {
+      let total = 0;
+      this.productsInOrder.forEach(item => {
+        total += item.count * item.product.price[item.selectedWeight].value;
+      })
+      return total;
+    }
+  }
 }
 </script>
