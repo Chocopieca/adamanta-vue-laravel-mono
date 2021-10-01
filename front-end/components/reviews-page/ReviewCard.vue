@@ -45,7 +45,7 @@
         icon="mdi-ray-start-arrow"
         content="Весь отзыв"
         text
-        class="size14-weight400"
+        font-size="size14-weight400"
         @submit="$emit('openDialog')"
       />
 

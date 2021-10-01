@@ -483,6 +483,66 @@ export default {
           }
         },
       ],
+      productsInOrder: [
+        {
+          productId: 123,
+          inBasket: true,
+          count: 1,
+          product: {
+            image: 'image/popularProduct.svg',
+            title: 'СОДА ПИЩЕВАЯ',
+            link: 'сода_пищевая',
+            type: 'Оптом и в розницу',
+            available: true,
+            price: [
+              {
+                value: 10,
+                currency: '₴',
+                weight: '500 г'
+              },
+              {
+                value: 20,
+                currency: '₴',
+                weight: '1 кг'
+              },
+              {
+                value: 100,
+                currency: '₴',
+                weight: '5 кг'
+              }
+            ]
+          },
+        },
+        {
+          productId: 124,
+          inBasket: true,
+          count: 1,
+          product: {
+            image: 'image/popularProduct.svg',
+            title: 'СОДА ПИЩЕВАЯ',
+            link: 'сода_пищевая',
+            type: 'Оптом и в розницу',
+            available: true,
+            price: [
+              {
+                value: 10,
+                currency: '₴',
+                weight: '500 г'
+              },
+              {
+                value: 20,
+                currency: '₴',
+                weight: '1 кг'
+              },
+              {
+                value: 100,
+                currency: '₴',
+                weight: '5 кг'
+              }
+            ]
+          },
+        },
+      ],
       contacts: {
         numbers: [
           '+38 (099) 000 00 00',
