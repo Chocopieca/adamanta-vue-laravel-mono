@@ -2,6 +2,7 @@
   <div class="search">
     <v-text-field
       v-if="search"
+      v-model="searchText"
       class="black--text search-input"
       background-color="transparent"
       prepend-inner-icon="mdi-magnify"
@@ -42,12 +43,14 @@ export default {
   data() {
     return {
       search: false,
+      searchText: '',
     }
   },
   methods: {
     goToSearchPage() {
-      this.search = !this.search
-      this.$router.push({ name: this.$lang.link('search') })
+      this.search = !this.search;
+      this.$router.push({ path: this.$lang.link(`search/?q=${this.searchText}`) });
+      this.searchText = '';
     }
   }
 }

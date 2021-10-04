@@ -12,6 +12,7 @@
     </v-btn>
     <Dialog ref="search">
       <v-text-field
+        v-model="searchText"
         class="black--text search-input mb-5"
         background-color="transparent"
         prepend-inner-icon="mdi-magnify"
@@ -50,12 +51,14 @@ export default {
     return {
       search: false,
       dialog: false,
+      searchText: '',
     }
   },
   methods: {
     goToSearchPage() {
-      this.search = !this.search
-      this.$router.push({ name: this.$lang.link('search') })
+      this.search = !this.search;
+      this.$router.push({ name: this.$lang.link(`search/?q=${this.searchText}`) });
+      this.searchText = '';
     }
   }
 }
