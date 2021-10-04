@@ -61,7 +61,7 @@
         <v-divider />
       </div>
 
-      <nuxt-link to="/" class="d-flex justify-end">
+      <nuxt-link :to="$lang.link('')" class="d-flex justify-end">
         <Button
           :color-text="vuetifyMainWhite"
           content="Подтвердить заказ"

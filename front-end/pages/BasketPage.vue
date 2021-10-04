@@ -14,7 +14,7 @@
           <v-divider class="mb-5"/>
           <div class="mb-5 size24-weight700"><span class="mr-10">К оплате</span> {{ sumPriceInOrder }}₴</div>
 
-          <nuxt-link to="/checkout">
+          <nuxt-link :to="$lang.link('/checkout')">
             <Button
               :color-text="vuetifyMainWhite"
               content="Оформить заказ"
@@ -25,7 +25,7 @@
             />
           </nuxt-link>
 
-          <nuxt-link to="/">
+          <nuxt-link :to="$lang.link('')">
             <Button
               content="Продолжить покупки"
               :color-button="vuetifyTransparent"

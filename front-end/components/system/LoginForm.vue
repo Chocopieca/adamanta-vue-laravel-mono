@@ -15,6 +15,7 @@
       <TextField
         v-model="loginPassword"
         placeholder="Пароль"
+        password
         required
       />
 
