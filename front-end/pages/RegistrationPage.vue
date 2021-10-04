@@ -1,12 +1,80 @@
 <template>
-  <div>
-    RegistrationPage
-  </div>
+  <v-container class="mb-md-10">
+    <h1 class="size20-weight700 ma-0 mb-5 mb-md-10">Регистрация</h1>
+    <v-row no-gutters>
+      <v-col cols="12" md="6" class="pr-md-10">
+        <div class="size18-weight700 mb-3">Ваше имя</div>
+        <TextField
+          v-model="userCredo.firstName"
+          placeholder="Имя"
+          dense
+        />
+        <div class="size18-weight700 mb-3">Ваша фамилия</div>
+        <TextField
+          v-model="userCredo.secondName"
+          placeholder="Фамилия"
+          dense
+        />
+        <div class="size18-weight700 mb-3">Дата рождения</div>
+        <DatePiker v-model="userCredo.birthday"/>
+        <div class="size18-weight700 mb-3">E-mail</div>
+        <TextField
+          v-model="userCredo.email"
+          placeholder="1314sjg@gmail.com"
+          dense
+        />
+      </v-col>
+      <v-col cols="12" md="6" class="pl-md-10">
+        <div class="size18-weight700 mb-3">Придумайте ароль</div>
+        <TextField
+          v-model="userCredo.email"
+          placeholder="Вашь пароль"
+          password
+          dense
+        />
+        <div class="size18-weight700 mb-3">Повторите пароль</div>
+        <TextField
+          v-model="userCredo.email"
+          placeholder="Вашь пароль"
+          password
+          dense
+        />
+        <div class="size18-weight700 mb-3">Номер телефона</div>
+        <TextField
+          v-model="userCredo.email"
+          placeholder="+380 (__)___-__-__"
+          dense
+        />
+        <nuxt-link :to="$lang.link('')" class="flex-center">
+          <Button
+            content="Зарегестрироваться"
+            :color-button="vuetifyMainGreen"
+            class="w-100 mb-6"
+            :max-width="411"
+          />
+        </nuxt-link>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 export default {
-  name: "RegistrationPage"
+  name: "RegistrationPage",
+  components: {
+    DatePiker: () => import('~~/components/common/DatePiker'),
+  },
+  data() {
+    return {
+      userCredo: {
+        firstName: '',
+        secondName: '',
+        birthday: '',
+        email: '',
+        password: '',
+      }
+    }
+  }
 }
 </script>
 
