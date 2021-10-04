@@ -167,11 +167,23 @@ export default {
           group: 'моющие_и_чистящие_средства',
           product: 'сода_пищевая',
           available: true,
-          price: {
-            value: 1,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
@@ -180,11 +192,23 @@ export default {
           group: 'моющие_и_чистящие_средства',
           product: 'сода_пищевая',
           available: false,
-          price: {
-            value: 11,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
@@ -193,11 +217,23 @@ export default {
           group: 'моющие_и_чистящие_средства',
           product: 'сода_пищевая',
           available: true,
-          price: {
-            value: 111,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
@@ -206,11 +242,23 @@ export default {
           group: 'моющие_и_чистящие_средства',
           product: 'сода_пищевая',
           available: false,
-          price: {
-            value: 1111,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
@@ -219,11 +267,23 @@ export default {
           group: 'моющие_и_чистящие_средства',
           product: 'сода_пищевая',
           available: true,
-          price: {
-            value: 11111,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
@@ -232,11 +292,23 @@ export default {
           group: 'моющие_и_чистящие_средства',
           product: 'сода_пищевая',
           available: true,
-          price: {
-            value: 777,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
       ],
       reviews: [
@@ -341,146 +413,314 @@ export default {
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: true,
-          price: {
-            value: 1,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: false,
-          price: {
-            value: 11,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: true,
-          price: {
-            value: 111,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: false,
-          price: {
-            value: 1111,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: true,
-          price: {
-            value: 11111,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: true,
-          price: {
-            value: 777,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: true,
-          price: {
-            value: 1,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: false,
-          price: {
-            value: 11,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: true,
-          price: {
-            value: 111,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: false,
-          price: {
-            value: 1111,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: true,
-          price: {
-            value: 11111,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
         {
           image: 'image/popularProduct.svg',
           title: 'СОДА ПИЩЕВАЯ',
-          link: 'сода_пищевая',
           type: 'Оптом и в розницу',
+          product: 'сода_пищевая',
+          category: 'химия_для_дома',
+          group: 'моющие_и_чистящие_средства',
           available: true,
-          price: {
-            value: 777,
-            currency: '₴',
-            weight: '500 г'
-          }
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
         },
       ],
       productsInOrder: [
@@ -492,8 +732,10 @@ export default {
           product: {
             image: 'image/popularProduct.svg',
             title: 'СОДА ПИЩЕВАЯ',
-            link: 'сода_пищевая',
             type: 'Оптом и в розницу',
+            product: 'сода_пищевая',
+            category: 'химия_для_дома',
+            group: 'моющие_и_чистящие_средства',
             available: true,
             price: [
               {
@@ -522,8 +764,10 @@ export default {
           product: {
             image: 'image/popularProduct.svg',
             title: 'СОДА ПИЩЕВАЯ',
-            link: 'сода_пищевая',
             type: 'Оптом и в розницу',
+            product: 'сода_пищевая',
+            category: 'химия_для_дома',
+            group: 'моющие_и_чистящие_средства',
             available: true,
             price: [
               {
