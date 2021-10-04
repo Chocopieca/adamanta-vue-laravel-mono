@@ -5,8 +5,11 @@
     :placeholder="placeholder"
     :outlined="outlined"
     :required="required"
+    :type="password ? showPassword : ''"
     :dense="dense"
+    :append-icon="password ? appendIcon : ''"
     @click="$emit('input', $event.target.value)"
+    @click:append="show = !show"
   />
 </template>
 
@@ -45,6 +48,23 @@ export default {
     rules: {
       type: Array,
       default: () => []
+    },
+    password: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  data() {
+    return {
+      show: false,
+    }
+  },
+  computed: {
+    showPassword() {
+      return this.show ? 'text' : 'password';
+    },
+    appendIcon() {
+     return !this.show ? 'mdi-eye' : 'mdi-eye-off'
     }
   }
 }
