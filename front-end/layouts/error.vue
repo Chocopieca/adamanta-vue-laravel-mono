@@ -7,7 +7,7 @@
       <h1 v-else>
         {{ otherError }}
       </h1>
-      <NuxtLink :to="$lang.link('/')">
+      <NuxtLink :to="$lang.link('')">
         Home page
       </NuxtLink>
     </v-app>

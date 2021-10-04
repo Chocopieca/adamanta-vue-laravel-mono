@@ -37,7 +37,7 @@ export default {
         },
         {
           text: this.textConvertor(this.category),
-          href: `/category/${this.category}`,
+          href: `category/${this.category}`,
         },
       ]
     }

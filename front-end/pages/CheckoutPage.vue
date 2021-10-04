@@ -66,7 +66,7 @@
           :color-text="vuetifyMainWhite"
           content="Подтвердить заказ"
           :min-height="48"
-          :max-width="vuetifyBreakpoint.mdAndUp ? '333' : '100%'"
+          :max-width="vuetifyBreakpoint.mdAndUp ? 333 : '100%'"
           font-size="size18-weight700"
           class="w-100 mb-5"
         />
@@ -93,7 +93,7 @@ export default {
         },
         {
           text: 'Корзина',
-          href: `/checkout`,
+          href: `checkout`,
         },
       ],
       checkoutInfo: {

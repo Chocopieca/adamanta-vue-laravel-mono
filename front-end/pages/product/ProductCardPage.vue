@@ -47,15 +47,15 @@ export default {
         },
         {
           text: this.textConvertor(this.category),
-          href: `/category/${this.category}`,
+          href: `category/${this.category}`,
         },
         {
           text: this.textConvertor(this.group),
-          href: `/category/${this.category}/${this.group}`,
+          href: `category/${this.category}/${this.group}`,
         },
         {
           text: this.textConvertor(this.product),
-          href: `/category/${this.category}/${this.group}/${this.product}`,
+          href: `category/${this.category}/${this.group}/${this.product}`,
         },
       ],
     }

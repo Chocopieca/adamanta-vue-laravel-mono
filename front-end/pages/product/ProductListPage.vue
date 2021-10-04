@@ -43,11 +43,11 @@ export default {
         },
         {
           text: this.textConvertor(this.category),
-          href: `/category/${this.category}`,
+          href: `category/${this.category}`,
         },
         {
           text: this.textConvertor(this.group),
-          href: `/category/${this.category}/${this.group}`,
+          href: `category/${this.category}/${this.group}`,
         },
       ],
       paginateItems: [],

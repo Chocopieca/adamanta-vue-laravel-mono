@@ -4,7 +4,7 @@
       <v-breadcrumbs-item
         nuxt
         exact
-        :to="lang.link(item.href)"
+        :to="$lang.link(item.href)"
         :class="vuetifyBreakpoint.mdAndUp ? 'size14-weight400' : 'size10-weight400'"
       >
         {{ item.text }}
