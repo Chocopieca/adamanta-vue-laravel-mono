@@ -894,6 +894,197 @@ export default {
           },
         ]
       },
+      productInOrderHistory: [
+        {
+          productId: '12132256-363',
+          totalCountPrice: 60,
+          totalProduct: 6,
+          deliveryPrice: 35,
+          phone: '+38 (000) 000 00 00',
+          address: 'Харьков, Харьковская обл., Отделение № 68 (до 30 кг), проспект Науки, 39',
+          date: new Date(),
+          productItem: [
+            {
+              image: 'image/popularProduct.svg',
+              title: 'СОДА ПИЩЕВАЯ',
+              type: 'Оптом и в розницу',
+              product: 'сода_пищевая',
+              category: 'химия_для_дома',
+              group: 'моющие_и_чистящие_средства',
+              available: true,
+              inBasket: true,
+              count: 3,
+              selectedWeight: 0,
+              price: [
+                {
+                  value: 10,
+                  currency: '₴',
+                  weight: '500 г'
+                },
+                {
+                  value: 20,
+                  currency: '₴',
+                  weight: '1 кг'
+                },
+                {
+                  value: 100,
+                  currency: '₴',
+                  weight: '5 кг'
+                }
+              ]
+            },
+            {
+              image: 'image/popularProduct.svg',
+              title: 'СОДА ПИЩЕВАЯ',
+              type: 'Оптом и в розницу',
+              product: 'сода_пищевая',
+              category: 'химия_для_дома',
+              group: 'моющие_и_чистящие_средства',
+              available: true,
+              inBasket: true,
+              count: 3,
+              selectedWeight: 0,
+              price: [
+                {
+                  value: 10,
+                  currency: '₴',
+                  weight: '500 г'
+                },
+                {
+                  value: 20,
+                  currency: '₴',
+                  weight: '1 кг'
+                },
+                {
+                  value: 100,
+                  currency: '₴',
+                  weight: '5 кг'
+                }
+              ]
+            },
+          ],
+        },
+        {
+          productId: '12132256-363',
+          totalCountPrice: 30,
+          totalProduct: 3,
+          deliveryPrice: 35,
+          phone: '+38 (000) 000 00 00',
+          address: 'Харьков, Харьковская обл., Отделение № 68 (до 30 кг), проспект Науки, 39',
+          date: new Date(),
+          productItem: [
+            {
+              image: 'image/popularProduct.svg',
+              title: 'СОДА ПИЩЕВАЯ',
+              type: 'Оптом и в розницу',
+              product: 'сода_пищевая',
+              category: 'химия_для_дома',
+              group: 'моющие_и_чистящие_средства',
+              available: true,
+              inBasket: true,
+              count: 3,
+              selectedWeight: 0,
+              price: [
+                {
+                  value: 10,
+                  currency: '₴',
+                  weight: '500 г'
+                },
+                {
+                  value: 20,
+                  currency: '₴',
+                  weight: '1 кг'
+                },
+                {
+                  value: 100,
+                  currency: '₴',
+                  weight: '5 кг'
+                }
+              ]
+            }
+          ],
+        },
+        {
+          productId: '12132256-363',
+          totalCountPrice: 30,
+          totalProduct: 3,
+          deliveryPrice: 35,
+          phone: '+38 (000) 000 00 00',
+          address: 'Харьков, Харьковская обл., Отделение № 68 (до 30 кг), проспект Науки, 39',
+          date: new Date(),
+          productItem: [
+            {
+              image: 'image/popularProduct.svg',
+              title: 'СОДА ПИЩЕВАЯ',
+              type: 'Оптом и в розницу',
+              product: 'сода_пищевая',
+              category: 'химия_для_дома',
+              group: 'моющие_и_чистящие_средства',
+              available: true,
+              inBasket: true,
+              count: 3,
+              selectedWeight: 0,
+              price: [
+                {
+                  value: 10,
+                  currency: '₴',
+                  weight: '500 г'
+                },
+                {
+                  value: 20,
+                  currency: '₴',
+                  weight: '1 кг'
+                },
+                {
+                  value: 100,
+                  currency: '₴',
+                  weight: '5 кг'
+                }
+              ]
+            }
+          ],
+        },
+        {
+          productId: '12132256-363',
+          totalCountPrice: 30,
+          totalProduct: 3,
+          deliveryPrice: 35,
+          phone: '+38 (000) 000 00 00',
+          address: 'Харьков, Харьковская обл., Отделение № 68 (до 30 кг), проспект Науки, 39',
+          date: new Date(),
+          productItem: [
+            {
+              image: 'image/popularProduct.svg',
+              title: 'СОДА ПИЩЕВАЯ',
+              type: 'Оптом и в розницу',
+              product: 'сода_пищевая',
+              category: 'химия_для_дома',
+              group: 'моющие_и_чистящие_средства',
+              available: true,
+              inBasket: true,
+              count: 3,
+              selectedWeight: 0,
+              price: [
+                {
+                  value: 10,
+                  currency: '₴',
+                  weight: '500 г'
+                },
+                {
+                  value: 20,
+                  currency: '₴',
+                  weight: '1 кг'
+                },
+                {
+                  value: 100,
+                  currency: '₴',
+                  weight: '5 кг'
+                }
+              ]
+            }
+          ],
+        },
+      ]
     }
   }
 }

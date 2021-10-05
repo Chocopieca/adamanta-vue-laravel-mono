@@ -1,14 +1,14 @@
 <template>
   <v-menu
     ref="menu"
-    v-model="menu"
+    v-model="menuShow"
     :close-on-content-click="false"
     :return-value.sync="date"
     transition="scale-transition"
     offset-y
     min-width="auto"
   >
-    <template v-slot:activator="{ on, attrs }">
+    <template #activator="{ on, attrs }">
       <v-text-field
         v-model="date"
         append-icon="mdi-calendar"
@@ -29,7 +29,7 @@
       <v-btn
         text
         color="primary"
-        @click="menu = false"
+        @click="menuShow = false"
       >
         Cancel
       </v-btn>
@@ -55,7 +55,7 @@ export default {
   },
   data: () => ({
     date: null,
-    menu: false,
+    menuShow: false,
   }),
   watch: {
     date() {
