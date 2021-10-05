@@ -26,7 +26,7 @@
             <DeliveryTab />
           </template>
           <template v-if="tab.name === 'orders'">
-            orders
+            <OrdersTab />
           </template>
         </v-tab-item>
 
@@ -59,6 +59,7 @@ export default {
     Tabs: () => import('~~/components/common/Tabs'),
     DescriptionTab: () => import('~~/components/profile-page/DescriptionTab'),
     DeliveryTab: () => import('~~/components/profile-page/DeliveryTab'),
+    OrdersTab: () => import('~~/components/profile-page/OrdersTab'),
   },
   mixins: [MockMixin],
   data() {
