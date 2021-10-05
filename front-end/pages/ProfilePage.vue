@@ -22,6 +22,12 @@
           <template v-if="tab.name === 'description'">
             <DescriptionTab />
           </template>
+          <template v-if="tab.name === 'delivery'">
+            <DeliveryTab />
+          </template>
+          <template v-if="tab.name === 'orders'">
+            orders
+          </template>
         </v-tab-item>
 
         <v-spacer />
@@ -52,6 +58,7 @@ export default {
     CommonPagesLayout: () => import('~~/components/feature/CommonPagesLayout'),
     Tabs: () => import('~~/components/common/Tabs'),
     DescriptionTab: () => import('~~/components/profile-page/DescriptionTab'),
+    DeliveryTab: () => import('~~/components/profile-page/DeliveryTab'),
   },
   mixins: [MockMixin],
   data() {
@@ -72,11 +79,11 @@ export default {
           title: 'Контактная информация',
         },
         {
-          name: 'usage',
+          name: 'delivery',
           title: 'Доставка',
         },
         {
-          name: 'reviews',
+          name: 'orders',
           title: 'История заказов',
         },
       ],

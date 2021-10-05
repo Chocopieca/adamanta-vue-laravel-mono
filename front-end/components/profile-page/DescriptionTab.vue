@@ -83,7 +83,16 @@
           dense
         />
       </div>
+      <div class="mr-md-10">
+        <Button
+          content="Сохранить"
+          :color-button="vuetifyMainGreen"
+          class="w-100 mb-6"
+          @submit="$refs.snackbar.toggle()"
+        />
+      </div>
     </v-col>
+    <Snackbar ref="snackbar" content="Ваши данные сохранены"/>
   </v-row>
 </template>
 
