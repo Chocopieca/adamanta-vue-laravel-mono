@@ -59,12 +59,18 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
+    '@nuxtjs/moment',
   ],
 
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     optionsPath: './vuetify.options.js',
     treeShake: true,
+  },
+
+  moment: {
+    defaultLocale: 'ru',
+    locales: ['ru']
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

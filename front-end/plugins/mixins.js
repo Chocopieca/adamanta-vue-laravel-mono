@@ -137,5 +137,8 @@ Vue.mixin({
           const newText = text.replace(regExp, ' ');
           return `${newText[0].toUpperCase()}${newText.slice(1)}`;
         },
+        parseDate(date) {
+          return this.$moment(date).format('D MMMM YYYY HH:mm')
+        }
     }
 })

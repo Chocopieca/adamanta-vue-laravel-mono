@@ -1,5 +1,5 @@
 <template>
-  <v-tabs :color="vuetifyMainBlue" class="tabs">
+  <v-tabs :color="vuetifyMainBlue" center-active :vertical="vertical" class="tabs">
     <v-tab v-for="(item, index) in tabs" :key="index" class="size18-weight700">
       {{ item.title }}
     </v-tab>
@@ -16,6 +16,10 @@ export default {
     tabs: {
       type: Array,
       default: () => []
+    },
+    vertical: {
+      type: Boolean,
+      default: false,
     }
   },
 }
