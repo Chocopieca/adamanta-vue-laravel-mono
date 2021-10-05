@@ -32,11 +32,11 @@ export default {
       default: ''
     },
     minHeight: {
-      type: Number,
+      type: [Number, String],
       default: null,
     },
     maxWidth: {
-      type: Number,
+      type: [Number, String],
       default: null,
     },
     icon: {

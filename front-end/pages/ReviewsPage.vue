@@ -1,16 +1,10 @@
 <template>
-  <v-container class="pa-0">
-    <Breadcrumbs :items="breadcrumbs"/>
+  <CommonPagesLayout :breadcrumbs="breadcrumbs">
     <div class="px-3">
       <h1 class="mb-5 size20-weight700">Отзывы</h1>
-
       <ReviewsList :reviews="reviews" :number-of-cards="8"/>
-
-      <div class="mb-md-16">
-        <PopularProducts />
-      </div>
     </div>
-  </v-container>
+  </CommonPagesLayout>
 </template>
 
 <script>
@@ -19,8 +13,7 @@ import MockMixin from "../mixins/MockMixin";
 export default {
   name: "ReviewsPage",
   components: {
-    Breadcrumbs: () => import('~~/components/common/Breadcrumbs'),
-    PopularProducts: () => import('~~/components/home-page/PopularProducts'),
+    CommonPagesLayout: () => import('~~/components/feature/CommonPagesLayout'),
     ReviewsList: () => import('~~/components/common/ReviewsList'),
   },
   mixins: [MockMixin],
@@ -33,7 +26,7 @@ export default {
         },
         {
           text: 'Отзывы',
-          href: `/reviews`,
+          href: `reviews`,
         },
       ],
     }

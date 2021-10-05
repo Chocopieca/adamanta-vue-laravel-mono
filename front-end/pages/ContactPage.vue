@@ -44,7 +44,7 @@ export default {
         },
         {
           text: 'Контакты',
-          href: `/contacts`,
+          href: `contacts`,
         },
       ]
     }

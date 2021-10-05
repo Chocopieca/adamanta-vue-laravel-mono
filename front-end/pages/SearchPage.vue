@@ -33,7 +33,7 @@ export default {
         },
         {
           text: 'Поиск',
-          href: `/search`,
+          href: `search`,
         },
       ],
       paginateItems: [],

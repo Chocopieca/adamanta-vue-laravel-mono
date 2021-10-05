@@ -14,12 +14,12 @@
           <v-divider class="mb-5"/>
           <div class="mb-5 size24-weight700"><span class="mr-10">К оплате</span> {{ sumPriceInOrder }}₴</div>
 
-          <nuxt-link :to="$lang.link('/checkout')">
+          <nuxt-link :to="$lang.link('checkout')">
             <Button
               :color-text="vuetifyMainWhite"
               content="Оформить заказ"
               :min-height="48"
-              :max-width="vuetifyBreakpoint.mdAndUp ? '303' : '100%'"
+              :max-width="vuetifyBreakpoint.mdAndUp ? 303 : '100%'"
               font-size="size18-weight700"
               class="w-100 mb-5"
             />
@@ -31,7 +31,7 @@
               :color-button="vuetifyTransparent"
               :color-text="vuetifyMainGreen"
               :min-height="48"
-              :max-width="vuetifyBreakpoint.mdAndUp ? '332' : '100%'"
+              :max-width="vuetifyBreakpoint.mdAndUp ? 332 : '100%'"
               font-size="size18-weight700"
               class="w-100 mb-6"
               outlined
@@ -62,7 +62,7 @@ export default {
         },
         {
           text: 'Корзина',
-          href: `/basket`,
+          href: `basket`,
         },
       ],
       prices: [],

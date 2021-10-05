@@ -13,13 +13,13 @@
       <v-divider class="my-5"/>
       <div class="size12-weight400">
         <span>Раздел: </span>
-        <nuxt-link :to="$lang.link(`/category/${productCard.category}`)" :style="`color: ${vuetifyMainBlue}`">
+        <nuxt-link :to="$lang.link(`category/${productCard.category}`)" :style="`color: ${vuetifyMainBlue}`">
           {{ textConvertor(productCard.category) }}
         </nuxt-link>
       </div>
       <div class="size12-weight400">
         <span>Категория: </span>
-        <nuxt-link :to="$lang.link(`/category/${productCard.category}/${productCard.group}`)" :style="`color: ${vuetifyMainBlue}`">
+        <nuxt-link :to="$lang.link(`category/${productCard.category}/${productCard.group}`)" :style="`color: ${vuetifyMainBlue}`">
           {{ textConvertor(productCard.group) }}
         </nuxt-link>
       </div>
@@ -71,7 +71,7 @@
         <span class="size18-weight400 flex-center mt-1 mr-5">Купить</span>
       </v-btn>
 
-      <nuxt-link v-else :to="$lang.link('/basket')">
+      <nuxt-link v-else :to="$lang.link('basket')">
         <v-btn
           class="size18-weight700 mr-5 mb-5 mb-md-0 w-md-100"
           :color="vuetifyMainGreen"

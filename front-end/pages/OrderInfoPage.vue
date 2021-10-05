@@ -41,7 +41,7 @@ export default {
         },
         {
           text: 'Доставка и оплата',
-          href: `/order_info`,
+          href: `order_info`,
         },
       ]
     }

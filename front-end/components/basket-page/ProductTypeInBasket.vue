@@ -25,7 +25,7 @@
 
       <v-col cols="6" md="3" class="flex-center flex-column mb-10 mb-md-0">
         <div class="size14-weight700 mb-4">Наименование товара</div>
-        <div class="size14-weight400">{{ textConvertor(order.product.link) }}</div>
+        <div class="size14-weight400">{{ textConvertor(order.product.product) }}</div>
       </v-col>
 
       <v-col cols="6" md="2" class="flex-center flex-column mb-10 mb-md-0">
