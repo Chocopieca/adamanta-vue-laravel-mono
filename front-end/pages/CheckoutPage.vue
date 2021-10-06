@@ -61,7 +61,7 @@
         <v-divider />
       </div>
 
-      <nuxt-link :to="$lang.link('')" class="d-flex justify-end">
+      <div class="d-flex justify-end">
         <Button
           :color-text="vuetifyMainWhite"
           content="Подтвердить заказ"
@@ -69,9 +69,19 @@
           :max-width="vuetifyBreakpoint.mdAndUp ? 333 : '100%'"
           font-size="size18-weight700"
           class="w-100 mb-5"
+          @submit="$refs.dialog.toggle()"
         />
-      </nuxt-link>
+      </div>
     </v-container>
+
+    <Dialog ref="dialog" has-close-action to="">
+      <div class="flex-center flex-column">
+        <div class="size36-weight700 mb-3" :style="`color: ${vuetifyMainGreen};`">Спасибо!</div>
+        <div class="size24-weight700 mb-3">Ваш заказ
+          успешно оформлен</div>
+        <v-img contain max-width="350" :src="baseUrl + 'image/successBuy.svg'" class="mb-10" />
+      </div>
+    </Dialog>
   </CommonPagesLayout>
 </template>
 
@@ -82,6 +92,7 @@ export default {
   name: "CheckoutPage",
   components: {
     CommonPagesLayout: () => import('~~/components/feature/CommonPagesLayout'),
+    Dialog: () => import('~~/components/common/Dialog'),
   },
   mixins: [MockMixin],
   data() {
