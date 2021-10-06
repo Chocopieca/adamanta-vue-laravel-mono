@@ -57,13 +57,13 @@
       </div>
 
       <v-btn
-        v-if="!isBuying"
+        v-if="!inBasket"
         class="size18-weight700 mr-5 mb-5 mb-md-0 w-md-100"
         :color="vuetifyMainGreen"
         dark
         rounded
         :width="vuetifyBreakpoint.mdAndUp ? 200 : ''"
-        @click="isBuying = !isBuying"
+        @click="addToBasket"
       >
         <v-icon class="mr-3">
           mdi-cart-outline
@@ -86,6 +86,8 @@
         </v-btn>
       </nuxt-link>
     </v-col>
+
+    <Snackbar ref="snackbar" content="Товар добавлен в корзину"/>
   </v-row>
 </template>
 
@@ -98,7 +100,7 @@ export default {
   data() {
     return {
       weightType: null,
-      isBuying: false,
+      inBasket: false,
     }
   },
   computed: {
@@ -121,7 +123,11 @@ export default {
   },
   methods: {
     getProductPrice(val, currency, weight) {
-      return `${val} ${currency} / ${weight}`
+      return `${val} ${currency} / ${weight}`;
+    },
+    addToBasket() {
+      this.inBasket = true;
+      this.$refs.snackbar.toggle();
     },
   },
 }
