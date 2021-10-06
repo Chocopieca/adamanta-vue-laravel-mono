@@ -13,7 +13,7 @@
       <div v-for="(item, index) in bannerSlides" :key="index">
         <v-img :src="baseUrl + item.background" cover :height="vuetifyBreakpoint.lgAndUp ? 700 : 500">
           <v-container class="pt-16">
-            <v-col sm="8" md="8" lg="6" class="banner-content">
+            <v-col sm="8" md="8" lg="6" class="banner-content pa-5">
               <h2
                 class="mb-10"
                 :class="vuetifyBreakpoint.lgAndUp ? 'size36-weight700' : 'size22-weight700'"

@@ -1,5 +1,5 @@
 <template>
-  <CommonPagesLayout :breadcrumbs="breadcrumbs">
+  <CommonPagesLayout :breadcrumbs="breadcrumbs" :isShowPopular="false">
     <div class="px-3 mb-md-10">
       <v-row no-gutters justify="space-between" align="center">
         <h1>Профиль</h1>
