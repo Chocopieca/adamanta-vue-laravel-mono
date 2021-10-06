@@ -17,6 +17,16 @@
 <script>
 export default {
   name: "Dialog",
+  props: {
+    hasCloseAction: {
+      type: Boolean,
+      default: false,
+    },
+    to: {
+      type: String,
+      default: '',
+    }
+  },
   data() {
     return {
       dialog: false,
@@ -25,6 +35,13 @@ export default {
   methods: {
     toggle() {
       this.dialog = !this.dialog;
+    }
+  },
+  watch: {
+    dialog(val) {
+      if (!val && this.hasCloseAction) {
+        this.$router.push(this.$lang.link(this.to))
+      }
     }
   }
 }

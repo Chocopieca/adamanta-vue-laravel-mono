@@ -35,10 +35,21 @@
     </v-card-subtitle>
 
     <v-card-actions>
+      <nuxt-link v-if="inBasket" :to="$lang.link('basket')">
+        <Button
+          :color-text="vuetifyMainWhite"
+          content="Оформить заказ"
+          :min-height="54"
+          font-size="size18-weight700"
+          class="w-100"
+        />
+      </nuxt-link>
       <Button
+        v-else
         :color-button="vuetifyMainGreen"
         icon="mdi-cart-outline"
         fab
+        @submit="addToBasket"
       />
     </v-card-actions>
   </v-card>
@@ -53,9 +64,18 @@ export default {
       default: () => {},
     }
   },
+  data() {
+    return {
+      inBasket: false,
+    }
+  },
   methods: {
     getProductPrice(val, currency, weight) {
-      return `${val} ${currency} / ${weight}`
+      return `${val} ${currency} / ${weight}`;
+    },
+    addToBasket() {
+      this.inBasket = true;
+      this.$emit('addToBasket');
     },
   }
 }

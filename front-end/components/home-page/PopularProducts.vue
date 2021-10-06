@@ -17,10 +17,11 @@
       >
         <template #slides>
           <div v-for="(item, index) in popularProducts" :key="index">
-            <ProductItem :item="item"/>
+            <ProductItem :item="item" @addToBasket="$refs.snackbar.toggle()"/>
           </div>
         </template>
       </Carousel>
+      <Snackbar ref="snackbar" content="Товар добавлен в корзину"/>
     </div>
   </v-lazy>
 </template>

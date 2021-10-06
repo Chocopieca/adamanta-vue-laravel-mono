@@ -5,7 +5,7 @@
 
     <slot></slot>
 
-    <PopularProducts class="mb-md-100 mb-16" />
+    <PopularProducts v-if="isShowPopular" class="mb-md-100 mb-16" />
 
   </v-container>
 </template>
@@ -21,7 +21,11 @@ export default {
     breadcrumbs: {
       type: Array,
       default: () => [],
-    }
+    },
+    isShowPopular: {
+      type: Boolean,
+      default: true,
+    },
   }
 }
 </script>
