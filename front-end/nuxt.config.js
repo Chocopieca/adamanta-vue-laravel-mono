@@ -11,7 +11,7 @@ export default {
 
   server: {
     port: 1780,
-    host: '172.22.0.6',
+    host: '0',
   },
 
   serverMiddleware: ['~/middleware/NuxtServerLogger'],
