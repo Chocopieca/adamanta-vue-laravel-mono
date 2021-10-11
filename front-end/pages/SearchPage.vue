@@ -1,8 +1,8 @@
 <template>
   <CommonPagesLayout :breadcrumbs="breadcrumbs">
     <v-row no-gutters class="mb-md-100 mb-16">
-      <v-col v-for="(item, index) in paginateItems" :key="index" cols="12" sm="4" md="3" class="pa-3">
-        <ProductItem :item="item" @addToBasket="$refs.snackbar.toggle()"/>
+      <v-col v-for="(item, index) in paginateItems" :key="index" cols="12" sm="4" md="3" class="pa-3 pt-0">
+        <ProductCardItem :item="item" @addToBasket="$refs.snackbar.toggle()"/>
       </v-col>
     </v-row>
 
@@ -22,7 +22,7 @@ export default {
   mixins: [MockMixin],
   components: {
     CommonPagesLayout: () => import('~~/components/feature/CommonPagesLayout'),
-    ProductItem: () => import('~~/components/common/ProductItem'),
+    ProductCardItem: () => import('~~/components/product-list-page/ProductCardItem'),
     Pagination: () => import('~~/components/common/Pagination'),
   },
   data() {
@@ -30,7 +30,7 @@ export default {
       breadcrumbs: [
         {
           text: 'Главная',
-          href: '/',
+          href: '',
         },
         {
           text: 'Поиск',

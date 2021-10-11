@@ -2,7 +2,7 @@
   <CommonPagesLayout :breadcrumbs="breadcrumbs" :isShowPopular="false">
     <div class="px-3 mb-md-10">
       <v-row no-gutters justify="space-between" align="center">
-        <h1>Профиль</h1>
+        <h1 class="mt-0">Профиль</h1>
         <template v-if="vuetifyBreakpoint.mdAndDown">
           <nuxt-link :to="$lang.link('')">
             <Button
@@ -67,7 +67,7 @@ export default {
       breadcrumbs: [
         {
           text: 'Главная',
-          href: '/',
+          href: '',
         },
         {
           text: 'Профиль пользователя',

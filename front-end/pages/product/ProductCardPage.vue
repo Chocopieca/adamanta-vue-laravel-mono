@@ -1,6 +1,6 @@
 <template>
   <CommonPagesLayout :breadcrumbs="breadcrumbs">
-    <v-row no-gutters class="pa-md-3">
+    <v-row no-gutters class="pa-md-3 pt-md-0">
       <v-col v-if="vuetifyBreakpoint.mdAndUp" md="3">
         <ContactInfoCard />
       </v-col>
@@ -16,6 +16,8 @@
 
 <script>
 
+import MockMixin from "../../mixins/MockMixin";
+
 export default {
   name: "ProductCardPage",
   components: {
@@ -24,6 +26,7 @@ export default {
     ContactInfoCard: () => import('~~/components/product-card-page/ContactInfoCard'),
     ProductCard: () => import('~~/components/product-card-page/ProductCard'),
   },
+  mixins: [MockMixin],
   props: {
     category: {
       type: String,
@@ -38,27 +41,27 @@ export default {
       default: ''
     },
   },
-  data() {
-    return {
-      breadcrumbs: [
+  computed: {
+    breadcrumbs() {
+      return [
         {
           text: 'Главная',
-          href: '/',
+          href: '',
         },
         {
-          text: this.textConvertor(this.category),
+          text: this.getTitle().category(this.navCategory, this.category),
           href: `category/${this.category}`,
         },
         {
-          text: this.textConvertor(this.group),
+          text: this.getTitle().category(this.categoryGroups, this.group),
           href: `category/${this.category}/${this.group}`,
         },
         {
-          text: this.textConvertor(this.product),
+          text: this.getTitle().product(this.categoryProducts, this.product),
           href: `category/${this.category}/${this.group}/${this.product}`,
         },
-      ],
-    }
-  },
+      ]
+    },
+  }
 }
 </script>
