@@ -31,11 +31,16 @@
         </v-menu>
 
         <template v-for="(page, index) in pages">
-          <nuxt-link :key="index" :to="$lang.link(page.link)">
-            <v-btn text class="mr-5">
-              <span class="size18-weight700">{{ page.title }}</span>
-            </v-btn>
-          </nuxt-link>
+          <v-btn
+            :key="index"
+            nuxt
+            :to="$lang.link(page.link)"
+            text
+            class="mr-5"
+            :color="vuetifyMainGreen"
+          >
+            <span class="size18-weight700 black--text">{{ page.title }}</span>
+          </v-btn>
         </template>
       </v-row>
     </v-container>
