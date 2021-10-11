@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="5" class="pa-5 size18-weight400">
+  <v-card class="pa-5 size18-weight400 custom-elevation">
     <div class="mb-3">
       <h3 class="size18-weight700">Контакты</h3>
       <template v-for="(number, index) in contacts.numbers">

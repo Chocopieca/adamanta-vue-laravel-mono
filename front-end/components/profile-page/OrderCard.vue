@@ -1,20 +1,22 @@
 <template>
   <div>
-    <v-card v-for="(order, orderIndex) in orders" :key="orderIndex" class="pa-5 mb-5 elevation-3">
+    <v-card v-for="(order, orderIndex) in orders" :key="orderIndex" class="pa-5 my-5 mr-5 product-history-elevation">
       <v-row no-gutters>
         <v-col cols="12" md="9" class="mb-5 mb-md-0">
           <h3 class="size18-weight700 mb-5">Заказ №{{order.productId}}</h3>
-          <div v-for="(product, productIndex) in order.productItem" :key="productIndex" class="d-flex mb-5">
-            <v-img
-              :src="baseUrl + product.image"
-              max-width="85"
-              height="85"
-              cover
-              class="rounded-lg mr-5"
-            />
+          <div v-for="(product, productIndex) in order.productItems" :key="productIndex" class="d-flex mb-5">
+            <nuxt-link :to="$lang.link(`category/${product.linkGroup.category}/${product.linkGroup.group}/${product.linkGroup.product}`)">
+              <v-img
+                :src="baseUrl + product.image"
+                max-width="85"
+                height="85"
+                cover
+                class="rounded-lg mr-5"
+              />
+            </nuxt-link>
             <div>
               <h4 class="size18-weight700">
-                {{ textConvertor(product.product) }}
+                {{ getTitle().product(order.productItems, product.linkGroup.product) }}
                 <span>
                 {{product.price[product.selectedWeight].weight}}
               </span>
@@ -71,6 +73,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.product-history-elevation {
+  box-shadow: 0 4px 10px 5px rgb(0 0 0 / 6%) !important;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <Dialog ref="review">
-    <v-card class="pa-md-5" elevation="0">
+    <v-card class="pa-md-5 pt-md-0" elevation="0">
       <template slot="progress">
         <v-progress-linear
           color="deep-purple"
@@ -9,7 +9,7 @@
         ></v-progress-linear>
       </template>
 
-      <v-card-title class="d-flex justify-space-between">
+      <v-card-title class="d-flex justify-space-between align-end pt-0">
         <div class="d-flex">
           <v-avatar size="64">
             <img alt="user" :src="baseUrl + currentReview.avatar">
@@ -28,7 +28,7 @@
           </div>
         </div>
 
-        <div class="size14-weight400" :style="`color: ${vuetifyMainGray}`">
+        <div class="size14-weight400 d-flex align-bottom" :style="`color: ${vuetifyMainGray}`">
           {{ dateConvertor(currentReview.date) }}
         </div>
       </v-card-title>

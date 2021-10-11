@@ -9,49 +9,54 @@
       />
     </v-col>
     <v-col class="pa-5 pa-md-0">
-      <h1 class="size24-weight700 ma-0 mt-md-10">{{ productCard.title }}</h1>
-      <v-divider class="my-5"/>
-      <div class="size12-weight400">
+      <h1 class="size24-weight700 ma-0 mt-md-8">{{ productCard.title.toUpperCase() }}</h1>
+      <v-divider class="my-4"/>
+      <div class="size12-weight400 mb-4">
         <span>Раздел: </span>
         <nuxt-link :to="$lang.link(`category/${productCard.category}`)" :style="`color: ${vuetifyMainBlue}`">
-          {{ textConvertor(productCard.category) }}
+          {{ getTitle().category(navCategory, productCard.category) }}
         </nuxt-link>
       </div>
       <div class="size12-weight400">
         <span>Категория: </span>
         <nuxt-link :to="$lang.link(`category/${productCard.category}/${productCard.group}`)" :style="`color: ${vuetifyMainBlue}`">
-          {{ textConvertor(productCard.group) }}
+          {{ getTitle().category(categoryGroups, productCard.group) }}
         </nuxt-link>
       </div>
 
-      <div class="mb-3 mb-md-0">
-        <div
-          v-if="productCard.available"
-          :style="`color: ${vuetifyMainGreen}`"
-          class="size12-md-weight400 size12-weight400"
-        >
-          <v-icon :color="vuetifyMainGreen" size="13">mdi-check-circle</v-icon>
-          В наличии
-        </div>
-
-        <div
-          v-else
-          :style="`color: ${vuetifyError}`"
-          class="size12-md-weight400 size12-weight400"
-        >
-          <v-icon :color="vuetifyError" size="13">mdi-close-circle</v-icon>
-          Нет в наличии
-        </div>
+      <div class="size12-weight400 mb-7 mb-md-0">
+        <template v-if="productCard.available">
+          <div class="d-flex align-center" :style="`color: ${vuetifyMainGreen}`">
+            <v-icon :color="vuetifyMainGreen" size="15" class="mr-1 mb-1">mdi-check-circle</v-icon>
+            В наличии
+          </div>
+        </template>
+        <template v-else>
+          <div class="d-flex align-center" :style="`color: ${vuetifyError}`">
+            <v-icon :color="vuetifyError" size="15" class="mr-1 mb-1">mdi-close-circle</v-icon>
+            Нет в наличии
+          </div>
+        </template>
       </div>
 
-      <div class="d-flex align-center">
+      <div class="d-flex align-center mb-6">
         <span class="mr-3 size18-weight700">Фасовка:</span>
-        <v-chip-group v-model="weightType" active-class="green--text">
-          <v-chip v-for="tag in arrayWeight" :key="tag" :value="tag">{{ tag }}</v-chip>
+        <v-chip-group v-model="weightType" active-class="white--text">
+          <v-chip
+            v-for="tag in arrayWeight"
+            :key="tag"
+            :value="tag"
+            :outlined="weightType !== tag"
+            :color="vuetifyMainGreen"
+            :text-color="weightType === tag ? '' : vuetifyMainBlack"
+            class="size18-weight700"
+          >
+            <div class="mt-1">{{ tag }}</div>
+          </v-chip>
         </v-chip-group>
       </div>
 
-      <div class="d-flex align-center size24-weight700 mb-10">
+      <div class="d-flex align-center size24-weight700 mb-11">
         <span class="mr-5 size18-weight700">Цена:</span>
         {{ price }}
       </div>

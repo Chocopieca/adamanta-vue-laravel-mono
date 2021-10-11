@@ -51,89 +51,89 @@ export default {
         {
           icon: 'icons/category1.svg',
           title: 'Химия для дома',
-          link: 'химия_для_дома'
+          link: 'khimiya_dlya_doma'
         },
         {
           icon: 'icons/category1.svg',
           title: 'Химия для дома',
-          link: 'химия_для_дома'
+          link: 'khimiya_dlya_doma'
         },
         {
           icon: 'icons/category2.svg',
           title: 'Агрохимия',
-          link: 'агрохимия'
+          link: 'agrokhimiya'
         },
         {
           icon: 'icons/category3.svg',
           title: 'Техническая химия',
-          link: 'техническая_химия'
+          link: 'tekhnicheskaya-khimiya'
         },
         {
           icon: 'icons/category1.svg',
           title: 'Химия для дома',
-          link: 'химия_для_дома'
+          link: 'khimiya_dlya_doma'
         },
         {
           icon: 'icons/category1.svg',
           title: 'Химия для дома',
-          link: 'химия_для_дома'
+          link: 'khimiya_dlya_doma'
         },
         {
           icon: 'icons/category2.svg',
           title: 'Агрохимия',
-          link: 'агрохимия'
+          link: 'agrokhimiya'
         },
         {
           icon: 'icons/category3.svg',
           title: 'Техническая химия',
-          link: 'техническая_химия'
+          link: 'tekhnicheskaya-khimiya'
         },
       ],
       categoryGroups: [
         {
           icon: 'icons/group1.svg',
           title: 'Моющие и чистящие средства',
-          link: 'моющие_и_чистящие_средства'
+          link: 'moyushchiye_i_chistyashchiye_sredstva'
         },
         {
           icon: 'icons/group2.svg',
           title: 'Дезинфицирующие средства',
-          link: 'дезинфицирующие_средства'
+          link: 'dezinfitsiruyushchiye_sredstva'
         },
         {
           icon: 'icons/group3.svg',
           title: 'Средства для кухни',
-          link: 'средства_для_кухни'
+          link: 'sredstva_dlya_kukhni'
         },
         {
           icon: 'icons/group4.svg',
           title: 'Уход за домом',
-          link: 'уход_за_домом'
+          link: 'ukhod_za_domom'
         },
         {
           icon: 'icons/group1.svg',
           title: 'Моющие и чистящие средства',
-          link: 'моющие_и_чистящие_средства'
+          link: 'moyushchiye_i_chistyashchiye_sredstva'
         },
         {
           icon: 'icons/group2.svg',
           title: 'Дезинфицирующие средства',
-          link: 'дезинфицирующие_средства'
+          link: 'dezinfitsiruyushchiye_sredstva'
         },
         {
           icon: 'icons/group3.svg',
           title: 'Средства для кухни',
-          link: 'средства_для_кухни'
+          link: 'sredstva_dlya_kukhni'
         },
         {
           icon: 'icons/group4.svg',
           title: 'Уход за домом',
-          link: 'уход_за_домом'
+          link: 'ukhod_za_domom'
         },
         {
           icon: 'icons/group1.svg',
           title: 'Моющие и чистящие средства',
-          link: 'моющие_и_чистящие_средства'
+          link: 'moyushchiye_i_chistyashchiye_sredstva'
         },
       ],
       benefits: [
@@ -162,10 +162,12 @@ export default {
       popularProducts: [
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          product: 'сода_пищевая',
+          title: 'Сода пищевая',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -187,35 +189,12 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          product: 'сода_пищевая',
-          available: false,
-          price: [
-            {
-              value: 10,
-              currency: '₴',
-              weight: '500 г'
-            },
-            {
-              value: 20,
-              currency: '₴',
-              weight: '1 кг'
-            },
-            {
-              value: 100,
-              currency: '₴',
-              weight: '5 кг'
-            }
-          ]
-        },
-        {
-          image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          product: 'сода_пищевая',
+          title: 'Сода пищевая',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -237,35 +216,12 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          product: 'сода_пищевая',
-          available: false,
-          price: [
-            {
-              value: 10,
-              currency: '₴',
-              weight: '500 г'
-            },
-            {
-              value: 20,
-              currency: '₴',
-              weight: '1 кг'
-            },
-            {
-              value: 100,
-              currency: '₴',
-              weight: '5 кг'
-            }
-          ]
-        },
-        {
-          image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          product: 'сода_пищевая',
+          title: 'Сода пищевая',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -287,10 +243,120 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          product: 'сода_пищевая',
+          title: 'Сода пищевая',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -412,11 +478,13 @@ export default {
       categoryProducts: [
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
+          title: 'Сода пищевая',
           type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -438,37 +506,13 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
+          title: 'Сода пищевая',
           type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          available: false,
-          price: [
-            {
-              value: 10,
-              currency: '₴',
-              weight: '500 г'
-            },
-            {
-              value: 20,
-              currency: '₴',
-              weight: '1 кг'
-            },
-            {
-              value: 100,
-              currency: '₴',
-              weight: '5 кг'
-            }
-          ]
-        },
-        {
-          image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -490,37 +534,13 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
+          title: 'Сода пищевая',
           type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          available: false,
-          price: [
-            {
-              value: 10,
-              currency: '₴',
-              weight: '500 г'
-            },
-            {
-              value: 20,
-              currency: '₴',
-              weight: '1 кг'
-            },
-            {
-              value: 100,
-              currency: '₴',
-              weight: '5 кг'
-            }
-          ]
-        },
-        {
-          image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -542,11 +562,13 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
+          title: 'Сода пищевая',
           type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -568,11 +590,13 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
+          title: 'Сода пищевая',
           type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -594,37 +618,13 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
+          title: 'Сода пищевая',
           type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          available: false,
-          price: [
-            {
-              value: 10,
-              currency: '₴',
-              weight: '500 г'
-            },
-            {
-              value: 20,
-              currency: '₴',
-              weight: '1 кг'
-            },
-            {
-              value: 100,
-              currency: '₴',
-              weight: '5 кг'
-            }
-          ]
-        },
-        {
-          image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -646,37 +646,13 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
+          title: 'Сода пищевая',
           type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
-          available: false,
-          price: [
-            {
-              value: 10,
-              currency: '₴',
-              weight: '500 г'
-            },
-            {
-              value: 20,
-              currency: '₴',
-              weight: '1 кг'
-            },
-            {
-              value: 100,
-              currency: '₴',
-              weight: '5 кг'
-            }
-          ]
-        },
-        {
-          image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
-          type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -698,11 +674,685 @@ export default {
         },
         {
           image: 'image/popularProduct.svg',
-          title: 'СОДА ПИЩЕВАЯ',
+          title: 'Сода пищевая',
           type: 'Оптом и в розницу',
-          product: 'сода_пищевая',
-          category: 'химия_для_дома',
-          group: 'моющие_и_чистящие_средства',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
+          available: true,
+          price: [
+            {
+              value: 10,
+              currency: '₴',
+              weight: '500 г'
+            },
+            {
+              value: 20,
+              currency: '₴',
+              weight: '1 кг'
+            },
+            {
+              value: 100,
+              currency: '₴',
+              weight: '5 кг'
+            }
+          ]
+        },
+        {
+          image: 'image/popularProduct.svg',
+          title: 'Сода пищевая',
+          type: 'Оптом и в розницу',
+          linkGroup: {
+            category: 'khimiya_dlya_doma',
+            group: 'moyushchiye_i_chistyashchiye_sredstva',
+            product: 'soda_pishchevaya',
+          },
           available: true,
           price: [
             {
@@ -731,11 +1381,13 @@ export default {
           selectedWeight: 0,
           product: {
             image: 'image/popularProduct.svg',
-            title: 'СОДА ПИЩЕВАЯ',
+            title: 'Сода пищевая',
             type: 'Оптом и в розницу',
-            product: 'сода_пищевая',
-            category: 'химия_для_дома',
-            group: 'моющие_и_чистящие_средства',
+            linkGroup: {
+              category: 'khimiya_dlya_doma',
+              group: 'moyushchiye_i_chistyashchiye_sredstva',
+              product: 'soda_pishchevaya',
+            },
             available: true,
             price: [
               {
@@ -757,17 +1409,19 @@ export default {
           },
         },
         {
-          productId: 124,
+          productId: 123,
           inBasket: true,
           count: 1,
           selectedWeight: 0,
           product: {
             image: 'image/popularProduct.svg',
-            title: 'СОДА ПИЩЕВАЯ',
+            title: 'Сода пищевая',
             type: 'Оптом и в розницу',
-            product: 'сода_пищевая',
-            category: 'химия_для_дома',
-            group: 'моющие_и_чистящие_средства',
+            linkGroup: {
+              category: 'khimiya_dlya_doma',
+              group: 'moyushchiye_i_chistyashchiye_sredstva',
+              product: 'soda_pishchevaya',
+            },
             available: true,
             price: [
               {
@@ -808,12 +1462,12 @@ export default {
       },
       productCard: {
         image: 'image/product-image.svg',
-        title: 'СОДА ПИЩЕВАЯ',
+        title: 'Сода пищевая',
         link: 'сода_пищевая',
         type: 'Оптом и в розницу',
-        category: 'химия_для_дома',
-        group: 'моющие_и_чистящие_средства',
-        product: 'сода_пищевая',
+        category: 'khimiya_dlya_doma',
+        group: 'moyushchiye_i_chistyashchiye_sredstva',
+        product: 'soda_pishchevaya',
         available: true,
         price: [
           {
@@ -903,14 +1557,16 @@ export default {
           phone: '+38 (000) 000 00 00',
           address: 'Харьков, Харьковская обл., Отделение № 68 (до 30 кг), проспект Науки, 39',
           date: new Date(),
-          productItem: [
+          productItems: [
             {
               image: 'image/popularProduct.svg',
-              title: 'СОДА ПИЩЕВАЯ',
+              title: 'Сода пищевая',
               type: 'Оптом и в розницу',
-              product: 'сода_пищевая',
-              category: 'химия_для_дома',
-              group: 'моющие_и_чистящие_средства',
+              linkGroup: {
+                category: 'khimiya_dlya_doma',
+                group: 'moyushchiye_i_chistyashchiye_sredstva',
+                product: 'soda_pishchevaya',
+              },
               available: true,
               inBasket: true,
               count: 3,
@@ -935,11 +1591,13 @@ export default {
             },
             {
               image: 'image/popularProduct.svg',
-              title: 'СОДА ПИЩЕВАЯ',
+              title: 'Сода пищевая',
               type: 'Оптом и в розницу',
-              product: 'сода_пищевая',
-              category: 'химия_для_дома',
-              group: 'моющие_и_чистящие_средства',
+              linkGroup: {
+                category: 'khimiya_dlya_doma',
+                group: 'moyushchiye_i_chistyashchiye_sredstva',
+                product: 'soda_pishchevaya',
+              },
               available: true,
               inBasket: true,
               count: 3,
@@ -972,14 +1630,16 @@ export default {
           phone: '+38 (000) 000 00 00',
           address: 'Харьков, Харьковская обл., Отделение № 68 (до 30 кг), проспект Науки, 39',
           date: new Date(),
-          productItem: [
+          productItems: [
             {
               image: 'image/popularProduct.svg',
-              title: 'СОДА ПИЩЕВАЯ',
+              title: 'Сода пищевая',
               type: 'Оптом и в розницу',
-              product: 'сода_пищевая',
-              category: 'химия_для_дома',
-              group: 'моющие_и_чистящие_средства',
+              linkGroup: {
+                category: 'khimiya_dlya_doma',
+                group: 'moyushchiye_i_chistyashchiye_sredstva',
+                product: 'soda_pishchevaya',
+              },
               available: true,
               inBasket: true,
               count: 3,
@@ -1012,14 +1672,16 @@ export default {
           phone: '+38 (000) 000 00 00',
           address: 'Харьков, Харьковская обл., Отделение № 68 (до 30 кг), проспект Науки, 39',
           date: new Date(),
-          productItem: [
+          productItems: [
             {
               image: 'image/popularProduct.svg',
-              title: 'СОДА ПИЩЕВАЯ',
+              title: 'Сода пищевая',
               type: 'Оптом и в розницу',
-              product: 'сода_пищевая',
-              category: 'химия_для_дома',
-              group: 'моющие_и_чистящие_средства',
+              linkGroup: {
+                category: 'khimiya_dlya_doma',
+                group: 'moyushchiye_i_chistyashchiye_sredstva',
+                product: 'soda_pishchevaya',
+              },
               available: true,
               inBasket: true,
               count: 3,
@@ -1052,14 +1714,16 @@ export default {
           phone: '+38 (000) 000 00 00',
           address: 'Харьков, Харьковская обл., Отделение № 68 (до 30 кг), проспект Науки, 39',
           date: new Date(),
-          productItem: [
+          productItems: [
             {
               image: 'image/popularProduct.svg',
-              title: 'СОДА ПИЩЕВАЯ',
+              title: 'Сода пищевая',
               type: 'Оптом и в розницу',
-              product: 'сода_пищевая',
-              category: 'химия_для_дома',
-              group: 'моющие_и_чистящие_средства',
+              linkGroup: {
+                category: 'khimiya_dlya_doma',
+                group: 'moyushchiye_i_chistyashchiye_sredstva',
+                product: 'soda_pishchevaya',
+              },
               available: true,
               inBasket: true,
               count: 3,
