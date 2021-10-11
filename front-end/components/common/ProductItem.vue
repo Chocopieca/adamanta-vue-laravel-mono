@@ -1,9 +1,9 @@
 <template>
-  <v-card class="ma-3" elevation="0">
-    <nuxt-link :to="$lang.link(`category/${item.category}/${item.group}/${item.product}`)">
+  <v-card class="ma-3 mt-0 rounded-lg overflow-hidden" elevation="0">
+    <nuxt-link :to="$lang.link(`category/${item.linkGroup.category}/${item.linkGroup.group}/${item.linkGroup.product}`)">
       <v-img :src="baseUrl + item.image" height="102px" />
 
-      <v-card-title>{{ item.title }}</v-card-title>
+      <v-card-title class="size16-weight700">{{ item.title }}</v-card-title>
     </nuxt-link>
 
     <v-divider />

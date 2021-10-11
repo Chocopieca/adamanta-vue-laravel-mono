@@ -13,19 +13,19 @@
     <div class="banner-arrows">
       <span v-if="withArrow" @click="showPrev()">
         <v-btn icon :color="navColor">
-          <v-icon>mdi-chevron-left</v-icon>
+          <v-icon size="30">mdi-chevron-left</v-icon>
         </v-btn>
       </span>
       <template v-if="withDots">
         <template v-for="(item, i) in bannerSlides">
           <v-btn :key="i" icon :color="navColor" @click="goTo(i)">
-            <v-icon :size="isCurrentSlide(i) ? 20 : 15">mdi-circle</v-icon>
+            <v-icon :size="isCurrentSlide(i) ? 23 : 13">mdi-circle</v-icon>
           </v-btn>
         </template>
       </template>
       <span v-if="withArrow" @click="showNext()">
         <v-btn icon :color="navColor">
-          <v-icon>mdi-chevron-right</v-icon>
+          <v-icon size="30">mdi-chevron-right</v-icon>
         </v-btn>
       </span>
     </div>
@@ -42,7 +42,6 @@
         </v-btn>
       </span>
     </div>
-
   </div>
 </template>
 
