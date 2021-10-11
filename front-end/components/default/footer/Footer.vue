@@ -17,9 +17,9 @@
               @submit="$emit('close')"
             />
           </v-col>
-          <v-col cols="6" sm="2" class="offset-sm-1 d-flex align-start flex-column mb-10 mb-sm-0">
+          <v-col cols="6" sm="2" class="offset-sm-1 d-flex align-center align-md-start flex-column mb-10 mb-sm-0">
             <h3 class="size16-weight700 px-3 mb-6">Карта сайта</h3>
-            <div>
+            <div :class="vuetifyBreakpoint.mdAndUp ? '' : 'flex-center flex-column'">
               <template v-for="(page, index) in pages">
                 <div :key="index">
                   <nuxt-link :to="$lang.link(page.link)">
@@ -31,9 +31,9 @@
               </template>
             </div>
           </v-col>
-          <v-col cols="6" sm="2" class="offset-sm-1 d-flex align-start flex-column mb-10 mb-sm-0">
+          <v-col cols="6" sm="2" class="offset-sm-1 d-flex align-center align-md-start flex-column mb-10 mb-sm-0">
             <h3 class="size16-weight700 px-3 mb-6">Каталог</h3>
-            <div>
+            <div :class="vuetifyBreakpoint.mdAndUp ? '' : 'flex-center flex-column'">
               <template v-for="(category, index) in navCategory">
                 <div v-if="index > 3" :key="index">
                   <nuxt-link :to="$lang.link(`category/${category.link}`)">
