@@ -1,7 +1,7 @@
 <template>
   <CommonPagesLayout :breadcrumbs="breadcrumbs">
     <div class="px-3">
-      <h1 class="mb-5 size20-weight700">Отзывы</h1>
+      <h1 class="mb-5 mt-0 size20-weight700">Отзывы</h1>
       <ReviewsList :reviews="reviews" :number-of-cards="8"/>
     </div>
   </CommonPagesLayout>
@@ -22,7 +22,7 @@ export default {
       breadcrumbs: [
         {
           text: 'Главная',
-          href: '/',
+          href: '',
         },
         {
           text: 'Отзывы',

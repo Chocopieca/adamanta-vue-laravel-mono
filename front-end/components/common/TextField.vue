@@ -8,7 +8,8 @@
     :type="password ? showPassword : ''"
     :dense="dense"
     :append-icon="password ? appendIcon : ''"
-    @click="$emit('input', $event.target.value)"
+    :hide-details="hideDetails"
+    @input="submit"
     @click:append="show = !show"
   />
 </template>
@@ -16,10 +17,6 @@
 <script>
 export default {
   name: "TextField",
-  model: {
-    prop: 'value',
-    event: 'input',
-  },
   props: {
     value: {
       type: String,
@@ -53,6 +50,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    hideDetails: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
@@ -65,6 +66,11 @@ export default {
     },
     appendIcon() {
      return !this.show ? 'mdi-eye' : 'mdi-eye-off'
+    }
+  },
+  methods: {
+    submit(val) {
+      this.$emit('input', val)
     }
   }
 }

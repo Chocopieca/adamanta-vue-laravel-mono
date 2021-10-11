@@ -42,20 +42,24 @@
                 </div>
               </v-col>
 
-              <v-col>
-                <h3 class="size16-weight400">Тема отзыва <span class="red--text">*</span></h3>
+              <v-col cols="12" class="review-form">
+                <h3 class="size16-weight400 mb-3">Тема отзыва <span class="red--text">*</span></h3>
                 <TextField
-                  v-model="newReview.content"
+                  v-model="newReview.title"
                   placeholder="Введите текст"
                   dense
+                  class="mb-5"
                 />
 
-                <h3 class="size16-weight400">Отзыв</h3>
+                <h3 class="size16-weight400 mb-3">Отзыв</h3>
                 <v-textarea
+                  v-model="newReview.content"
                   dense
                   outlined
+                  auto-grow
                   placeholder="Введите текст"
-                ></v-textarea>
+                  class="size24-weight700 mb-5"
+                />
 
                 <Button
                   content="Отправить"
@@ -121,6 +125,10 @@ export default {
   },
   methods: {
     openSuccessReviewDialog() {
+      this.newReview.title = '';
+      this.newReview.content = '';
+      this.newReview.stars = null;
+
       this.$refs.successReview.openDialog();
     },
   }
@@ -133,5 +141,15 @@ export default {
   border-radius: 50%;
   color: white;
   padding: 7px 10px;
+}
+
+::v-deep.review-form {
+  input {
+    font-size: 16px !important;
+  }
+
+  textarea {
+    font-size: 16px !important;
+  }
 }
 </style>

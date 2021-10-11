@@ -1,5 +1,8 @@
 <template>
   <v-container class="mb-md-10">
+    <v-row>
+      <Breadcrumbs :items="breadcrumbs"/>
+    </v-row>
     <h1 class="size20-weight700 ma-0 mb-5 mb-md-10">Регистрация</h1>
     <v-row no-gutters>
       <v-col cols="12" md="6" class="pr-md-10">
@@ -8,12 +11,14 @@
           v-model="userCredo.firstName"
           placeholder="Имя"
           dense
+          class="mb-5"
         />
         <div class="size18-weight700 mb-3">Ваша фамилия</div>
         <TextField
           v-model="userCredo.secondName"
           placeholder="Фамилия"
           dense
+          class="mb-5"
         />
         <div class="size18-weight700 mb-3">Дата рождения</div>
         <DatePiker v-model="userCredo.birthday"/>
@@ -22,6 +27,7 @@
           v-model="userCredo.email"
           placeholder="1314sjg@gmail.com"
           dense
+          class="mb-5"
         />
       </v-col>
       <v-col cols="12" md="6" class="pl-md-10">
@@ -31,6 +37,7 @@
           placeholder="Вашь пароль"
           password
           dense
+          class="mb-5"
         />
         <div class="size18-weight700 mb-3">Повторите пароль</div>
         <TextField
@@ -38,12 +45,14 @@
           placeholder="Вашь пароль"
           password
           dense
+          class="mb-5"
         />
         <div class="size18-weight700 mb-3">Номер телефона</div>
         <TextField
           v-model="userCredo.email"
           placeholder="+380 (__)___-__-__"
           dense
+          class="mb-5"
         />
         <nuxt-link :to="$lang.link('')" class="flex-center">
           <Button
@@ -62,10 +71,21 @@
 export default {
   name: "RegistrationPage",
   components: {
+    Breadcrumbs: () => import('~~/components/common/Breadcrumbs'),
     DatePiker: () => import('~~/components/common/DatePiker'),
   },
   data() {
     return {
+      breadcrumbs: [
+        {
+          text: 'Главная',
+          href: '',
+        },
+        {
+          text: 'Страница регистрации',
+          href: `registration`,
+        },
+      ],
       userCredo: {
         firstName: '',
         secondName: '',

@@ -1,17 +1,21 @@
 <template>
   <div>
-    <HeaderDesktop @openDialog="openDialog" v-if="$vuetify.breakpoint.lgAndUp" class="header-fixed"/>
-    <HeaderMobile @openDialog="openDialog" v-else/>
+    <HeaderDesktop
+      v-if="$vuetify.breakpoint.lgAndUp"
+      class="header-fixed"
+      @openDialog="openDialog"
+    />
+    <HeaderMobile v-else @openDialog="openDialog"/>
 
     <Dialog ref="login">
       <LoginForm
         :link-to="dialog"
-        @forgotPass="$refs['forgot-login'].toggle()"
+        @forgotPass="onForgotPassword"
         @close="$refs['login'].toggle()"
       />
     </Dialog>
-    <Dialog ref="forgot-login">
-      <ForgotPassword @changePass="$refs['forgot-login'].toggle()"/>
+    <Dialog ref="forgot-login" @close="$refs['forgot-login-card'].reset()">
+      <ForgotPassword ref="forgot-login-card" @changePass="$refs['forgot-login'].toggle()"/>
     </Dialog>
   </div>
 </template>
@@ -36,6 +40,10 @@ export default {
       this.$refs.login.toggle();
       this.dialog = type;
     },
+    onForgotPassword() {
+      this.$refs['forgot-login'].toggle();
+      this.$refs.login.toggle();
+    }
   }
 }
 </script>

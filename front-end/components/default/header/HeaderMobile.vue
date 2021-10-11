@@ -45,11 +45,19 @@
             small
             @click="$emit('openDialog', 'basket')"
           >
-            <v-icon color="black">mdi-cart</v-icon>
+            <v-badge
+              :color="vuetifyMainBlue"
+              :content="countProductInBasket"
+              right
+              offset-x="6"
+              offset-y="6"
+            >
+              <v-icon color="black">mdi-cart</v-icon>
+            </v-badge>
           </v-btn>
         </div>
       </div>
-      <NavMenu/>
+      <NavMenu class="header-elevation"/>
     </v-navigation-drawer>
 
     <v-app-bar
@@ -62,8 +70,11 @@
 </template>
 
 <script>
+import MockMixin from "../../../mixins/MockMixin";
+
 export default {
   name: "HeaderMobile",
+  mixins: [MockMixin],
   components: {
     SearchWithDialog: () => import('~~/components/common/SearchWithDialog'),
     Language: () => import('~~/components/common/Language'),
@@ -76,9 +87,20 @@ export default {
       logoLink: 'image/logo.svg',
     }
   },
+  computed: {
+    countProductInBasket() {
+      let count = 0;
+      this.productsInOrder.forEach(item => {
+        count += item.count
+      })
+      return count;
+    }
+  }
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.header-elevation {
+  box-shadow: 0 30px 24px -25px rgb(0 0 0 / 18%) !important;
+}
 </style>

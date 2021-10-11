@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="pa-0">
-    <Banner />
+    <Banner @addProduct="$refs.snackbar.toggle()"/>
 
     <v-container class="pa-0">
       <Category />
@@ -17,6 +17,8 @@
     <v-container class="pa-0 mb-md-100 mb-16 pa-5">
       <Reviews />
     </v-container>
+
+    <Snackbar ref="snackbar" content="Товар добавлен в корзину"/>
   </v-container>
 </template>
 

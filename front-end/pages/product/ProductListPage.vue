@@ -1,8 +1,8 @@
 <template>
   <CommonPagesLayout :breadcrumbs="breadcrumbs">
     <v-row no-gutters class="mb-md-100 mb-16">
-      <v-col v-for="(item, index) in paginateItems" :key="index" cols="12" sm="4" md="3" class="pa-3">
-        <ProductItem :item="item" @addToBasket="$refs.snackbar.toggle()"/>
+      <v-col v-for="(item, index) in paginateItems" :key="index" cols="12" sm="4" md="3" class="pa-3 pt-0">
+        <ProductCardItem :item="item" @addToBasket="$refs.snackbar.toggle()"/>
       </v-col>
     </v-row>
 
@@ -23,7 +23,7 @@ export default {
   components: {
     CommonPagesLayout: () => import('~~/components/feature/CommonPagesLayout'),
     Pagination: () => import('~~/components/common/Pagination'),
-    ProductItem: () => import('~~/components/common/ProductItem'),
+    ProductCardItem: () => import('~~/components/product-list-page/ProductCardItem'),
   },
   props: {
     category: {
@@ -37,22 +37,26 @@ export default {
   },
   data() {
     return {
-      breadcrumbs: [
-        {
-          text: 'Главная',
-          href: '/',
-        },
-        {
-          text: this.textConvertor(this.category),
-          href: `category/${this.category}`,
-        },
-        {
-          text: this.textConvertor(this.group),
-          href: `category/${this.category}/${this.group}`,
-        },
-      ],
       paginateItems: [],
     }
   },
+  computed: {
+    breadcrumbs() {
+      return [
+        {
+          text: 'Главная',
+          href: '',
+        },
+        {
+          text: this.getTitle().category(this.navCategory, this.category),
+          href: `category/${this.category}`,
+        },
+        {
+          text: this.getTitle().category(this.categoryGroups, this.group),
+          href: `category/${this.category}/${this.group}`,
+        },
+      ]
+    },
+  }
 }
 </script>

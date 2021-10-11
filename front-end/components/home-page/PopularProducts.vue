@@ -6,7 +6,7 @@
     transition="fade-transition"
   >
     <div class="position-relative pa-3">
-      <h2 class="mb-md-16">Популярные товары</h2>
+      <h2 class="mb-md-8">Популярные товары</h2>
       <Carousel
         siad-arrow
         :with-side-arrow="vuetifyBreakpoint.lgAndUp"

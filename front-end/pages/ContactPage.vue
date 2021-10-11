@@ -2,7 +2,7 @@
   <v-container class="pa-0">
     <Breadcrumbs :items="breadcrumbs"/>
     <div class="px-3">
-      <h1 class="mb-5 size20-weight700">Контакты</h1>
+      <h1 class="mb-5 mt-0 size20-weight700">Контакты</h1>
       <v-row no-gutters>
         <v-col cols="12" md="2" class="mb-10">
           <span :style="`color: ${vuetifyMainBlue};`">Телефон</span>
@@ -40,7 +40,7 @@ export default {
       breadcrumbs: [
         {
           text: 'Главная',
-          href: '/',
+          href: '',
         },
         {
           text: 'Контакты',

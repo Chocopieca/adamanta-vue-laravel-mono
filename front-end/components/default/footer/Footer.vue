@@ -17,7 +17,7 @@
               @submit="$emit('close')"
             />
           </v-col>
-          <v-col cols="6" sm="2" class="offset-sm-1 d-flex align-center flex-column mb-10 mb-sm-0">
+          <v-col cols="6" sm="2" class="offset-sm-1 d-flex align-start flex-column mb-10 mb-sm-0">
             <h3 class="size16-weight700 px-3 mb-6">Карта сайта</h3>
             <div>
               <template v-for="(page, index) in pages">
@@ -31,7 +31,7 @@
               </template>
             </div>
           </v-col>
-          <v-col cols="6" sm="2" class="offset-sm-1 d-flex align-center flex-column mb-10 mb-sm-0">
+          <v-col cols="6" sm="2" class="offset-sm-1 d-flex align-start flex-column mb-10 mb-sm-0">
             <h3 class="size16-weight700 px-3 mb-6">Каталог</h3>
             <div>
               <template v-for="(category, index) in navCategory">
@@ -47,8 +47,8 @@
           </v-col>
           <v-col
             cols="12"
-            sm="3"
-            class="size14-weight400 flex-center justify-sm-start align-sm-end flex-column px-5 px-md-0"
+            sm="2"
+            class="size14-weight400 flex-center justify-sm-start align-sm-start flex-column offset-md-1 px-5 px-md-0"
           >
             <h3 class="size16-weight700 mb-6">Контакты и адрес</h3>
             <div

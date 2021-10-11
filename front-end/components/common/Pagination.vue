@@ -23,12 +23,12 @@ export default {
   },
   computed: {
     productPages() {
-      return Math.ceil(this.itemArray.length / 4)
+      return Math.ceil(this.itemArray.length / 16)
     },
     paginateItems() {
       const firstIndex = (this.page - 1) * 4
       return this.itemArray.filter((item, index) => {
-        return index >= firstIndex && index < firstIndex + 4;
+        return index >= firstIndex && index < firstIndex + 16;
       })
     }
   },

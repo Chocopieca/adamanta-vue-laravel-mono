@@ -10,6 +10,7 @@
             v-model="forgotData"
             placeholder="e-mail / phone"
             required
+            class="mb-5"
           />
           <Button
             content="Отправить код"
@@ -31,15 +32,17 @@
             v-model="enteredCode"
             placeholder="Код"
             required
+            class="mb-5"
           />
 
           <div class="size16-weight400 mb-3">Введите пароль</div>
 
           <TextField
             v-model="enteredCode"
-            placeholder="Код"
+            placeholder="Пароль"
             :rules="[(v) => v !== copyPassword || 'Пароль не совподает']"
             required
+            class="mb-5"
           />
 
           <div class="size16-weight400 mb-3">Подтвердите пароль</div>
@@ -47,6 +50,7 @@
             v-model="copyPassword"
             placeholder="Пароль"
             required
+            class="mb-5"
           />
 
           <Button
@@ -75,8 +79,11 @@ export default {
   },
   methods: {
     submit() {
-      this.step = 1;
+      this.reset();
       this.$emit('changePass');
+    },
+    reset() {
+      this.step = 1;
     }
   }
 }

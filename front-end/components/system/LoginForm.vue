@@ -10,6 +10,7 @@
         v-model="loginData"
         placeholder="E-mail / Phone"
         required
+        class="mb-5"
       />
 
       <TextField
@@ -17,12 +18,13 @@
         placeholder="Пароль"
         password
         required
+        class="mb-5"
       />
 
       <v-row no-gutters justify="space-between" align="center" class="mb-6">
         <v-checkbox
-          class="ma-0"
           v-model="rememberMe"
+          class="ma-0"
           label="Запомнить меня"
           hide-details
           required

@@ -5,6 +5,7 @@
     :outlined="outlined"
     :items="items"
     :placeholder="placeholder"
+    :hide-details="hideDetails"
     @click="$emit('input', $event.target.value)"
   />
 </template>
@@ -30,6 +31,10 @@ export default {
       default: true,
     },
     outlined: {
+      type: Boolean,
+      default: true,
+    },
+    hideDetails: {
       type: Boolean,
       default: true,
     },

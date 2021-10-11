@@ -9,6 +9,7 @@
     :outlined="outlined"
     :rounded="rounded"
     @click="$emit('submit')"
+    class="elevation-0"
   >
     <span v-if="content" :class="textStyle()" class="pt-1">{{ content }}</span>
     <v-icon v-if="icon">{{ icon }}</v-icon>

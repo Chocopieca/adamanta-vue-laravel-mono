@@ -13,8 +13,8 @@
       clearable
       autofocus
       clear-icon="mdi-close"
-      @blur="search = !search"
-      @click:clear="search = !search"
+      @blur="onClose"
+      @click:clear="onClose"
       @keydown.enter="goToSearchPage"
     />
     <v-btn
@@ -47,6 +47,10 @@ export default {
     }
   },
   methods: {
+    onClose() {
+      this.searchText = '';
+      this.search = !this.search;
+    },
     goToSearchPage() {
       this.search = !this.search;
       this.$router.push({ path: this.$lang.link(`search/?q=${this.searchText}`) });
@@ -63,6 +67,10 @@ export default {
     border: 2px solid var(--v-main_green-base);
     border-radius: 20px 20px;
     height: 40px;
+
+    & input {
+      font-size: 16px !important;
+    }
   }
 
   & + .v-btn {

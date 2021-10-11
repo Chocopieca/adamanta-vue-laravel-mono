@@ -1,11 +1,11 @@
 <template>
   <CommonPagesLayout :breadcrumbs="breadcrumbs">
-    <v-container>
+    <v-container class="pt-0">
       <v-row>
-        <v-col cols="12" md="9">
+        <v-col cols="12" md="9" class="pt-0">
           <h1 class="size20-weight700 ma-0 mb-10">Корзина</h1>
           <div v-for="(item, index) in productsInOrder" :key="index">
-            <ProductTypeInBasket :order="item" :index="index"/>
+            <ProductTypeInBasket :order="item" :index="index" :array="categoryProducts"/>
           </div>
         </v-col>
         <v-col cols="12" md="3">
@@ -58,7 +58,7 @@ export default {
       breadcrumbs: [
         {
           text: 'Главная',
-          href: '/',
+          href: '',
         },
         {
           text: 'Корзина',

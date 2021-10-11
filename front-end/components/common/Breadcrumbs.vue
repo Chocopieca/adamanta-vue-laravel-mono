@@ -1,5 +1,5 @@
 <template>
-  <v-breadcrumbs :items="items" divider="/" class="pa-3">
+  <v-breadcrumbs :items="items" divider="/" class="pa-3 py-8">
     <template #item="{ item }">
       <v-breadcrumbs-item
         nuxt
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+// TODO Update item array with push() method
 export default {
   name: "Breadcrumbs",
   props: {
@@ -22,7 +23,7 @@ export default {
       default: () => [
         {
           text: 'Главная',
-          href: '/',
+          href: '',
         },
       ]
     }
