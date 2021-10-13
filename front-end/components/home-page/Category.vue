@@ -17,6 +17,7 @@
         <template #slides>
           <div v-for="(item, index) in navCategory" :key="index">
             <v-card
+              v-ripple="{ class: `mainGreenColor` }"
               class="flex-center flex-column text-center custom-elevation rounded-lg mx-5 mx-md-10 ma-2 mb-5 pa-4"
               height="174"
               @click="routeToCategory(item.link)"

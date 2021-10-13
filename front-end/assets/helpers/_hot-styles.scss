@@ -104,3 +104,8 @@
   line-height: 1.3em;
   height: 3.9em;
 }
+
+.mainGreenColor {
+  color: var(--v-main_green-base) !important;
+  caret-color: var(--v-main_green-base) !important;
+}

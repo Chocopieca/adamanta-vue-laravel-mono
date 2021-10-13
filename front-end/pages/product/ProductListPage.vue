@@ -1,11 +1,11 @@
 <template>
   <CommonPagesLayout :breadcrumbs="breadcrumbs">
     <v-row no-gutters class="mb-md-100 mb-16">
-      <v-col v-for="(item, index) in paginateItems" :key="index" cols="12" sm="4" md="3" class="pa-3 pt-0">
+      <v-col v-for="(item, index) in paginateItems" :key="index" cols="12" sm="4" md="3" class="pa-3 pt-0 pb-6">
         <ProductCardItem :item="item" @addToBasket="$refs.snackbar.toggle()"/>
       </v-col>
     </v-row>
-
+<!---->
     <div class="flex-center mb-md-16">
       <Pagination :item-array="categoryProducts" @getPaginateArray="paginateItems = $event"/>
     </div>
