@@ -8,7 +8,7 @@
           <Selector v-model="checkoutInfo.paymentType" placeholder="Выберите способ оплаты" :items="paymentType" class="mb-5"/>
           <h3 class="size18-weight700 mb-5">Выберите способ доставки: <span class="red--text">*</span></h3>
           <v-alert border="left" :color="vuetifyMainGreen" dark class="mb-5">
-            Доставка новой почтой будет стоить от 45грн
+            Доставка новой почтой от 45 грн
           </v-alert>
           <Selector v-model="checkoutInfo.typeGetting" placeholder="Тип получения" :items="typeGetting" class="mb-5"/>
           <v-row no-gutters class="mb-5">
@@ -87,7 +87,7 @@
     <Dialog ref="dialog" has-close-action to="">
       <div class="flex-center flex-column">
         <div class="size36-weight700 mb-3" :style="`color: ${vuetifyMainGreen};`">Спасибо!</div>
-        <div class="size24-weight700 mb-3">Ваш заказ
+        <div class="size24-weight700 mb-3 text-center">Ваш заказ
           успешно оформлен</div>
         <v-img contain max-width="350" :src="baseUrl + 'image/successBuy.svg'" class="mb-10" />
       </div>

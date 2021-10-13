@@ -38,7 +38,7 @@
           <div class="size16-weight400 mb-3">Введите пароль</div>
 
           <TextField
-            v-model="enteredCode"
+            v-model="forgotPassword"
             placeholder="Пароль"
             :rules="[(v) => v !== copyPassword || 'Пароль не совподает']"
             required

@@ -5,7 +5,7 @@
     min-height="200"
     transition="fade-transition"
   >
-    <div class="position-relative pa-3">
+    <div class="position-relative pa-3 mx-100">
       <h2 class="mb-md-8">Популярные товары</h2>
       <Carousel
         siad-arrow
@@ -62,5 +62,9 @@ export default {
   @media (max-width: map-get($grid-breakpoints, md)) {
     width: 768px;
   }
+}
+
+.mx-100 {
+  margin: 0 100px;
 }
 </style>

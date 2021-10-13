@@ -8,6 +8,7 @@
     :small="small"
     :outlined="outlined"
     :rounded="rounded"
+    :ripple="{ class: `mainGreenColor` }"
     @click="$emit('submit')"
     class="elevation-0"
   >

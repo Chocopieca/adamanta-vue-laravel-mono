@@ -1,5 +1,6 @@
 <template>
   <v-text-field
+    class="custom-input"
     :value="value"
     :label="label"
     :placeholder="placeholder"
@@ -76,6 +77,10 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+::v-deep.custom-input {
+  & input {
+    font-size: 16px !important;
+  }
+}
 </style>

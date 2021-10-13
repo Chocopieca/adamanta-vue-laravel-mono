@@ -11,7 +11,8 @@
     </VueSlickCarousel>
 
     <div class="banner-arrows">
-      <span v-if="withArrow" @click="showPrev()">
+      <span :class="withDots ? 'banner-arrows__block' : ''">
+        <span v-if="withArrow" @click="showPrev()">
         <v-btn icon :color="navColor">
           <v-icon size="30">mdi-chevron-left</v-icon>
         </v-btn>
@@ -27,6 +28,7 @@
         <v-btn icon :color="navColor">
           <v-icon size="30">mdi-chevron-right</v-icon>
         </v-btn>
+      </span>
       </span>
     </div>
 
@@ -160,6 +162,13 @@ export default {
   left: 0;
   right: 0;
   top: 520px;
+
+  &__block {
+    background: #0000007a;
+    border-radius: 20px;
+    padding: 3px;
+  }
+
   @media (max-width: map-get($grid-breakpoints, md)) {
     top: 400px;
   }
@@ -184,11 +193,11 @@ export default {
   }
 
   & > span:nth-child(1) {
-    left: -50px;
+    left: -100px;
   }
 
   & > span:nth-child(2) {
-    right: -50px;
+    right: -100px;
   }
 }
 </style>

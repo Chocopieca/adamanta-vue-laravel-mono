@@ -12,6 +12,7 @@
               v-model="userCredo.firstName"
               placeholder="Имя"
               dense
+              class="mb-5"
             />
           </div>
           <div class="mr-md-10">
@@ -20,6 +21,7 @@
               v-model="userCredo.secondName"
               placeholder="Фамилия"
               dense
+              class="mb-5"
             />
           </div>
           <div class="mr-md-10">
@@ -28,6 +30,7 @@
               v-model="userCredo.login"
               placeholder="Фамилия"
               dense
+              class="mb-5"
             />
           </div>
           <div class="mr-md-10">
@@ -36,6 +39,7 @@
               v-model="userCredo.email"
               placeholder="1314sjg@gmail.com"
               dense
+              class="mb-5"
             />
           </div>
         </v-col>
@@ -50,6 +54,7 @@
               v-model="userCredo.email"
               placeholder="+380 (__)___-__-__"
               dense
+              class="mb-5"
             />
           </div>
         </v-col>
@@ -65,6 +70,7 @@
           placeholder="123445"
           password
           dense
+          class="mb-5"
         />
       </div>
       <div class="mr-md-10">
@@ -81,6 +87,7 @@
           placeholder="123445"
           password
           dense
+          class="mb-5"
         />
       </div>
       <div class="mr-md-10">

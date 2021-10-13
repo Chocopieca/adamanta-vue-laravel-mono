@@ -12,7 +12,7 @@
           </template>
         </v-col>
         <v-col cols="12" md="3" class="mb-10">
-          <span :style="`color: ${vuetifyMainBlue};`">Адресс</span>
+          <span :style="`color: ${vuetifyMainBlue};`">Адрес</span>
           <v-divider class="my-3"/>
           {{ contacts.address }}
         </v-col>

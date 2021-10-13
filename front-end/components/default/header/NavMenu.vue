@@ -21,7 +21,12 @@
           <v-list>
             <template v-for="(category, index) in navCategory">
               <nuxt-link :key="index" :to="$lang.link(`category/${category.link}`)">
-                <v-list-item v-ripple class="py-1" @click="isShowItems = false">
+                <v-list-item
+                  v-ripple="{ class: `mainGreenColor` }"
+                  class="py-1"
+                  @click="isShowItems = false"
+                  color="red"
+                >
                   <v-img width="56" height="56" :src="baseUrl + category.icon" class="mr-3"/>
                   <v-list-item-title>{{ category.title }}</v-list-item-title>
                 </v-list-item>
@@ -64,6 +69,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

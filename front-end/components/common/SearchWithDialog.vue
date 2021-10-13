@@ -71,6 +71,10 @@ export default {
     border: 2px solid var(--v-main_green-base);
     border-radius: 20px 20px;
     height: 40px;
+
+    & input {
+      font-size: 16px !important;
+    }
   }
 
   & + .v-btn {
