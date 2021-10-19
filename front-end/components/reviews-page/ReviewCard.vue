@@ -42,7 +42,7 @@
       <Button
         :color-text="vuetifyMainBlack"
         :color-button="vuetifyTransparent"
-        icon="mdi-ray-start-arrow"
+        icon="mdi-arrow-right"
         content="Весь отзыв"
         text
         font-size="size14-weight400"

@@ -63,11 +63,12 @@
               @click="$emit('openDialog', 'basket')"
             >
               <v-badge
-                :color="vuetifyMainBlue"
+                :color="vuetifyMainGreen"
                 :content="countProductInBasket"
                 right
                 offset-x="6"
                 offset-y="6"
+                class="mainGreenColor"
               >
                 <v-icon color="black">mdi-cart</v-icon>
               </v-badge>

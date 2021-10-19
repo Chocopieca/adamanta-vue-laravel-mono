@@ -50,9 +50,11 @@
             <v-icon>mdi-minus</v-icon>
           </v-btn>
 
-          <div class="mx-2 cursor-default">{{ count }}</div>
+          <div class="mx-2 cursor-default">
+            <v-text-field class="custom-text-field" outlined hide-details type="number" v-model="count"/>
+          </div>
 
-          <v-btn :disabled="isIncrementedCount" fab text x-small @click="changeCount(1)">
+          <v-btn fab text x-small @click="changeCount(1)">
             <v-icon>mdi-plus</v-icon>
           </v-btn>
         </div>
@@ -107,9 +109,6 @@ export default {
     isDecrementedWeight() {
       return this.productType === 0;
     },
-    isIncrementedCount() {
-      return this.count === 100;
-    },
     isDecrementedCount() {
       return this.count === 1;
     },
@@ -123,7 +122,7 @@ export default {
       this.productType += type;
     },
     changeCount(type) {
-      this.count += type;
+      this.count = +this.count + type;
     },
   },
 }
@@ -148,6 +147,30 @@ export default {
 
   .v-input__slot {
     box-shadow: 0 0 0 0 !important;
+  }
+}
+
+::v-deep.custom-text-field {
+  & .v-input__slot {
+    padding: 0 !important;
+  }
+  & fieldset {
+    color: transparent !important;
+    padding: 0;
+  }
+
+  input {
+    text-align: center;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
   }
 }
 </style>
