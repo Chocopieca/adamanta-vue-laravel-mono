@@ -65,6 +65,8 @@ export default {
 }
 
 .mx-100 {
-  margin: 0 100px;
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    margin: 0 100px;
+  }
 }
 </style>

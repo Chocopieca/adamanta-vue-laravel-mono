@@ -25,15 +25,6 @@
             />
           </div>
           <div class="mr-md-10">
-            <div class="size18-weight700 mb-3">Ваша фамилия</div>
-            <TextField
-              v-model="userCredo.login"
-              placeholder="Фамилия"
-              dense
-              class="mb-5"
-            />
-          </div>
-          <div class="mr-md-10">
             <div class="size18-weight700 mb-3">E-mail / Логин</div>
             <TextField
               v-model="userCredo.email"
@@ -51,7 +42,7 @@
           <div class="mr-md-10">
             <div class="size18-weight700 mb-3">Номер телефона</div>
             <TextField
-              v-model="userCredo.email"
+              v-model="userCredo.phone"
               placeholder="+380 (__)___-__-__"
               dense
               class="mb-5"
@@ -114,10 +105,10 @@ export default {
       userCredo: {
         firstName: '',
         secondName: '',
-        login: '',
         birthday: '',
         email: '',
         password: '',
+        phone: '',
       },
     }
   }
