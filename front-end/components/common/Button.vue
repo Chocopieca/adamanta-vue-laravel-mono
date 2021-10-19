@@ -3,6 +3,7 @@
     :style="`color: ${colorText}; background: ${colorButton}`"
     :min-height="minHeight"
     :max-width="maxWidth"
+    :max-height="maxHeight"
     :text="text"
     :fab="fab"
     :small="small"
@@ -12,7 +13,7 @@
     @click="$emit('submit')"
     class="elevation-0"
   >
-    <span v-if="content" :class="textStyle()" class="pt-1">{{ content }}</span>
+    <span v-if="content" :class="textStyle()">{{ content }}</span>
     <v-icon v-if="icon">{{ icon }}</v-icon>
   </v-btn>
 </template>
@@ -38,6 +39,10 @@ export default {
       default: null,
     },
     maxWidth: {
+      type: [Number, String],
+      default: null,
+    },
+    maxHeight: {
       type: [Number, String],
       default: null,
     },

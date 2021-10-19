@@ -26,6 +26,7 @@
         <TextField
           v-model="userCredo.email"
           placeholder="1314sjg@gmail.com"
+          :rules="[rules.email]"
           dense
           class="mb-5"
         />
@@ -33,7 +34,7 @@
       <v-col cols="12" md="6" class="pl-md-10">
         <div class="size18-weight700 mb-3">Придумайте ароль</div>
         <TextField
-          v-model="userCredo.email"
+          v-model="userCredo.password"
           placeholder="Вашь пароль"
           password
           dense
@@ -41,7 +42,7 @@
         />
         <div class="size18-weight700 mb-3">Повторите пароль</div>
         <TextField
-          v-model="userCredo.email"
+          v-model="rules.confirmPassword"
           placeholder="Вашь пароль"
           password
           dense
@@ -49,7 +50,7 @@
         />
         <div class="size18-weight700 mb-3">Номер телефона</div>
         <TextField
-          v-model="userCredo.email"
+          v-model="userCredo.phone"
           placeholder="+380 (__)___-__-__"
           dense
           class="mb-5"
@@ -92,8 +93,20 @@ export default {
         birthday: '',
         email: '',
         password: '',
-      }
+        phone: '',
+        confirmPassword: '',
+      },
     }
+  },
+  computed: {
+    rules() {
+      return {
+        email: value => {
+          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          return pattern.test(value) || 'Не верная почта.'
+        },
+      }
+    },
   }
 }
 </script>

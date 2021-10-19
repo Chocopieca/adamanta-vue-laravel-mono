@@ -10,6 +10,7 @@
     :dense="dense"
     :append-icon="password ? appendIcon : ''"
     :hide-details="hideDetails"
+    :rules="[...rules]"
     @input="submit"
     @click:append="show = !show"
   />

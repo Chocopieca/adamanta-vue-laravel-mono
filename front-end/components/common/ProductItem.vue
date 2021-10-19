@@ -8,38 +8,38 @@
 
     <v-divider />
 
-    <v-card-subtitle
+    <div
       v-if="item.available"
       :style="`color: ${vuetifyMainGreen}`"
-      class="size12-md-weight400 size12-weight400"
+      class="ma-3 size12-md-weight400 size12-weight400"
     >
       <v-icon :color="vuetifyMainGreen">mdi-check-circle</v-icon>
       В наличии
-    </v-card-subtitle>
+    </div>
 
-    <v-card-subtitle
+    <div
       v-else
       :style="`color: ${vuetifyError}`"
       class="size12-md-weight400 size12-weight400"
     >
       <v-icon :color="vuetifyError">mdi-close-circle</v-icon>
       Нет в наличии
-    </v-card-subtitle>
+    </div>
 
-    <v-card-subtitle class="product-price">
+    <div class="ml-3 size22-weight700 product-price">
       {{ getProductPrice(item.price[0].value, item.price[0].currency, item.price[0].weight) }}
-    </v-card-subtitle>
+    </div>
 
-    <v-card-subtitle v-if="item.type">
+    <div class="ml-3" v-if="item.type">
       {{ item.type }}
-    </v-card-subtitle>
+    </div>
 
     <v-card-actions>
       <nuxt-link v-if="inBasket" :to="$lang.link('basket')">
         <Button
           :color-text="vuetifyMainWhite"
           content="Оформить заказ"
-          :min-height="54"
+          :min-height="40"
           font-size="size18-weight700"
           class="w-100"
         />
@@ -47,8 +47,10 @@
       <Button
         v-else
         :color-button="vuetifyMainGreen"
-        icon="mdi-cart-outline"
+        icon="mdi-cart"
         fab
+        :max-width="40"
+        :max-height="40"
         @submit="addToBasket"
       />
     </v-card-actions>

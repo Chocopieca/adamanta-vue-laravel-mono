@@ -10,7 +10,7 @@
         </v-col>
         <v-col cols="12" md="3">
           <h2 class="mb-5 size20-weight700">Итог заказа</h2>
-          <div><span class="mr-10 size18-weight400">{{ sumProductInOrder }}</span> {{ sumPriceInOrder }}₴</div>
+          <div class="size18-weight700"><span class="mr-2">Итоги </span><span class="mr-10 size18-weight400">{{ sumProductInOrder }}</span> {{ sumPriceInOrder }}₴</div>
           <v-divider class="mb-5"/>
           <div class="mb-5 size24-weight700"><span class="mr-10">К оплате</span> {{ sumPriceInOrder }}₴</div>
 
