@@ -63,7 +63,7 @@
               @click="$emit('openDialog', 'basket')"
             >
               <v-badge
-                :color="vuetifyMainGreen"
+                :color="vuetifyMainBlue"
                 :content="countProductInBasket"
                 right
                 offset-x="6"
