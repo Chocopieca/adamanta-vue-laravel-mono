@@ -43,7 +43,7 @@
         placeholder="Уточнение к заказу"
         dense
         outlined
-        class="mb-5"
+        class="custom-textarea mb-5"
       />
 
       <div class="d-flex justify-end">
@@ -109,6 +109,10 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+::v-deep.custom-textarea {
+  & textarea {
+    font-size: 16px !important;
+  }
+}
 </style>

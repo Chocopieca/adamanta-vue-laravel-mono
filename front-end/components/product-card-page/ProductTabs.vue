@@ -8,8 +8,9 @@
         </v-container>
 
         <v-container v-if="tab.name === 'usage'" class="my-10 pa-md-0">
-          <div v-for="(content, id) in productCard.usage" :key="id" class="my-5">
-            <span class="usage-id">{{ id + 1 }}</span> {{ content }}
+          <div v-for="(content, id) in productCard.usage" :key="id" class="d-flex my-5">
+            <div class="mr-3"><div class="usage-id">{{ id + 1 }}</div></div>
+            <div>{{ content }}</div>
           </div>
         </v-container>
 
@@ -140,7 +141,7 @@ export default {
   background: var(--v-main_green-base);
   border-radius: 50%;
   color: white;
-  padding: 7px 10px;
+  padding: 1px 8px 0;
 }
 
 ::v-deep.review-form {

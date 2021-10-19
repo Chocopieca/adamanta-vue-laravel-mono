@@ -8,31 +8,31 @@
 
     <v-divider />
 
-    <div
+    <v-card-subtitle
       v-if="item.available"
       :style="`color: ${vuetifyMainGreen}`"
-      class="ma-3 size12-md-weight400 size12-weight400"
+      class="size12-md-weight400 size12-weight400"
     >
       <v-icon :color="vuetifyMainGreen">mdi-check-circle</v-icon>
       В наличии
-    </div>
+    </v-card-subtitle>
 
-    <div
+    <v-card-subtitle
       v-else
       :style="`color: ${vuetifyError}`"
       class="size12-md-weight400 size12-weight400"
     >
       <v-icon :color="vuetifyError">mdi-close-circle</v-icon>
       Нет в наличии
-    </div>
+    </v-card-subtitle>
 
-    <div class="ml-3 size22-weight700 product-price">
+    <v-card-subtitle class="size22-weight700 product-price">
       {{ getProductPrice(item.price[0].value, item.price[0].currency, item.price[0].weight) }}
-    </div>
+    </v-card-subtitle>
 
-    <div class="ml-3" v-if="item.type">
+    <v-card-subtitle v-if="item.type">
       {{ item.type }}
-    </div>
+    </v-card-subtitle>
 
     <v-card-actions>
       <nuxt-link v-if="inBasket" :to="$lang.link('basket')">
@@ -40,7 +40,7 @@
           :color-text="vuetifyMainWhite"
           content="Оформить заказ"
           :min-height="40"
-          font-size="size18-weight700"
+          font-size="size16-weight700"
           class="w-100"
         />
       </nuxt-link>
