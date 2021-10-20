@@ -76,9 +76,5 @@ export default {
       font-size: 16px !important;
     }
   }
-
-  & + .v-btn {
-    border: 2px solid;
-  }
 }
 </style>
