@@ -115,7 +115,7 @@ export default {
   justify-content: end;
 
   .v-btn {
-    border: 2px solid var(--v-main_green-base);
+    border: 3px solid var(--v-main_green-base);
   }
 }
 

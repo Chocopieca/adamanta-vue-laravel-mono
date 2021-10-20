@@ -100,6 +100,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+::v-deep.header-buttons {
+  display: flex;
+  justify-content: end;
+
+  .v-btn {
+    border: 3px solid var(--v-main_green-base);
+  }
+}
+
 .header-elevation {
   box-shadow: 0 30px 24px -25px rgb(0 0 0 / 18%) !important;
 }
