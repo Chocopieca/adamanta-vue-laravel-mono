@@ -22,15 +22,17 @@
                 class="mb-10"
                 :class="vuetifyBreakpoint.lgAndUp ? 'size22-weight400' : 'size14-weight400'"
               >{{ item.content }}</p>
-              <Button
-                :color-text="vuetifyMainWhite"
-                content="Купить"
-                :min-height="54"
-                :max-width="246"
-                font-size="size18-weight700"
-                class="w-100"
-                @submit="$emit('addProduct')"
-              />
+              <nuxt-link :to="$lang.link(`category/${productsInOrder[0].product.linkGroup.category}/${productsInOrder[0].product.linkGroup.group}/${productsInOrder[0].product.linkGroup.product}`)">
+                <Button
+                  :color-text="vuetifyMainWhite"
+                  content="Купить"
+                  :min-height="54"
+                  :max-width="246"
+                  font-size="size18-weight700"
+                  class="w-100"
+                  @submit="$emit('addProduct')"
+                />
+              </nuxt-link>
             </v-col>
           </v-container>
         </v-img>

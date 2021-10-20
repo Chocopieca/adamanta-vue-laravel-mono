@@ -16,6 +16,7 @@
         readonly
         dense
         outlined
+        class="text-field"
         v-bind="attrs"
         v-on="on"
       ></v-text-field>
@@ -65,6 +66,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+::v-deep.text-field input {
+  font-size: 16px !important;
+}
 </style>
